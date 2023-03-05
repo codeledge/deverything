@@ -3,7 +3,6 @@ import { randomInt } from "./randomInt";
 
 describe("randomInt", () => {
   test("no args", async () => {
-    console.log(randomInt());
     expect(randomInt()).toBeGreaterThanOrEqual(Number.MIN_VALUE);
     expect(randomInt()).toBeLessThanOrEqual(Number.MAX_VALUE);
   });

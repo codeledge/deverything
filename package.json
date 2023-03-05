@@ -10,11 +10,11 @@
     "dist/**"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --dts",
-    "dev": "tsup src/index.ts --format esm,cjs --watch --dts",
+    "build": "tsup",
+    "dev": "tsup --watch",
     "lint": "TIMING=1 eslint src --fix",
     "clean": "rm -rf node_modules && rm -rf dist",
-    "prepublish": "pnpm build",
+    "prepublish": "pnpm test && pnpm build",
     "test": "jest"
   },
   "repository": {

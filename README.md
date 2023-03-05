@@ -2,7 +2,16 @@
 
 ## Everything you constantly need for dev
 
+The promise:
+
+- 0 dependencies: keep it simple and lightweight
+- Pick the best: the code is minimal and uses the best current practices
+- Typescript: use it and export the helper types!
+- Favour always the most intuitive API
+
 #### Validators
+
+- `isObject`
 
 #### Helpers
 
