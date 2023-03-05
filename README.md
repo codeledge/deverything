@@ -1,35 +1,33 @@
-# Deverything
+# DEVerything
 
-## Everything you constantly need for dev
+## Everything you constantly need for dev (and probably still copy-pasting)
 
 The promise:
 
-- 0 dependencies: keep it simple and lightweight
-- Pick the best: the code is minimal and uses the best current practices
-- Typescript: use it and export the helper types!
-- Favour always the most intuitive API
+- **one package**: say goodbye to installing lodash, faker, this and that and the other one.
+- **0 dependencies**: keep it simple and lightweight.
+- **Pick the best**: the code is minimal and uses the best current practices and performance.
+- **Typescript**: use it, support it and export it.
+- **Intuitive**: favour always the most intuitive API, don't throw errors unless asked.
 
-#### Validators
+Contributions always welcome!
 
+### Validators
+
+- `isBrowser`
+- `isClient`
+- `isEmpty`
+- `isJsDate`
 - `isObject`
+- `isServer`
+- `isStringDate`
 
-#### Helpers
+### Helpers
 
-#### Random
+- `parseDate`
 
-Random data that will please you:
+### Random data generators
 
-- Semantic functions
-- REAL data
-- High performance
-- Low entropy
-- Complex structures
+These functions are optimised for low entropy random data generation useful for Unit Testing, Storybook, Pass real validations, Reverse hacking, Penetration testing...
 
-Use cases:
-
-- Unit Testing
-- Storybook
-- Pass validations
-- Reverse hacking
-- Penetration testing
-- Have fun
+- `randomInt`
