@@ -4,7 +4,7 @@
 
 The promise:
 
-- **one package**: say goodbye to installing lodash, faker, this and that and the other one.
+- **1 package**: say goodbye to installing lodash, faker, this and that and the other one.
 - **0 dependencies**: keep it simple and lightweight.
 - **Pick the best**: the code is minimal and uses the best current practices and performance.
 - **Typescript**: use it, support it and export it.
@@ -14,20 +14,32 @@ Contributions always welcome!
 
 ### Validators
 
-- `isBrowser`
-- `isClient`
-- `isEmpty`
-- `isJsDate`
-- `isObject`
-- `isServer`
-- `isStringDate`
+- `isBrowser()`
+- `isClient()`
+- `isEmpty()`
+- `isJsDate()`
+- `isObject()`
+- `isServer()`
+- `isStringDate()`
 
 ### Helpers
 
-- `parseDate`
+- `parseDate(date: Date | string | number): Date`
 
 ### Random data generators
 
-These functions are optimised for low entropy random data generation useful for Unit Testing, Storybook, Pass real validations, Reverse hacking, Penetration testing...
+These functions are optimized for low entropy random data generation useful for Unit Testing, Storybook, Pass real validations, Reverse hacking, Penetration testing...
 
-- `randomInt`
+- `randomAddress(): { city: string, country: string, street: string, number: number, zip: string}`
+- `randomArrayItem()`
+- `randomBool()`
+- `randomDate()`
+  - `randomFutureDate()`
+  - `randomPastDate()`
+- `randomEmail()`
+- `randomInt()`
+- `randomName()`
+  - `randomFirstName()`
+  - `randomLastName()`
+  - `randomFullName()`
+  - `randomHandle()`
