@@ -24,13 +24,18 @@ Contributions always welcome!
 
 ### Helpers
 
-- `parseDate(date: Date | string | number): Date`
+- `array()`
+- `first()`
+- `last()`
+- `moveToFirst()`
+- `moveToLast()`
+- `parseDate()`
 
 ### Random data generators
 
 These functions are optimized for low entropy random data generation useful for Unit Testing, Storybook, Pass real validations, Reverse hacking, Penetration testing...
 
-- `randomAddress(): { city: string, country: string, street: string, number: number, zip: string}`
+- `randomAddress()`
 - `randomArrayItem()`
 - `randomBool()`
 - `randomDate()`
