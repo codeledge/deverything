@@ -4,12 +4,12 @@
 
 The promise:
 
-- 1️⃣ **1 package**: say goodbye to lodash, faker, this and that and the other package.
-- 0️⃣ **0 dependencies**: keep it simple and lightweight.
-- 🏆 **Pick the best**: the code is minimal and uses the best current practices and is optimized for max performance.
-- 👪🏼 **Typescript**: use it, support it and export it.
-- 🌊 **Intuitive**: favour always the most intuitive API and common usage, _never_ throw errors unless asked.
-- 🙈 **Semantic**: use simple function names that are easy to remember, no complicated options.
+- **1️⃣ package**: say goodbye to lodash, faker, this and that and the other package.
+- **0️⃣ dependencies**: keep it simple and lightweight.
+- **🏆 Pick the best**: the code is minimal and uses the best current practices and is optimized for max performance.
+- **👪🏼 Typescript**: use it, support it and export it.
+- **🌊 Intuitive**: favour always the most intuitive API and common usage, _never_ throw errors unless asked.
+- **🙈 Semantic**: use simple function names that are easy to remember, no complicated options.
 
 Contributions always welcome!
 
