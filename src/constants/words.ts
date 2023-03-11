@@ -1,0 +1,70 @@
+export const VERBS = [
+  "abide",
+  "abound",
+  "accept",
+  "accomplish",
+  "achieve",
+  "acquire",
+  "act",
+  "adapt",
+  "add",
+  "address",
+  "adjust",
+  "admire",
+  "admit",
+  "adopt",
+  "advance",
+  "advise",
+  "afford",
+  "agree",
+  "alert",
+  "allow",
+];
+
+export const NOUNS = [
+  "abandon",
+  "ability",
+  "able",
+  "abortion",
+  "about",
+  "above",
+  "abroad",
+  "absence",
+  "absent",
+  "absolute",
+];
+
+export const ADJECTIVES = [
+  "abandoned",
+  "abdominal",
+  "ability",
+  "able",
+  "abnormal",
+  "abolish",
+  "abortion",
+  "about",
+  "above",
+  "abroad",
+  "absence",
+  "absent",
+  "absolute",
+];
+
+export const ADVERBS = [
+  "abnormally",
+  "aboard",
+  "absentmindedly",
+  "absolutely",
+  "absurdly",
+  "abundantly",
+  "abysmally",
+  "academically",
+  "acceleratedly",
+  "accentually",
+  "acceptably",
+  "accessibly",
+  "accidentally",
+  "accommodatingly",
+];
+
+export const WORDS = [...VERBS, ...NOUNS, ...ADJECTIVES];

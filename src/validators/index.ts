@@ -1,4 +1,4 @@
-export * from "./isObject";
+export * from "./isArray";
 export * from "./isBrowser";
 export * from "./isClient";
 export * from "./isEmpty";

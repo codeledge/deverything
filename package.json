@@ -1,6 +1,6 @@
 {
   "name": "deverything",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Everything you need for Dev",
   "main": "dist/index.js",
   "module": "./dist/index.mjs",
@@ -32,7 +32,8 @@
     "words",
     "numbers",
     "dates",
-    "types"
+    "types",
+    "utils"
   ],
   "author": "ogroppo",
   "license": "MIT",

@@ -8,8 +8,16 @@ describe("isEmpty", () => {
     expect(isEmpty(null)).toBeTruthy();
     expect(isEmpty(void 0)).toBeTruthy();
     expect(isEmpty(0)).toBeFalsy();
-    expect(isEmpty([])).toBeFalsy();
-    expect(isEmpty({})).toBeFalsy();
     expect(isEmpty(() => {})).toBeFalsy();
+  });
+
+  test("array", async () => {
+    expect(isEmpty([])).toBeTruthy();
+    expect(isEmpty([1])).toBeFalsy();
+  });
+
+  test("object", async () => {
+    expect(isEmpty({})).toBeTruthy();
+    expect(isEmpty({ key: "value" })).toBeFalsy();
   });
 });
