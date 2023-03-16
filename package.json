@@ -11,9 +11,10 @@
   ],
   "scripts": {
     "build": "tsup",
+    "ci:publish": "pnpm publish --no-git-checks",
+    "clean": "rm -rf node_modules && rm -rf dist",
     "dev": "tsup --watch",
     "lint": "TIMING=1 eslint src --fix",
-    "clean": "rm -rf node_modules && rm -rf dist",
     "prepublish": "pnpm test && pnpm build",
     "test": "jest"
   },
