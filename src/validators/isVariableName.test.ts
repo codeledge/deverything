@@ -3,15 +3,6 @@ import { isVariableName } from "./isVariableName";
 
 describe("isVariableName", function () {
   it("checks correctly", function () {
-    const g = {
-      volatile: 0,
-      var: 0,
-      while: 0,
-      with: 0,
-      yield: 0,
-      " 0sun": 0,
-    };
-    console.log(g);
     // no empty strings, symbols, etc.
     expect(isVariableName("a@a.a")).toBe(false);
     expect(isVariableName(" ")).toBe(false);

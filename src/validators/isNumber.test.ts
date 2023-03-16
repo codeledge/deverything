@@ -84,7 +84,8 @@ describe("isNumber", function () {
 
   describe("isNegative", function () {
     it("checks correctly", function () {
-      expect(isNegative(1)).toBe(true);
+      expect(isNegative(1)).toBe(false);
+      expect(isNegative(-1e12)).toBe(true);
       expect(isNegative(0)).toBe(false);
       expect(isNegative(Infinity)).toBe(false);
       expect(isNegative(-0)).toBe(false);
