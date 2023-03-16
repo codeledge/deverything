@@ -4,8 +4,8 @@
 
 The promise:
 
-- **1️⃣ package**: say goodbye to lodash, faker, this and that and the other package.
-- **0️⃣ dependencies**: keep it simple and lightweight.
+- **1️⃣-package**: say goodbye to lodash, faker, this and that and the other package.
+- **0️⃣-dependencies**: keep it simple and lightweight.
 - **🏆 Pick the best**: the code is minimal and uses the best current practices and is optimized for max performance.
 - **👪🏼 Typescript**: use it, support it and export it.
 - **🌊 Intuitive**: favour always the most intuitive API and common usage, _never_ throw errors unless asked.
@@ -20,6 +20,12 @@ Contributions always welcome!
 - `isClient()` to detect if you are ont the browser/client
 - `isEmpty()` to check for empty object, empty array, empty string, null or undefined
 - `isJsDate()` if it's a **valid** javascript's Date
+- `isNumber()` if the arg is number, and also usable (no infinity)
+  - `isInt()`
+  - `isEven()`
+  - `isOdd()`
+  - `isPositive()`
+  - `isNegative()`
 - `isObject()` if it's a js Object
 - `isServer()` if you are on the server
 - `isStringDate()` if the string passed is a **valid** date
