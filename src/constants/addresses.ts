@@ -136,3 +136,23 @@ export const ADDRESSES = [
   ...EUROPE_ADDRESSES,
   ...MIXED_ADDRESSES,
 ];
+
+export const CITIES = [
+  "London",
+  "Birmingham",
+  "New York",
+  "Los Angeles",
+  "Paris",
+  "Berlin",
+  "Rome",
+  "Madrid",
+  "Moscow",
+  "Tokyo",
+  "Beijing",
+  "Cairo",
+  "Buenos Aires",
+  "Cape Town",
+  "Sydney",
+  "Rio de Janeiro",
+  "Mexico City",
+];

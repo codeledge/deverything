@@ -3,11 +3,12 @@ import { isArray } from "./isArray";
 import { isObject } from "./isObject";
 import { isString } from "./isString";
 
-export const isEmpty = (value?: Maybe<any>) => {
-  if (isObject(value)) return Object.keys(value).length === 0;
-  if (isArray(value)) return value.length === 0;
+export const isEmpty = (arg?: Maybe<any>) => {
+  if (isEmptyObject(arg)) return true;
+  if (isEmptyArray(arg)) return true;
+  if (isEmptyString(arg)) return true;
 
-  return value === undefined || value === null || value === "";
+  return arg === undefined || arg === null;
 };
 
 export const isEmptyString = (arg: string) => {

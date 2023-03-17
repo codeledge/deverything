@@ -9,11 +9,23 @@ export const randomDate = (start?: Date, end?: Date) => {
   );
 };
 
-// Add a safe margin in the future (i.e. lagging tests). About 5 minutes is enough.
-export const randomFutureDate = (end?: Date) => {
-  return randomDate(new Date(new Date().getTime() + 5 * 60000), end);
+export const randomFutureDate = () => {
+  // Add a safe margin in the future (i.e. lagging tests). About 5 minutes is enough.
+  const safeNow = new Date(new Date().getTime() + 5 * 60000);
+  return randomDate(safeNow, undefined);
 };
 
-export const randomPastDate = (start?: Date) => {
-  return randomDate(start, new Date());
+export const randomPastDate = () => {
+  return randomDate(undefined, new Date());
+};
+
+export const randomDateRange = () => {
+  const startDate = randomDate();
+
+  const endDate = randomDate(startDate);
+
+  return {
+    endDate,
+    startDate,
+  };
 };
