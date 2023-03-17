@@ -144,6 +144,26 @@ export const JS_RESERVED_WORDS = [
   "yield",
 ];
 
+export const HTML_COLORS = [
+  "AliceBlue",
+  "AntiqueWhite",
+  "Aqua",
+  "Aquamarine",
+  "Azure",
+  "Beige",
+  "Bisque",
+  "Black",
+  "BlanchedAlmond",
+  "Blue",
+  "BlueViolet",
+  "Brown",
+  "BurlyWood",
+  "CadetBlue",
+  "Chartreuse",
+  "Chocolate",
+  "Coral",
+];
+
 export const WORDS = [
   ...VERBS,
   ...NOUNS,

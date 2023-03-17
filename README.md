@@ -19,6 +19,9 @@ Contributions always welcome!
 - `isBrowser()` to detect if you are on the browser
 - `isClient()` to detect if you are ont the browser/client
 - `isEmpty()` to check for empty object, empty array, empty string, null or undefined
+  - `isEmptyString()` trims the string and checks if something is left
+  - `isEmptyArray()`
+  - `isEmptyObject()`
 - `isJsDate()` if it's a **valid** javascript's Date
 - `isNumber()` if the arg is number, and also usable (no infinity)
   - `isInt()`
@@ -28,7 +31,8 @@ Contributions always welcome!
   - `isNegative()`
 - `isObject()` if it's a js Object
 - `isServer()` if you are on the server
-- `isStringDate()` if the string passed is a **valid** date
+- `isString()`
+  - `isStringDate()` if the string passed is a **valid** date
 
 ### Helpers
 
@@ -65,3 +69,19 @@ These functions are optimized for low entropy random data generation useful for 
 - `MaybePromiseOrValueArray`
 - `DateLike`
 - `NonUndefined`
+
+## Development
+
+After changes, run
+
+```
+pnpm changeset
+```
+
+then
+
+```
+pnpm changeset version
+```
+
+To bump the version. CI will take care of publishing the package when merged.
