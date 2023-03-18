@@ -14,4 +14,5 @@ export * from "./isStringDate";
 export * from "./isUndefined";
 export * from "./isURL";
 export * from "./isUUID";
+export * from "./isValue";
 //export * from "./isVariableName"; //TODO needs clarification

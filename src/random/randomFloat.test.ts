@@ -1,11 +1,17 @@
 import { describe, it, expect } from "@jest/globals";
-import { randomFloat } from "./randomFloat";
+import { JS_MAX_DIGITS, randomFloat } from "./randomFloat";
 
 describe(`randomFloat`, () => {
   it(`default`, () => {
-    expect(randomFloat(0, 9, 22).toString().length).toBe(17);
-    expect(randomFloat(0, 9, 17).toString().length).toBe(17);
-    expect(randomFloat(0, 9, 15).toString().length).toBe(17);
-    expect(randomFloat(0, 9, 14).toString().length).toBe(16);
+    expect(
+      randomFloat(0, 9, JS_MAX_DIGITS + 2).toString().length - 2
+    ).toBeLessThanOrEqual(JS_MAX_DIGITS);
+    expect(
+      randomFloat(0, 9, JS_MAX_DIGITS).toString().length - 2
+    ).toBeLessThanOrEqual(JS_MAX_DIGITS);
+    expect(
+      randomFloat(0, 9, JS_MAX_DIGITS - 1).toString().length - 2
+    ).toBeLessThanOrEqual(JS_MAX_DIGITS - 1);
+    expect(randomFloat(0, 9, 0).toString().length - 1).toBe(0);
   });
 });
