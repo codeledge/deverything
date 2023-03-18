@@ -1,4 +1,5 @@
-# DEVerything
+<img width="273" alt="Screenshot 2023-03-18 at 18 45 28 copy" src="https://user-images.githubusercontent.com/4820803/226130021-988b51db-9ddb-4f07-b227-1ee42ae65f70.png">
+
 
 ## Everything you constantly need for development (and probably still copy-pasting from other projects)
 
