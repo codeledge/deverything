@@ -1,4 +1,4 @@
-<img width="273" alt="Screenshot 2023-03-18 at 18 45 28 copy" src="https://user-images.githubusercontent.com/4820803/226130021-988b51db-9ddb-4f07-b227-1ee42ae65f70.png">
+<img width="393" alt="Screenshot 2023-03-18 at 19 06 18" src="https://user-images.githubusercontent.com/4820803/226131139-740d5fd7-26e5-4555-95fb-14745e145b85.png">
 
 
 ## Everything you constantly need for development (and probably still copy-pasting from other projects)
