@@ -3,8 +3,8 @@ import { randomInt } from "./randomInt";
 
 describe("randomInt", () => {
   test("no args", async () => {
-    expect(randomInt()).toBeGreaterThanOrEqual(Number.MIN_VALUE);
-    expect(randomInt()).toBeLessThanOrEqual(Number.MAX_VALUE);
+    expect(randomInt()).toBeGreaterThanOrEqual(-Number.MAX_SAFE_INTEGER);
+    expect(randomInt()).toBeLessThanOrEqual(Number.MAX_SAFE_INTEGER);
   });
 
   test("args", async () => {

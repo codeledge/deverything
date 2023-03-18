@@ -1,6 +1,5 @@
 <img width="393" alt="Screenshot 2023-03-18 at 19 06 18" src="https://user-images.githubusercontent.com/4820803/226131139-740d5fd7-26e5-4555-95fb-14745e145b85.png">
 
-
 ## Everything you constantly need for development (and probably still copy-pasting from other projects)
 
 The promise:
@@ -56,25 +55,36 @@ These functions are optimized for low entropy random data generation useful for 
 - `randomAddress()`
 - `randomArrayItem()`
 - `randomBool()`
+- `randomCoords()`
+  - `randomLat()`
+  - `randomLng()`
 - `randomDate()`
   - `randomFutureDate()`
   - `randomPastDate()`
   - `randomDateRange()` => { startDate, endDate }
 - `randomEmail()`
+- `randomEmoji()`
+- `randomFile()`
+- `randomFloat()`
+- `randomHandle()` useful for social identifiers, or slugs
+- `randomHexColor()`
+- `randomHexValue()`
 - `randomInt()`
 - `randomName()`
   - `randomFirstName()`
   - `randomLastName()`
   - `randomFullName()`
-- `randomHandle()` useful for social identifiers, or slugs
+- `randomParagraph()`
+- `randomWord()`
 
 ### TypeScript Helpers
 
+- `Coords`
+- `DateLike`
 - `Maybe`
 - `MaybePromise`
 - `MaybePromiseOrValue`
 - `MaybePromiseOrValueArray`
-- `DateLike`
 - `NonUndefined`
 
 ## Development

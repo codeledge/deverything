@@ -1,5 +1,11 @@
 # deverything
 
+## 0.7.0
+
+### Minor Changes
+
+- added banner and safe int
+
 ## 0.6.0
 
 ### Minor Changes
