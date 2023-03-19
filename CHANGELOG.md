@@ -1,5 +1,11 @@
 # deverything
 
+## 0.7.2
+
+### Patch Changes
+
+- add funding link
+
 ## 0.7.0
 
 ### Minor Changes
