@@ -5,6 +5,7 @@ export * from "./randomCoords";
 export * from "./randomDate";
 export * from "./randomEmail";
 export * from "./randomEmoji";
+export * from "./randomEnumValue";
 export * from "./randomFile";
 export * from "./randomFloat";
 export * from "./randomHandle";

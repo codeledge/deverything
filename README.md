@@ -4,8 +4,8 @@
 
 The promise:
 
-- **1️ package**: say goodbye to lodash, faker, this and that and the other package.
-- **0️ dependencies**: keep it simple and lightweight.
+- **✅ 1 package**: say goodbye to lodash, faker, this and that and the other package.
+- **⭕ 0 dependencies**: keep it simple and lightweight.
 - **🏆 Pick the best**: the code is minimal and uses the best current practices and is optimized for max performance.
 - **👪🏼 Typescript**: use it, support it and export it.
 - **🌊 Intuitive**: favour always the most intuitive API and common usage, _never_ throw errors unless asked.
@@ -26,12 +26,14 @@ Contributions always welcome!
   - `isEmptyObject()`
 - `isFunction()`
 - `isJsDate()` if it's a **valid** javascript's Date
+- `isKeyOfObject()`
 - `isNumber()` if the arg is number, and also usable (no infinity)
   - `isInt()`
   - `isEven()`
   - `isOdd()`
   - `isPositive()`
   - `isNegative()`
+- `isNumeric()`
 - `isObject()` if it's a js plain Object
 - `isServer()` if you are on the server
 - `isString()`
@@ -64,12 +66,17 @@ These functions are optimized for low entropy random data generation useful for 
   - `randomDateRange()` => { startDate, endDate }
 - `randomEmail()`
 - `randomEmoji()`
+- `randomEnumValue()`
 - `randomFile()`
 - `randomFloat()`
 - `randomHandle()` useful for social identifiers, or slugs
 - `randomHexColor()`
 - `randomHexValue()`
 - `randomInt()`
+  - `randomPositiveInt()` > 0
+  - `randomNegativeInt()` < 0
+  - `randomMaxSafeInt()` Range of very BIG integers, which are still safe to use tho
+  - `randomMaxInt()` Range within the Maximum integer supported by js
 - `randomName()`
   - `randomFirstName()`
   - `randomLastName()`
@@ -86,6 +93,7 @@ These functions are optimized for low entropy random data generation useful for 
 - `MaybePromiseOrValue`
 - `MaybePromiseOrValueArray`
 - `NonUndefined`
+- `ObjectValues`
 
 ## Development
 

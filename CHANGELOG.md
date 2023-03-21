@@ -1,5 +1,11 @@
 # deverything
 
+## 0.8.0
+
+### Minor Changes
+
+- added random enum value
+
 ## 0.7.2
 
 ### Patch Changes

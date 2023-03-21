@@ -9,25 +9,27 @@ import {
 } from "./isNumber";
 
 describe("isNumber", function () {
-  it("checks correctly", function () {
-    expect(isNumber("string")).toBe(false);
-    expect(isNumber("33")).toBe(false);
-    expect(isNumber("-33")).toBe(false);
-    expect(isNumber("2e12")).toBe(false);
-    expect(isNumber("\t\t")).toBe(false);
-    expect(isNumber("\n\r")).toBe(false);
-    expect(isNumber(Infinity)).toBe(false);
-    expect(isNumber(-Infinity)).toBe(false);
-    expect(isNumber(null)).toBe(false);
-    expect(isNumber(undefined)).toBe(false);
-    expect(isNumber({})).toBe(false);
-    expect(isNumber([])).toBe(false);
-    expect(isNumber(0)).toBe(true);
-    expect(isNumber(parseInt("000"))).toBe(true);
-    expect(isNumber(912312)).toBe(true);
-    expect(isNumber(12.44)).toBe(true);
-    expect(isNumber(-1244)).toBe(true);
-    expect(isNumber(2e12)).toBe(true);
+  describe("isNumber", function () {
+    it("checks correctly", function () {
+      expect(isNumber("string")).toBe(false);
+      expect(isNumber("33")).toBe(false);
+      expect(isNumber("-33")).toBe(false);
+      expect(isNumber("2e12")).toBe(false);
+      expect(isNumber("\t\t")).toBe(false);
+      expect(isNumber("\n\r")).toBe(false);
+      expect(isNumber(Infinity)).toBe(false);
+      expect(isNumber(-Infinity)).toBe(false);
+      expect(isNumber(null)).toBe(false);
+      expect(isNumber(undefined)).toBe(false);
+      expect(isNumber({})).toBe(false);
+      expect(isNumber([])).toBe(false);
+      expect(isNumber(0)).toBe(true);
+      expect(isNumber(parseInt("000"))).toBe(true);
+      expect(isNumber(912312)).toBe(true);
+      expect(isNumber(12.44)).toBe(true);
+      expect(isNumber(-1244)).toBe(true);
+      expect(isNumber(2e12)).toBe(true);
+    });
   });
 
   describe("isInt", function () {
