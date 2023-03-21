@@ -1,8 +1,13 @@
-import { isNumeric } from "../validators/isNumeric";
 import { randomArrayItem } from "./randomArrayItem";
 
 export const randomEnumValue = (enumObject: any) => {
-  return randomArrayItem(
-    Object.keys(enumObject).filter((key) => !isNumeric(key))
-  );
+  let values: any[] = [];
+
+  Object.values(enumObject).forEach((value: any) => {
+    if (value in enumObject && !values.includes(value))
+      values.push(enumObject[value]);
+  });
+
+  console.log(values);
+  return randomArrayItem(values);
 };

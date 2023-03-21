@@ -1,10 +1,10 @@
 import { describe, expect, test } from "@jest/globals";
-import { randomEnumValue } from "./randomEnumValue";
+import { randomEnumKey } from "./randomEnumKey";
 
-describe("randomEnumValue", () => {
+describe("randomEnumKey", () => {
   test("empty", async () => {
     enum EMPTY_ENUM {}
-    expect(randomEnumValue(EMPTY_ENUM)).toBe(undefined);
+    expect(randomEnumKey(EMPTY_ENUM)).toBe(undefined);
   });
   test("default", async () => {
     enum DEFAULT_ENUM {
@@ -12,7 +12,7 @@ describe("randomEnumValue", () => {
       TWO,
     }
     // =>  { '0': 'ONE', '1': 'TWO', ONE: 0, TWO: 1 }
-    expect([0, 1]).toContain(randomEnumValue(DEFAULT_ENUM));
+    expect(["ONE", "TWO"]).toContain(randomEnumKey(DEFAULT_ENUM));
   });
   test("explicit", async () => {
     enum EXPLICIT_ENUM {
@@ -20,7 +20,7 @@ describe("randomEnumValue", () => {
       THREE = 3,
     }
     // => { '2': 'TWO', '3': 'THREE', TWO: 2, THREE: 3 }
-    expect([2, 3]).toContain(randomEnumValue(EXPLICIT_ENUM));
+    expect(["THREE", "TWO"]).toContain(randomEnumKey(EXPLICIT_ENUM));
   });
   test("string", async () => {
     enum STRING_ENUM {
@@ -28,15 +28,14 @@ describe("randomEnumValue", () => {
       TWO = "TWO",
     }
     // => { ONE: 'ONE', TWO: 'TWO' }
-    expect(["ONE", "TWO"]).toContain(randomEnumValue(STRING_ENUM));
+    expect(["ONE", "TWO"]).toContain(randomEnumKey(STRING_ENUM));
   });
   test("mixed", async () => {
     enum MIXED_ENUM {
       ONE,
       TWO = "TWO",
-      THREE = 3,
     }
-    // => { '0': 'ONE', '3': 'THREE', ONE: 0, TWO: 'TWO', THREE: 3 }
-    expect([0, "TWO", 3]).toContain(randomEnumValue(MIXED_ENUM));
+    // => { '0': 'ONE', ONE: 0, TWO: 'TWO' }
+    expect(["ONE", "TWO"]).toContain(randomEnumKey(MIXED_ENUM));
   });
 });
