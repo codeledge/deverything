@@ -35,6 +35,7 @@ Contributions always welcome!
   - `isNegative()`
 - `isNumeric()`
 - `isObject()` if it's a js plain Object
+- `isPWA()`
 - `isServer()` if you are on the server
 - `isString()`
   - `isStringDate()` also checks if the string passed is a **valid** date
@@ -72,6 +73,8 @@ These functions are optimized for low entropy random data generation useful for 
 - `randomHandle()` useful for social identifiers, or slugs
 - `randomHexColor()`
 - `randomHexValue()`
+- `randomHtmlColorName()`
+- `randomIBAN()`
 - `randomInt()`
   - `randomPositiveInt()` > 0
   - `randomNegativeInt()` < 0
@@ -81,7 +84,9 @@ These functions are optimized for low entropy random data generation useful for 
   - `randomFirstName()`
   - `randomLastName()`
   - `randomFullName()`
+- `randomNumericId()` autoincremental process-unique id
 - `randomParagraph()`
+- `randomUUID()` lightweight uuid generation, passing UUID validation
 - `randomWord()`
 
 ### TypeScript Helpers

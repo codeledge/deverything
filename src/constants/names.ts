@@ -21,18 +21,20 @@ export const TOOL_NAMES = [
 ];
 
 export const LATIN_FIRST_NAMES = [
-  "Abigail",
   "Adam",
   "Adrian",
-  "Agnes",
   "Alan",
   "Albert",
   "Alexander",
   "Alice",
   "Amanda",
+  "Emma",
   "Amelia",
   "Amy",
   "Andrew",
+  "Esther",
+  "Olivia",
+  "Ruby",
 ];
 
 export const LATIN_LAST_NAMES = [

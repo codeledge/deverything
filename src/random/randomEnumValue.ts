@@ -1,13 +1,16 @@
 import { randomArrayItem } from "./randomArrayItem";
 
-export const randomEnumValue = (enumObject: any) => {
-  let values: any[] = [];
+export type EnumValue = string | number;
 
-  Object.values(enumObject).forEach((value: any) => {
+export const randomEnumValue = (
+  enumObject: Record<string, EnumValue>
+): EnumValue => {
+  let values: EnumValue[] = [];
+
+  Object.values(enumObject).forEach((value) => {
     if (value in enumObject && !values.includes(value))
       values.push(enumObject[value]);
   });
 
-  console.log(values);
   return randomArrayItem(values);
 };

@@ -8,7 +8,6 @@ export const VERBS = [
   "act",
   "adapt",
   "add",
-  "address",
   "adjust",
   "admire",
   "admit",
@@ -19,6 +18,10 @@ export const VERBS = [
   "agree",
   "alert",
   "allow",
+  "be",
+  "go",
+  "need",
+  "work",
 ];
 
 export const NOUNS = [
@@ -144,16 +147,14 @@ export const JS_RESERVED_WORDS = [
   "yield",
 ];
 
-export const HTML_COLORS = [
+export const HTML_COLOR_NAME_SAMPLES = [
   "AliceBlue",
-  "AntiqueWhite",
   "Aqua",
   "Aquamarine",
   "Azure",
   "Beige",
   "Bisque",
   "Black",
-  "BlanchedAlmond",
   "Blue",
   "BlueViolet",
   "Brown",
@@ -162,6 +163,14 @@ export const HTML_COLORS = [
   "Chartreuse",
   "Chocolate",
   "Coral",
+  "DarkSlateGray",
+  "DeepPink",
+  "Gold",
+  "Lime",
+  "Olive",
+  "Orchid",
+  "Salmon",
+  "Turquoise",
 ];
 
 export const WORDS = [
