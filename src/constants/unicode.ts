@@ -1,4 +1,4 @@
-export const EMOJIS = [
+export const EMOJI_SAMPLE = [
   "😀",
   "😁",
   "😂",
@@ -16,3 +16,5 @@ export const EMOJIS = [
   "😗",
   "😙",
 ];
+
+export const SPECIAL_CHARACTERS = ["!", "@", "#", "$", "%", "^", "&", "*"];

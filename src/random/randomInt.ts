@@ -12,3 +12,5 @@ export const randomMaxSafeInt = () =>
 
 export const randomMaxInt = () =>
   randomInt(-Number.MAX_VALUE, Number.MAX_VALUE);
+
+export const randomPercentage = () => randomInt(-100, 100);

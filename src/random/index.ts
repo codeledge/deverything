@@ -18,5 +18,6 @@ export * from "./randomInt";
 export * from "./randomName";
 export * from "./randomNumericId";
 export * from "./randomParagraph";
+export * from "./randomPassword";
 export * from "./randomUUID";
 export * from "./randomWord";

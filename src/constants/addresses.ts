@@ -156,3 +156,27 @@ export const CITIES = [
   "Rio de Janeiro",
   "Mexico City",
 ];
+
+export const US_STATE_CODE_SAMPLES = [
+  "AL",
+  "AK",
+  "AZ",
+  "AR",
+  "CA",
+  "CO",
+  "CT",
+  "DE",
+  "FL",
+  "GA",
+  "HI",
+];
+
+export const ZIP_SAMPLES = [
+  "10036",
+  "90028",
+  "75001",
+  "10117",
+  "00186",
+  "28013",
+  "101000",
+];

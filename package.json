@@ -1,6 +1,6 @@
 {
   "name": "deverything",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "description": "Everything you need for Dev",
   "main": "dist/index.js",
   "module": "./dist/index.mjs",
@@ -10,7 +10,7 @@
     "dist/**"
   ],
   "scripts": {
-    "build": "tsup",
+    "build": "tsup --treeshake",
     "ci:publish": "pnpm publish --no-git-checks",
     "clean": "rm -rf node_modules && rm -rf dist",
     "dev": "tsup --watch",

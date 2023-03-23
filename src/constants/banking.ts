@@ -42,3 +42,54 @@ export const CARD_NUMBER_SAMPLES = [
   "4556364607930798",
   "4539148803436467",
 ];
+
+//An ABA routing number is a nine-digit code that identifies banks in the U.S.
+export const ABA_NUMBER_SAMPLES = [
+  "111000025",
+  "081000210",
+  "104000029",
+  "091300023",
+  "123000220",
+];
+
+export const ROUTING_NUMBER_SAMPLES = [
+  "637530215",
+  "130436324",
+  "611531133",
+  "865673685",
+];
+
+export const BANK_ACCOUNT_NUMBER_SAMPLES = [
+  "64766774",
+  "39526009",
+  "25048213",
+  "72796383",
+];
+
+export const VAT_REGISTRATION_NUMBER_SAMPLES = [
+  "IE1234567T",
+  "GB123456789",
+  "XI123456789",
+];
+
+export const SORT_CODE_SAMPLES = ["100000", "902127", "800551"];
+
+export const SSN_SAMPLES = ["235-55-7216", "372-37-3976", "414-99-6488"];
+
+export const BANK_NAME_SAMPLES = [
+  "Bank of England",
+  "Bank of Ireland",
+  "Bank of Scotland",
+  "Bank of America",
+];
+
+export const COMPANY_NAME_SAMPLES = [
+  "Acme Inc.",
+  "Acme Corp.",
+  "Acme Ltd.",
+  "Acme LLC",
+  "Umbrella Corp.",
+  "Umbrella Inc.",
+  "Umbrella Ltd.",
+  "Umbrella LLC",
+];

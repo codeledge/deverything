@@ -1,5 +1,11 @@
 # deverything
 
+## 0.10.0
+
+### Minor Changes
+
+- merge
+
 ## 0.9.0
 
 ### Minor Changes

@@ -20,13 +20,13 @@ Contributions always welcome!
 - `isBrowser()` to detect if you are on the browser
 - `isClient()` to detect if you are ont the browser/client
 - `isEmail()` this is a relaxed check, use your own validation if you need to be strict
-- `isEmpty()` to check for empty object, empty array, empty string, null or undefined
+- ⭐ `isEmpty()` to check for empty object, empty array, empty string, null or undefined
   - `isEmptyString()` trims the string and checks if something is left
   - `isEmptyArray()`
   - `isEmptyObject()`
 - `isFunction()`
 - `isJsDate()` if it's a **valid** javascript's Date
-- `isKeyOfObject()`
+- `isKey()`
 - `isNumber()` if the arg is number, and also usable (no infinity)
   - `isInt()`
   - `isEven()`
@@ -34,8 +34,11 @@ Contributions always welcome!
   - `isPositive()`
   - `isNegative()`
 - `isNumeric()`
-- `isObject()` if it's a js plain Object
+- ⭐ `isObject()` if it's a js plain Object
+- `isPromise()`
 - `isPWA()`
+- `isReactElement()`
+- `isRegExp()`
 - `isServer()` if you are on the server
 - `isString()`
   - `isStringDate()` also checks if the string passed is a **valid** date
@@ -45,20 +48,23 @@ Contributions always welcome!
 ### Helpers
 
 - `array()` create an arbitrary array based on a function
+- `capitalize()` word => Word
 - `first()` get the first element of an array
+- `getKeys()` get the keys of an object, includes symbols
 - `last()` get the last element of an array
+- ⭐ `merge()` deep merge objects
 - `moveToFirst()` move array element to first
 - `moveToLast()` move array element to last
-- `parseDate()` pass anything Date-Like, and get a JS Date back
+- ⭐ `parseDate()` pass anything Date-Like, and get a JS Date back
 
 ### Random data generators
 
 These functions are optimized for low entropy random data generation useful for Unit Testing, Storybook, Pass real validations, Reverse hacking, Penetration testing...
 
 - `randomAddress()`
-- `randomArrayItem()`
+- ⭐ `randomArrayItem()`
 - `randomBool()`
-- `randomCoords()`
+- ⭐ `randomCoords()`
   - `randomLat()`
   - `randomLng()`
 - `randomDate()`
@@ -86,6 +92,7 @@ These functions are optimized for low entropy random data generation useful for 
   - `randomFullName()`
 - `randomNumericId()` autoincremental process-unique id
 - `randomParagraph()`
+- `randomPassword()`
 - `randomUUID()` lightweight uuid generation, passing UUID validation
 - `randomWord()`
 
@@ -99,6 +106,7 @@ These functions are optimized for low entropy random data generation useful for 
 - `MaybePromiseOrValueArray`
 - `NonUndefined`
 - `ObjectValues`
+- `PlainObject`
 
 ## Development
 

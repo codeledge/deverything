@@ -13,3 +13,4 @@ export type DateLike = Date | string | number;
 export type NonUndefined<T> = T extends undefined ? never : T;
 
 export * from "./ObjectValues";
+export * from "./PlainObject";

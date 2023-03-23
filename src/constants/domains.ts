@@ -12,8 +12,6 @@ export const DOMAIN_NAMES = [
   "mac.com",
   "me.com",
   "earthlink.net",
-  "cox.net",
-  "optonline.net",
   "charter.net",
   "shaw.ca",
   "yahoo.ca",

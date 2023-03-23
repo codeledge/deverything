@@ -1,6 +1,6 @@
-import { EMOJIS } from "../constants/unicode";
+import { EMOJI_SAMPLE } from "../constants/unicode";
 import { randomArrayItem } from "./randomArrayItem";
 
 export const randomEmoji = () => {
-  return randomArrayItem(EMOJIS);
+  return randomArrayItem(EMOJI_SAMPLE);
 };
