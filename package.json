@@ -1,6 +1,6 @@
 {
   "name": "deverything",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "description": "Everything you need for Dev",
   "main": "dist/index.js",
   "module": "./dist/index.mjs",
@@ -16,7 +16,8 @@
     "dev": "tsup --watch",
     "lint": "TIMING=1 eslint src --fix",
     "prepublish": "pnpm test && pnpm build",
-    "test": "jest"
+    "test": "jest",
+    "bump": "pnpm changeset && pnpm changeset version"
   },
   "repository": {
     "type": "git",

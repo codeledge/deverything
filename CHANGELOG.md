@@ -1,5 +1,11 @@
 # deverything
 
+## 0.10.1
+
+### Patch Changes
+
+- reduce date range
+
 ## 0.10.0
 
 ### Minor Changes

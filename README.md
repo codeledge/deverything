@@ -67,13 +67,15 @@ These functions are optimized for low entropy random data generation useful for 
 - ⭐ `randomCoords()`
   - `randomLat()`
   - `randomLng()`
-- `randomDate()`
+- `randomDate()` a safe range in decade
+  - `randomMaxDate()` a range in the Max dates allowed by JS
   - `randomFutureDate()`
   - `randomPastDate()`
   - `randomDateRange()` => { startDate, endDate }
 - `randomEmail()`
 - `randomEmoji()`
-- `randomEnumValue()`
+- `randomEnumKey()` enum FRUIT { APPLE, PEAR } => APPLE
+- `randomEnumValue()` enum FRUIT { APPLE = 1, PEAR = 3 } => 3
 - `randomFile()`
 - `randomFloat()`
 - `randomHandle()` useful for social identifiers, or slugs
