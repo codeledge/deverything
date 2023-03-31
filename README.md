@@ -62,6 +62,7 @@ Contributions always welcome!
 These functions are optimized for low entropy random data generation useful for Unit Testing, Storybook, Pass real validations, Reverse hacking, Penetration testing...
 
 - `randomAddress()`
+- `randomAlphaNumericCode()`
 - ⭐ `randomArrayItem()`
 - `randomBool()`
 - ⭐ `randomCoords()`
@@ -92,6 +93,7 @@ These functions are optimized for low entropy random data generation useful for 
   - `randomFirstName()`
   - `randomLastName()`
   - `randomFullName()`
+- `randomNumericCode()`
 - `randomNumericId()` autoincremental process-unique id
 - `randomParagraph()`
 - `randomPassword()`
@@ -109,6 +111,7 @@ These functions are optimized for low entropy random data generation useful for 
 - `NonUndefined`
 - `ObjectValues`
 - `PlainObject`
+- `Point`
 
 ## Development
 

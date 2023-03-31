@@ -1,4 +1,5 @@
 export * from "./randomAddress";
+export * from "./randomAlphaNumericCode";
 export * from "./randomArrayItem";
 export * from "./randomBool";
 export * from "./randomCoords";
@@ -16,6 +17,7 @@ export * from "./randomHtmlColorName";
 export * from "./randomIBAN";
 export * from "./randomInt";
 export * from "./randomName";
+export * from "./randomNumericCode";
 export * from "./randomNumericId";
 export * from "./randomParagraph";
 export * from "./randomPassword";
