@@ -1,5 +1,11 @@
 # deverything
 
+## 0.12.0
+
+### Minor Changes
+
+- ip
+
 ## 0.11.0
 
 ### Minor Changes

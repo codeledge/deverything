@@ -89,6 +89,7 @@ These functions are optimized for low entropy random data generation useful for 
   - `randomNegativeInt()` < 0
   - `randomMaxSafeInt()` Range of very BIG integers, which are still safe to use tho
   - `randomMaxInt()` Range within the Maximum integer supported by js
+- `randomIP()`
 - `randomName()`
   - `randomFirstName()`
   - `randomLastName()`

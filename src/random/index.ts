@@ -16,6 +16,7 @@ export * from "./randomHexValue";
 export * from "./randomHtmlColorName";
 export * from "./randomIBAN";
 export * from "./randomInt";
+export * from "./randomIP";
 export * from "./randomName";
 export * from "./randomNumericCode";
 export * from "./randomNumericId";
