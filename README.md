@@ -26,7 +26,11 @@ Contributions always welcome!
   - `isEmptyObject()`
 - `isFunction()`
 - `isJsDate()` if it's a **valid** javascript's Date
-- `isKey()`
+  - `isFutureDate()`
+  - `isPastDate()`
+  - `isTimestamp()`
+  - `isStringDate()` also checks if the string passed is a **valid** date
+- `isKey()` is a real key of an object
 - `isNumber()` if the arg is number, and also usable (no infinity)
   - `isInt()`
   - `isEven()`
@@ -41,7 +45,6 @@ Contributions always welcome!
 - `isRegExp()`
 - `isServer()` if you are on the server
 - `isString()`
-  - `isStringDate()` also checks if the string passed is a **valid** date
 - `isURL()`
 - `isUUID()`
 
@@ -106,13 +109,14 @@ These functions are optimized for low entropy random data generation useful for 
 - `Coords`
 - `DateLike`
 - `Maybe`
-- `MaybePromise`
-- `MaybePromiseOrValue`
-- `MaybePromiseOrValueArray`
+  - `MaybePromise`
+  - `MaybePromiseOrValue`
+  - `MaybePromiseOrValueArray`
 - `NonUndefined`
 - `ObjectValues`
 - `PlainObject`
 - `Point`
+- `PrismaSelect`
 
 ## Development
 
