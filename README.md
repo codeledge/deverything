@@ -52,6 +52,7 @@ Contributions always welcome!
 
 - `array()` create an arbitrary array based on a function
 - `capitalize()` word => Word
+- `clamp()` clamp number in a range
 - `first()` get the first element of an array
 - `getKeys()` get the keys of an object, includes symbols
 - `last()` get the last element of an array
@@ -59,6 +60,7 @@ Contributions always welcome!
 - `moveToFirst()` move array element to first
 - `moveToLast()` move array element to last
 - ⭐ `parseDate()` pass anything Date-Like, and get a JS Date back
+- `truncate()` truncate text, does not break emojis
 
 ### Random data generators
 
