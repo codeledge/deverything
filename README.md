@@ -110,6 +110,7 @@ These functions are optimized for low entropy random data generation useful for 
 
 - `Coords`
 - `DateLike`
+- `Dimensions`
 - `Maybe`
   - `MaybePromise`
   - `MaybePromiseOrValue`

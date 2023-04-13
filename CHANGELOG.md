@@ -1,5 +1,11 @@
 # deverything
 
+## 0.15.0
+
+### Minor Changes
+
+- fix clamp
+
 ## 0.14.0
 
 ### Minor Changes

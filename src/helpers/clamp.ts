@@ -1,7 +1,16 @@
-export const clamp = (
-  number: number,
-  { min, max }: { min: number; max: number }
-) => {
+export const clamp = ({
+  number,
+  min,
+  max,
+}: {
+  number: number;
+  min: number;
+  max: number;
+}) => {
+  if (max < min && process.env.DEVERYTHING_WARNINGS) {
+    console.warn("clamp: max < min", { number, min, max });
+  }
+
   if (number < min) {
     return min;
   }
