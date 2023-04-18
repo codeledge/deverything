@@ -4,6 +4,8 @@ import { last } from "./last";
 describe("last", () => {
   test("no arg", async () => {
     expect(last()).toBeUndefined();
+    expect(last(undefined)).toBeUndefined();
+    expect(last()).toBeUndefined();
   });
 
   test("args", async () => {

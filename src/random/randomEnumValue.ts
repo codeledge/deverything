@@ -1,13 +1,11 @@
 import { randomArrayItem } from "./randomArrayItem";
 
-export type EnumValue = string | number;
+export const randomEnumValue = <T extends object>(
+  enumObject: T
+): T[keyof T] => {
+  let values: T[keyof T][] = [];
 
-export const randomEnumValue = (
-  enumObject: Record<string, EnumValue>
-): EnumValue => {
-  let values: EnumValue[] = [];
-
-  Object.values(enumObject).forEach((value) => {
+  Object.values(enumObject).forEach((value: T[keyof T]) => {
     if (value in enumObject && !values.includes(value))
       values.push(enumObject[value]);
   });

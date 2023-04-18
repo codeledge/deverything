@@ -1,6 +1,7 @@
 export * from "./array";
 export * from "./capitalize";
 export * from "./clamp";
+export * from "./cleanSpaces";
 export * from "./first";
 export * from "./getKeys";
 export * from "./last";
@@ -8,4 +9,7 @@ export * from "./merge";
 export * from "./moveToFirst";
 export * from "./moveToLast";
 export * from "./parseDate";
+export * from "./pretty";
+export * from "./sleep";
+export * from "./toggleArray";
 export * from "./truncate";

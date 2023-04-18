@@ -1,5 +1,11 @@
 # deverything
 
+## 0.16.0
+
+### Minor Changes
+
+- better types
+
 ## 0.15.0
 
 ### Minor Changes
