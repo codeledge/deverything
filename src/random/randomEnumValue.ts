@@ -1,3 +1,4 @@
+import { isKey } from "../validators/isKey";
 import { randomArrayItem } from "./randomArrayItem";
 
 export const randomEnumValue = <T extends object>(
@@ -5,9 +6,10 @@ export const randomEnumValue = <T extends object>(
 ): T[keyof T] => {
   let values: T[keyof T][] = [];
 
-  Object.values(enumObject).forEach((value: T[keyof T]) => {
-    if (value in enumObject && !values.includes(value))
-      values.push(enumObject[value]);
+  Object.values(enumObject).forEach((value) => {
+    // types are tricky here because the value is used also to check if exists as a key
+    if (isKey(value, enumObject) && !values.includes(value as T[keyof T]))
+      values.push(enumObject[value as keyof T]);
   });
 
   return randomArrayItem(values);

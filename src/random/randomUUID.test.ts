@@ -3,7 +3,7 @@ import { randomUUID } from "./randomUUID";
 
 describe("randomUUID", () => {
   test(`generates multiple valid ids`, async () => {
-    console.log(randomUUID());
     expect(randomUUID()).toBeTruthy();
+    expect(randomUUID()).not.toBe(randomUUID());
   });
 });
