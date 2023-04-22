@@ -1,5 +1,11 @@
 # deverything
 
+## 0.17.0
+
+### Minor Changes
+
+- added promiseWithTimeout() function with test and readme entry
+
 ## 0.16.0
 
 ### Minor Changes
