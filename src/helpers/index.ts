@@ -10,6 +10,7 @@ export * from "./moveToFirst";
 export * from "./moveToLast";
 export * from "./parseDate";
 export * from "./pretty";
+export * from "./promiseWithTimeout";
 export * from "./sleep";
 export * from "./toggleArray";
 export * from "./truncate";
