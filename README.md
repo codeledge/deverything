@@ -62,6 +62,7 @@ Contributions always welcome!
 - `moveToLast()` move array element to last
 - ⭐ `parseDate()` pass anything Date-Like, and get a JS Date back
 - `pretty()`
+- `promiseWithTimeout()`takes a promise, a timeoutMs, and an option error as arguments. Returns a new Promise that either resolves with the value of the input promise or rejects with the provided error or a default error message if the input promise does not resolve or reject within the specified timeoutMs.
 - `sleep()`
 - `toggleArray()`
 - `truncate()` truncate text, does not break emojis
