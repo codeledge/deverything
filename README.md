@@ -39,7 +39,6 @@ Contributions always welcome!
   - `isNegative()`
 - `isNumeric()`
 - ⭐ `isObject()` if it's a js plain Object
-- `isPastDate()`
 - `isPromise()`
 - `isPWA()`
 - `isReactElement()`
