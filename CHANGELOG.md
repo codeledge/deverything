@@ -1,5 +1,11 @@
 # deverything
 
+## 0.18.0
+
+### Minor Changes
+
+- add diffs
+
 ## 0.17.1
 
 ### Patch Changes
