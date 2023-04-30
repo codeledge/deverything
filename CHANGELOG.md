@@ -1,5 +1,11 @@
 # deverything
 
+## 0.19.0
+
+### Minor Changes
+
+- fixes and object firsts
+
 ## 0.18.0
 
 ### Minor Changes

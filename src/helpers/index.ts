@@ -5,6 +5,8 @@ export * from "./capitalize";
 export * from "./clamp";
 export * from "./cleanSpaces";
 export * from "./first";
+export * from "./firstKey";
+export * from "./firstValue";
 export * from "./getKeys";
 export * from "./last";
 export * from "./merge";

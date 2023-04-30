@@ -29,6 +29,10 @@ describe("isNumber", function () {
       expect(isNumber(12.44)).toBe(true);
       expect(isNumber(-1244)).toBe(true);
       expect(isNumber(2e12)).toBe(true);
+      expect(isNumber(0xff)).toBe(true);
+      expect(isNumber(0b11111111)).toBe(true);
+      expect(isNumber(0.255e3)).toBe(true);
+      expect(isNumber(Math.PI)).toBe(true);
     });
   });
 
