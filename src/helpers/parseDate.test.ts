@@ -1,5 +1,5 @@
 import { describe, expect, test } from "@jest/globals";
-import { MAX_DATE_MILLISECONDS } from "../constants";
+import { MAX_DATE_MILLISECONDS } from "../constants/time";
 import { parseDate } from "./parseDate";
 
 describe("parseDate", () => {
