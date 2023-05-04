@@ -1,8 +1,19 @@
-export const UK_ADDRESSES = [
+export type Address = {
+  city: string;
+  country: string;
+  state?: string;
+  street: string;
+  line2?: string;
+  number: string;
+  zip: string;
+};
+
+export const UK_ADDRESSES: Address[] = [
   {
     city: "London",
     country: "United Kingdom",
     street: "Baker Street",
+    line2: "Marylebone",
     number: "221B",
     zip: "NW1 6XE",
   },
@@ -15,24 +26,27 @@ export const UK_ADDRESSES = [
   },
 ];
 
-export const US_ADDRESSES = [
+export const US_ADDRESSES: Address[] = [
   {
     city: "New York",
     country: "United States",
+    state: "NY",
     street: "Broadway",
+    line2: "Manhattan",
     number: "42",
     zip: "10036",
   },
   {
     city: "Los Angeles",
     country: "United States",
+    state: "CA",
     street: "Hollywood Boulevard",
     number: "6801",
     zip: "90028",
   },
 ];
 
-export const EUROPE_ADDRESSES = [
+export const EUROPE_ADDRESSES: Address[] = [
   {
     city: "Paris",
     country: "France",
@@ -44,6 +58,7 @@ export const EUROPE_ADDRESSES = [
     city: "Berlin",
     country: "Germany",
     street: "Unter den Linden",
+    line2: "Mitte",
     number: "10117",
     zip: "10117",
   },
@@ -58,12 +73,13 @@ export const EUROPE_ADDRESSES = [
     city: "Madrid",
     country: "Spain",
     street: "Gran Vía",
+    line2: "Sol",
     number: "28013",
     zip: "28013",
   },
 ];
 
-export const MIXED_ADDRESSES = [
+export const MIXED_ADDRESSES: Address[] = [
   {
     city: "Moscow",
     country: "Russia",
@@ -75,6 +91,7 @@ export const MIXED_ADDRESSES = [
     city: "Tokyo",
     country: "Japan",
     street: "Shinjuku",
+    line2: "Shinjuku City",
     number: "160-0022",
     zip: "160-0022",
   },
@@ -90,7 +107,6 @@ export const MIXED_ADDRESSES = [
     country: "Egypt",
     street: "Al-Muizz",
     number: "11511",
-
     zip: "11511",
   },
   {
@@ -111,6 +127,7 @@ export const MIXED_ADDRESSES = [
     city: "Sydney",
     country: "Australia",
     street: "George",
+    line2: "Haymarket",
     number: "2000",
     zip: "2000",
   },
@@ -130,53 +147,9 @@ export const MIXED_ADDRESSES = [
   },
 ];
 
-export const ADDRESSES = [
+export const ADDRESSES: Address[] = [
   ...UK_ADDRESSES,
   ...US_ADDRESSES,
   ...EUROPE_ADDRESSES,
   ...MIXED_ADDRESSES,
-];
-
-export const CITIES = [
-  "London",
-  "Birmingham",
-  "New York",
-  "Los Angeles",
-  "Paris",
-  "Berlin",
-  "Rome",
-  "Madrid",
-  "Moscow",
-  "Tokyo",
-  "Beijing",
-  "Cairo",
-  "Buenos Aires",
-  "Cape Town",
-  "Sydney",
-  "Rio de Janeiro",
-  "Mexico City",
-];
-
-export const US_STATE_CODE_SAMPLES = [
-  "AL",
-  "AK",
-  "AZ",
-  "AR",
-  "CA",
-  "CO",
-  "CT",
-  "DE",
-  "FL",
-  "GA",
-  "HI",
-];
-
-export const ZIP_SAMPLES = [
-  "10036",
-  "90028",
-  "75001",
-  "10117",
-  "00186",
-  "28013",
-  "101000",
 ];
