@@ -1,5 +1,5 @@
 import { describe, expect, test } from "@jest/globals";
-import { isEmpty } from "./isEmpty";
+import { isEmpty, isEmptyObject } from "./isEmpty";
 
 describe("isEmpty", () => {
   test("mixed", async () => {
@@ -19,5 +19,9 @@ describe("isEmpty", () => {
   test("object", async () => {
     expect(isEmpty({})).toBeTruthy();
     expect(isEmpty({ key: "value" })).toBeFalsy();
+  });
+
+  test("isEmptyObject", async () => {
+    expect(isEmptyObject({})).toBeTruthy();
   });
 });

@@ -1,4 +1,4 @@
-import { Maybe } from "../types";
+import { Maybe, PlainObject } from "../types";
 import { isArray } from "./isArray";
 import { isObject } from "./isObject";
 import { isString } from "./isString";
@@ -19,6 +19,6 @@ export const isEmptyArray = (arg: any[]) => {
   return isArray(arg) && arg.length === 0;
 };
 
-export const isEmptyObject = (arg: Object) => {
+export const isEmptyObject = (arg: PlainObject) => {
   return isObject(arg) && Object.keys(arg).length === 0;
 };

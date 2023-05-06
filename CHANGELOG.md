@@ -1,5 +1,11 @@
 # deverything
 
+## 0.19.2
+
+### Patch Changes
+
+- clean spaces pro
+
 ## 0.19.1
 
 ### Patch Changes
