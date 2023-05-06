@@ -6,6 +6,7 @@ describe("invisibleWhitespaceRegex", () => {
     [" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "　"].forEach(
       (char) => {
         expect(invisibleWhitespaceRegex.test(char)).toBe(true);
+        invisibleWhitespaceRegex.lastIndex = 0;
       }
     );
   });

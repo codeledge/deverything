@@ -1,4 +1,4 @@
-export const controlCharRegex = /\p{C}/gu;
+export const controlCharRegex = new RegExp(/\p{C}/, "gu");
 
 // Charcodes:
 // [
