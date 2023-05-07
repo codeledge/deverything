@@ -79,6 +79,7 @@ These functions are optimized for low entropy random data generation useful for 
 - `randomAddress()`
 - `randomAlphaNumericCode()`
 - ⭐ `randomArrayItem()`
+- `randomBankAccount()`
 - `randomBool()`
 - ⭐ `randomCoords()`
   - `randomLat()`

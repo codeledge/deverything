@@ -1,6 +1,7 @@
 export * from "./randomAddress";
 export * from "./randomAlphaNumericCode";
 export * from "./randomArrayItem";
+export * from "./randomBankAccount";
 export * from "./randomBool";
 export * from "./randomCoords";
 export * from "./randomDate";

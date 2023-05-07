@@ -1,5 +1,11 @@
 # deverything
 
+## 0.20.0
+
+### Minor Changes
+
+- bank accounts
+
 ## 0.19.2
 
 ### Patch Changes
