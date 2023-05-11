@@ -62,6 +62,7 @@ Contributions always welcome!
 - `last()` get the last element of an array
 - ⭐ `merge()` deep merge objects
 - `moveToFirst()` move array element to first
+- `moveToIndex()` move array element to desired index
 - `moveToLast()` move array element to last
 - `objectDiff()`
 - ⭐ `parseDate()` pass anything Date-Like, and get a JS Date back
