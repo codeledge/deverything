@@ -3,10 +3,8 @@ export const moveToIndex = <T>(
   itemToMoveIndex: number,
   destinationIndex: number
 ): T[] => {
-  if (!items.length) return items;
-
-  if (itemToMoveIndex > items.length || destinationIndex > items.length)
-    throw new Error("index should be smaller then array length");
+  if (!items.length || itemToMoveIndex > items.length || destinationIndex > items.length)
+    return items;
 
   const newArray = [...items];
   const [removedItem] = newArray.splice(itemToMoveIndex, 1);

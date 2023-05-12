@@ -7,7 +7,7 @@ describe("moveToIndex", () => {
   });
 
   test("invalid index", () => {
-    expect(() => moveToIndex([1, 2, 3], 4, 0)).toThrow(Error);
+    expect(moveToIndex([1, 2, 3], 4, 0)).toStrictEqual([1, 2, 3]);
   });
 
   test("args", () => {
