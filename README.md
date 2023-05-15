@@ -28,7 +28,6 @@ Contributions always welcome!
 - `isJsDate()` if it's a **valid** javascript's Date
   - `isFutureDate()`
   - `isPastDate()`
-  - `isTimestamp()`
   - `isStringDate()` also checks if the string passed is a **valid** date
 - `isKey()` is a real key of an object
 - `isNumber()` if the arg is number, and also usable (no infinity)

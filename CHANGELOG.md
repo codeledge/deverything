@@ -1,5 +1,11 @@
 # deverything
 
+## 0.21.2
+
+### Patch Changes
+
+- missing exports
+
 ## 0.21.1
 
 ### Patch Changes
