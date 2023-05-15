@@ -1,5 +1,11 @@
 # deverything
 
+## 0.21.1
+
+### Patch Changes
+
+- fix pretty
+
 ## 0.21.0
 
 ### Minor Changes
