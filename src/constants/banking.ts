@@ -9,7 +9,7 @@ export const IBAN_SAMPLES = [
   "GB29NWBK60161331926819",
   "GE29NB0000000101904917",
 ];
-
+// testing branch code
 export const BIC_SWIFT_SAMPLES = [
   "ABNANL2A",
   "BKENGB2LXXX",
