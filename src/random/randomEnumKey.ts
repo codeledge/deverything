@@ -1,8 +1,9 @@
-import { isNumeric } from "../validators/isNumeric";
+import { enumKeys } from "../helpers/enumKeys";
+import { ObjectKey } from "../types/Object";
 import { randomArrayItem } from "./randomArrayItem";
 
-export const randomEnumKey = <T extends object>(enumObject: T): keyof T => {
-  return randomArrayItem(
-    Object.keys(enumObject).filter((key) => !isNumeric(key)) // key cannot be a number
-  ) as keyof T;
+export const randomEnumKey = <T extends object>(arg: T): ObjectKey<T> => {
+  const keys = enumKeys(arg);
+
+  return randomArrayItem(keys);
 };

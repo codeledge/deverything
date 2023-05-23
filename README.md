@@ -122,15 +122,16 @@ These functions are optimized for low entropy random data generation useful for 
 - `Coords`
 - `DateLike`
 - `Dimensions`
-- `Maybe`
-  - `MaybePromise`
-  - `MaybePromiseOrValue`
-  - `MaybePromiseOrValueArray`
+- `Maybe<>`
+  - `MaybePromise<>`
+  - `MaybePromiseOrValue<>`
+  - `MaybePromiseOrValueArray<>`
 - `NonUndefined`
-- `ObjectValues`
+- `ObjectKey<>`
+- `ObjectValue<>`
 - `PlainObject`
 - `Point`
-- `PrismaSelect`
+- `PrismaSelect<>`
 
 ## Development
 

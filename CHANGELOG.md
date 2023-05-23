@@ -1,5 +1,11 @@
 # deverything
 
+## 0.22.0
+
+### Minor Changes
+
+- enums
+
 ## 0.21.2
 
 ### Patch Changes
