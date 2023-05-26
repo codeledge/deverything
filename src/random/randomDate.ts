@@ -5,8 +5,10 @@ import {
 } from "../constants/time";
 
 export const randomDate = (start?: Date, end?: Date) => {
-  const startDate = start || new Date(-MILLISECONDS_IN_DECADE);
-  const endDate = end || new Date(MILLISECONDS_IN_DECADE);
+  const startDate =
+    start || new Date(new Date().getTime() - MILLISECONDS_IN_DECADE);
+  const endDate =
+    end || new Date(new Date().getTime() + MILLISECONDS_IN_DECADE);
   return new Date(
     startDate.getTime() +
       Math.random() * (endDate.getTime() - startDate.getTime())
