@@ -1,5 +1,11 @@
 # deverything
 
+## 0.22.2
+
+### Patch Changes
+
+- percentage and dates
+
 ## 0.22.1
 
 ### Patch Changes

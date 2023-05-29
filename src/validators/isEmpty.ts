@@ -4,11 +4,13 @@ import { isObject } from "./isObject";
 import { isString } from "./isString";
 
 export const isEmpty = (arg?: Maybe<any>) => {
+  if (arg === undefined) return true;
+  if (arg === null) return true;
+  if (isEmptyString(arg)) return true;
   if (isEmptyObject(arg)) return true;
   if (isEmptyArray(arg)) return true;
-  if (isEmptyString(arg)) return true;
 
-  return arg === undefined || arg === null;
+  return false;
 };
 
 export const isEmptyString = (arg: string) => {
