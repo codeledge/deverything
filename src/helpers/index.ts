@@ -17,6 +17,6 @@ export * from "./parseDate";
 export * from "./pretty";
 export * from "./promiseWithTimeout";
 export * from "./sleep";
-export * from "./toggleArray";
+export * from "./toggleArrayValue";
 export * from "./truncate";
 export * from "./uniqueValues";

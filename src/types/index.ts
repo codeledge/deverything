@@ -1,5 +1,3 @@
-export type NonUndefined<T> = T extends undefined ? never : T;
-
 export * from "./Coords";
 export * from "./Date";
 export * from "./Dimensions";
@@ -8,3 +6,4 @@ export * from "./Object";
 export * from "./PlainObject";
 export * from "./Point";
 export * from "./PrismaSelect";
+export * from "./NonUndefined";

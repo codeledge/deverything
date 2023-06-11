@@ -2,6 +2,7 @@ import { describe, expect, test } from "@jest/globals";
 import { MAX_DATE_MILLISECONDS } from "../constants/time";
 import { parseDate } from "./parseDate";
 
+// TODO: add string with millis 1678792327650170902
 describe("parseDate", () => {
   test("no arg", async () => {
     expect(parseDate()).toBeUndefined();

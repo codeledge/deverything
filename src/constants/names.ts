@@ -6,6 +6,11 @@ export const ANIMAL_NAMES = [
   "Koala",
   "Lion",
   "Penguin",
+  "Squirrel",
+  "Tiger",
+  "Turtle",
+  "Whale",
+  "Zebra",
 ];
 
 export const TOOL_NAMES = [
@@ -18,6 +23,9 @@ export const TOOL_NAMES = [
   "Saw",
   "Screwdriver",
   "Wrench",
+  "Blowtorch",
+  "Crowbar",
+  "Ladder",
 ];
 
 export const WESTERN_FIRST_NAMES = [
