@@ -1,5 +1,11 @@
 # deverything
 
+## 0.23.1
+
+### Patch Changes
+
+- add direct val
+
 ## 0.23.0
 
 ### Minor Changes

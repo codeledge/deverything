@@ -9,9 +9,16 @@ type AdvancedValidation = {
   endsWith?: string;
   startsWith?: string;
 };
-type WithEnvValidation = {
-  [env: string]: AdvancedValidation | SimpleValidationRule;
-};
+const advancedValidationKeys: (keyof AdvancedValidation)[] = [
+  "oneOf",
+  "endsWith",
+  "startsWith",
+];
+type WithEnvValidation =
+  | AdvancedValidation
+  | {
+      [env: string]: AdvancedValidation | SimpleValidationRule;
+    };
 type Config = {
   processEnvKey?: string;
 };
@@ -26,6 +33,9 @@ type Config = {
  *  ONLY_NON_PROD: ["test", "dev"],
  *  ONLY_PROD: {
  *   prod: true,
+ *  },
+ *  APP_ENV: {
+ *   oneOf: ["test", "dev", "prod"],
  *  },
  *  STRIPE_KEY: {
  *   prod: {
@@ -125,8 +135,19 @@ export const checkEnvVars = (
   Object.entries(envVarsMap).forEach(([envVarKey, rule]) => {
     const envVarValue = process.env[envVarKey];
     if (isObject(rule)) {
+      // Direct
+      Object.entries(rule).forEach(([advancedValidationKey, rule]) => {
+        if (advancedValidationKeys.includes(advancedValidationKey as any))
+          validateAdvanced({
+            envVarValue,
+            validation: { [advancedValidationKey]: rule },
+            envVarKey,
+          });
+      });
+
+      //With Env
       Object.entries(rule).forEach(([envName, rule]) => {
-        if (process.env[processEnvKey] === envName)
+        if (process.env[processEnvKey] === envName) {
           if (isObject(rule))
             validateAdvanced({
               envVarValue,
@@ -136,9 +157,10 @@ export const checkEnvVars = (
           else
             validateSimple({
               envVarValue,
-              rule,
+              rule: rule as SimpleValidationRule,
               envVarKey,
             });
+        }
       });
     } else if (isArray(rule)) {
       const envNames = rule;

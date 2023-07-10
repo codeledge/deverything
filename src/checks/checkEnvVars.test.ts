@@ -73,7 +73,15 @@ describe("checkEnvVars", function () {
         })
       ).not.toThrow();
     });
-    it("oneOf", function () {
+    it("direct oneOf", function () {
+      expect(() =>
+        checkEnvVars({
+          TEST_VAL: { oneOf: ["TEST_VAL", "TEST_VALDO"] },
+        })
+      ).not.toThrow();
+    });
+
+    it("env oneOf", function () {
       expect(() =>
         checkEnvVars({
           TEST_VAL: {
