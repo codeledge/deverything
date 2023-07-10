@@ -1,6 +1,6 @@
 {
   "name": "deverything",
-  "version": "0.22.3",
+  "version": "0.23.0",
   "description": "Everything you need for Dev",
   "main": "dist/index.js",
   "module": "./dist/index.mjs",
@@ -24,18 +24,19 @@
     "url": "git+https://github.com/codeledge/deverything.git"
   },
   "keywords": [
-    "random",
-    "generator",
-    "fake",
-    "testing",
-    "validators",
-    "helpers",
-    "toolkit",
-    "words",
-    "numbers",
+    "checks",
     "dates",
+    "fake",
+    "generator",
+    "helpers",
+    "numbers",
+    "random",
+    "testing",
+    "toolkit",
     "types",
-    "utils"
+    "utils",
+    "validators",
+    "words"
   ],
   "author": "ogroppo",
   "license": "MIT",

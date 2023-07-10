@@ -117,6 +117,12 @@ These functions are optimized for low entropy random data generation useful for 
 - `randomUUID()` lightweight uuid generation, passing UUID validation
 - `randomWord()`
 
+### Checks
+
+Checks are functions that throw an error, if the validation fails
+
+- ⭐ `checkEnvVars()` Make sure env vars are set per-environment
+
 ### TypeScript Helpers
 
 - `Coords`
