@@ -40,6 +40,7 @@ type Config = {
  *  STRIPE_KEY: {
  *   prod: {
  *    startsWith: "live_key_",
+ *    endsWith: "_end",
  *   },
  *  },
  * }, {
@@ -87,7 +88,7 @@ export const checkEnvVars = (
           );
         }
       } else {
-        //todo: error or no error, this is a soft check for now
+        errors.push(`${envVarKey} is missing`);
       }
     }
 
