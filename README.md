@@ -66,11 +66,12 @@ Contributions always welcome!
 - `objectDiff()`
 - ⭐ `parseDate()` pass anything Date-Like, and get a JS Date back
 - `pretty()` stringify anything, without breaking on circular dependencies
-- `promiseWithTimeout()`takes a promise, a timeoutMs, and an option error as arguments. Returns a new Promise that either resolves with the value of the input promise or rejects with the provided error or a default error message if the input promise does not resolve or reject within the specified timeoutMs.
-- `sleep()`
+- `promiseWithTimeout()` takes a promise, a timeoutMs, and an option error as arguments. Returns a new Promise that either resolves with the value of the input promise or rejects with the provided error or a default error message if the input promise does not resolve or reject within the specified timeoutMs.
+- `sleep()` promise-based sleep
+- `shuffle()` shuffles elements in an array
 - `toggleArrayValue()` remove/add value in array
 - `truncate()` truncate text, does not break emojis
-- `uniqueValues()`
+- `uniqueValues()` gets unique values in an array
 
 ### Random data generators
 

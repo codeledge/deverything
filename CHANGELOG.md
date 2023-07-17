@@ -1,5 +1,11 @@
 # deverything
 
+## 0.24.0
+
+### Minor Changes
+
+- shuffle
+
 ## 0.23.1
 
 ### Patch Changes
