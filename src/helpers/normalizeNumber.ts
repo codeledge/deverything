@@ -1,11 +1,14 @@
 export const normalizeNumber = ({
-  val,
+  value,
   max,
   min,
 }: {
-  val: number;
+  value: number;
   max: number;
   min: number;
 }) => {
-  return (val - min) / (max - min);
+  if (value >= max) return 1;
+  if (value <= min) return 0;
+
+  return (value - min) / (max - min);
 };
