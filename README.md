@@ -63,6 +63,7 @@ Contributions always welcome!
 - `moveToFirst()` move array element to first
 - `moveToIndex()` move array element to desired index
 - `moveToLast()` move array element to last
+- `normalizeNumber()` normalizes between 0 and 1
 - `objectDiff()`
 - ⭐ `parseDate()` pass anything Date-Like, and get a JS Date back
 - `pretty()` stringify anything, without breaking on circular dependencies

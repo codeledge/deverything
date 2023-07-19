@@ -1,5 +1,11 @@
 # deverything
 
+## 0.25.0
+
+### Minor Changes
+
+- normalize
+
 ## 0.24.0
 
 ### Minor Changes

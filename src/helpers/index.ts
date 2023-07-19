@@ -12,6 +12,7 @@ export * from "./last";
 export * from "./merge";
 export * from "./moveToFirst";
 export * from "./moveToLast";
+export * from "./normalizeNumber";
 export * from "./objectDiff";
 export * from "./parseDate";
 export * from "./pretty";
