@@ -1,6 +1,7 @@
 export type Address = {
   city: string;
   country: string;
+  countryCode: string;
   state?: string;
   street: string;
   line2?: string;
@@ -12,16 +13,18 @@ export const UK_ADDRESSES: Address[] = [
   {
     city: "London",
     country: "United Kingdom",
-    street: "Baker Street",
+    countryCode: "GB",
     line2: "Marylebone",
     number: "221B",
+    street: "Baker Street",
     zip: "NW1 6XE",
   },
   {
     city: "Birmingham",
     country: "United Kingdom",
-    street: "Bordesley Street",
+    countryCode: "GB",
     number: "B1 1AA",
+    street: "Bordesley Street",
     zip: "B1 1AA",
   },
 ];
@@ -30,6 +33,7 @@ export const US_ADDRESSES: Address[] = [
   {
     city: "New York",
     country: "United States",
+    countryCode: "US",
     state: "NY",
     street: "Broadway",
     line2: "Manhattan",
@@ -39,6 +43,7 @@ export const US_ADDRESSES: Address[] = [
   {
     city: "Los Angeles",
     country: "United States",
+    countryCode: "US",
     state: "CA",
     street: "Hollywood Boulevard",
     number: "6801",
@@ -50,6 +55,7 @@ export const EUROPE_ADDRESSES: Address[] = [
   {
     city: "Paris",
     country: "France",
+    countryCode: "FR",
     street: "Rue de Rivoli",
     number: "75001",
     zip: "75001",
@@ -57,6 +63,7 @@ export const EUROPE_ADDRESSES: Address[] = [
   {
     city: "Berlin",
     country: "Germany",
+    countryCode: "DE",
     street: "Unter den Linden",
     line2: "Mitte",
     number: "10117",
@@ -65,6 +72,7 @@ export const EUROPE_ADDRESSES: Address[] = [
   {
     city: "Rome",
     country: "Italy",
+    countryCode: "IT",
     street: "Via del Corso",
     number: "00186",
     zip: "00186",
@@ -72,6 +80,7 @@ export const EUROPE_ADDRESSES: Address[] = [
   {
     city: "Madrid",
     country: "Spain",
+    countryCode: "ES",
     street: "Gran Vía",
     line2: "Sol",
     number: "28013",
@@ -83,6 +92,7 @@ export const MIXED_ADDRESSES: Address[] = [
   {
     city: "Moscow",
     country: "Russia",
+    countryCode: "RU",
     street: "Tverskaya",
     number: "101000",
     zip: "101000",
@@ -90,6 +100,7 @@ export const MIXED_ADDRESSES: Address[] = [
   {
     city: "Tokyo",
     country: "Japan",
+    countryCode: "JP",
     street: "Shinjuku",
     line2: "Shinjuku City",
     number: "160-0022",
@@ -98,6 +109,7 @@ export const MIXED_ADDRESSES: Address[] = [
   {
     city: "Beijing",
     country: "China",
+    countryCode: "CN",
     street: "Changan",
     number: "100005",
     zip: "100005",
@@ -105,6 +117,7 @@ export const MIXED_ADDRESSES: Address[] = [
   {
     city: "Cairo",
     country: "Egypt",
+    countryCode: "EG",
     street: "Al-Muizz",
     number: "11511",
     zip: "11511",
@@ -112,6 +125,7 @@ export const MIXED_ADDRESSES: Address[] = [
   {
     city: "Buenos Aires",
     country: "Argentina",
+    countryCode: "AR",
     street: "Avenida de Mayo",
     number: "1002",
     zip: "C1006AAQ",
@@ -119,6 +133,7 @@ export const MIXED_ADDRESSES: Address[] = [
   {
     city: "Cape Town",
     country: "South Africa",
+    countryCode: "ZA",
     street: "Adderley",
     number: "7700",
     zip: "7700",
@@ -126,6 +141,7 @@ export const MIXED_ADDRESSES: Address[] = [
   {
     city: "Sydney",
     country: "Australia",
+    countryCode: "AU",
     street: "George",
     line2: "Haymarket",
     number: "2000",
@@ -134,6 +150,7 @@ export const MIXED_ADDRESSES: Address[] = [
   {
     city: "Rio de Janeiro",
     country: "Brazil",
+    countryCode: "BR",
     street: "Av. Presidente Vargas",
     number: "20021-000",
     zip: "20021-000",
@@ -141,6 +158,7 @@ export const MIXED_ADDRESSES: Address[] = [
   {
     city: "Mexico City",
     country: "Mexico",
+    countryCode: "MX",
     street: "Paseo de la Reforma",
     number: "06500",
     zip: "06500",

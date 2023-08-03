@@ -1,5 +1,11 @@
 # deverything
 
+## 0.25.2
+
+### Patch Changes
+
+- addresses
+
 ## 0.25.1
 
 ### Patch Changes
