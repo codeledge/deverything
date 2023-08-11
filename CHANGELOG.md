@@ -1,5 +1,11 @@
 # deverything
 
+## 0.26.0
+
+### Minor Changes
+
+- serializeObject
+
 ## 0.25.2
 
 ### Patch Changes
