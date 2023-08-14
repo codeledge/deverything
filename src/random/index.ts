@@ -25,4 +25,3 @@ export * from "./randomParagraph";
 export * from "./randomPassword";
 export * from "./randomUUID";
 export * from "./randomWord";
-export * from "./randomPlayingCard";
