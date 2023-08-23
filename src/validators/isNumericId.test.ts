@@ -7,7 +7,7 @@ describe("isNumericId", () => {
     expect(isNumericId("99999999")).toBe(true);
   });
 
-  test("args", async () => {
+  test("false", async () => {
     expect(isNumericId("0")).toBe(false);
     expect(isNumericId("2e3")).toBe(false);
     expect(isNumericId("-0")).toBe(false);
@@ -17,5 +17,6 @@ describe("isNumericId", () => {
     expect(isNumericId(" 1 ")).toBe(false);
     expect(isNumericId(" 1 1")).toBe(false);
     expect(isNumericId("1.1")).toBe(false);
+    expect(isNumericId("8/28/2023")).toBe(false);
   });
 });
