@@ -30,6 +30,7 @@ Contributions always welcome!
   - `isPastDate()`
   - `isStringDate()` also checks if the string passed is a **valid** date
 - `isKey()` is a real key of an object
+- `isLastIndex()` is the index is the last item of array
 - `isNumber()` if the arg is number, and also usable (no infinity)
   - `isInt()`
   - `isEven()`
@@ -47,6 +48,13 @@ Contributions always welcome!
 - `isString()`
 - `isURL()`
 - `isUUID()`
+
+### Math
+
+- `average()`
+- `max()`
+- `min()`
+- `sum()`
 
 ### Helpers
 

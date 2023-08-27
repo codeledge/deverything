@@ -8,6 +8,7 @@ export * from "./isFunction";
 export * from "./isFutureDate";
 export * from "./isJsDate";
 export * from "./isKey";
+export * from "./isLastIndex";
 export * from "./isNumber";
 export * from "./isNumeric";
 export * from "./isNumericId";
