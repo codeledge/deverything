@@ -1,5 +1,11 @@
 # deverything
 
+## 0.27.1
+
+### Patch Changes
+
+- guard bool
+
 ## 0.27.0
 
 ### Minor Changes
