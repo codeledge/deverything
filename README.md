@@ -91,6 +91,7 @@ These functions are optimized for low entropy random data generation useful for 
 - ⭐ `randomArrayItem()`
 - `randomBankAccount()`
 - `randomBool()`
+- `randomCompany()`
 - ⭐ `randomCoords()`
   - `randomLat()`
   - `randomLng()`
@@ -124,6 +125,7 @@ These functions are optimized for low entropy random data generation useful for 
 - `randomNumericId()` autoincremental process-unique id
 - `randomParagraph()`
 - `randomPassword()`
+- `randomPhoneNumber()`
 - `randomUUID()` lightweight uuid generation, passing UUID validation
 - `randomWord()`
 

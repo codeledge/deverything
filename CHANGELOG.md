@@ -1,5 +1,11 @@
 # deverything
 
+## 0.28.0
+
+### Minor Changes
+
+- company and phone number
+
 ## 0.27.1
 
 ### Patch Changes

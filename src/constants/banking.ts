@@ -53,12 +53,6 @@ export const BANK_ACCOUNT_NUMBER_SAMPLES = [
   "72796383",
 ];
 
-export const VAT_REGISTRATION_NUMBER_SAMPLES = [
-  "IE1234567T",
-  "GB123456789",
-  "XI123456789",
-];
-
 export const SORT_CODE_SAMPLES = ["100000", "902127", "800551"];
 
 export const SSN_SAMPLES = ["235-55-7216", "372-37-3976", "414-99-6488"];
@@ -71,20 +65,11 @@ export const BANK_NAME_SAMPLES = [
   "Goldman Sachs Group Inc.",
 ];
 
-export const COMPANY_NAME_SAMPLES = [
-  "Acme Inc.",
-  "Globex Ltd.",
-  "Aurora LLC",
-  "Serenity Systems",
-  "Vulcan Ventures",
-  "Umbrella Corp.",
-];
-
 export type BankAccount = {
   abaNumber?: string;
   accountHolderName: string;
-  accountHolderType?: "company" | "individual" | "other";
-  accountNumber?: string;
+  accountHolderType: "company" | "individual" | "other";
+  accountNumber: string;
   accountType?: "checking" | "savings";
   bankName?: string;
   bsbNumber?: string;
@@ -107,6 +92,7 @@ export const UK_BANK_ACCOUNT_SAMPLES: BankAccount[] = [
     bicSwift: "BARCGB22",
     iban: "GB51BARC20039534871253",
     sortCode: "12-34-56",
+    accountHolderType: "individual",
   },
   {
     accountHolderName: "Jane Evans",
@@ -116,6 +102,7 @@ export const UK_BANK_ACCOUNT_SAMPLES: BankAccount[] = [
     bicSwift: "HSBCGB2L",
     iban: "GB82BARC20031847813531",
     sortCode: "65-43-21",
+    accountHolderType: "company",
   },
 ];
 
@@ -128,6 +115,7 @@ export const US_BANK_ACCOUNT_SAMPLES: BankAccount[] = [
       "Bank of America Corporate Center, 100 North Tryon Street, Charlotte, NC 28255, USA",
     bankName: "Bank of America Corporation",
     routingNumber: "111000025",
+    accountHolderType: "individual",
   },
   {
     accountHolderName: "Sally T King",
@@ -136,6 +124,7 @@ export const US_BANK_ACCOUNT_SAMPLES: BankAccount[] = [
     bankAddress: "383 Madison Avenue, New York, NY 10179, USA",
     bankName: "JPMorgan Chase & Co.",
     routingNumber: "021000021",
+    accountHolderType: "company",
   },
 ];
 
@@ -149,6 +138,7 @@ export const AU_BANK_ACCOUNT_SAMPLES: BankAccount[] = [
     bankName: "Commonwealth Bank of Australia",
     bicSwift: "CTBAAU2S",
     bsbNumber: "062-000",
+    accountHolderType: "individual",
   },
   {
     accountHolderName: "Jennifer Ann Brown",
@@ -158,6 +148,7 @@ export const AU_BANK_ACCOUNT_SAMPLES: BankAccount[] = [
     bankName: "Westpac Banking Corporation",
     bicSwift: "WPACAU2S",
     bsbNumber: "032-001",
+    accountHolderType: "company",
   },
 ];
 
@@ -171,6 +162,7 @@ export const CA_BANK_ACCOUNT_SAMPLES: BankAccount[] = [
     bankName: "Royal Bank of Canada",
     branchTransitNumber: "45678",
     institutionNumber: "123",
+    accountHolderType: "individual",
   },
   {
     accountHolderName: "Olivia Orange",
@@ -181,6 +173,7 @@ export const CA_BANK_ACCOUNT_SAMPLES: BankAccount[] = [
     bankName: "Toronto-Dominion Bank",
     branchTransitNumber: "65432",
     institutionNumber: "987",
+    accountHolderType: "company",
   },
 ];
 
