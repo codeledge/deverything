@@ -1,5 +1,11 @@
 # deverything
 
+## 0.28.1
+
+### Patch Changes
+
+- fix random pw
+
 ## 0.28.0
 
 ### Minor Changes
