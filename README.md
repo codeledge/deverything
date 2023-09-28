@@ -28,9 +28,9 @@ Contributions always welcome!
 - `isJsDate()` if it's a **valid** javascript's Date
   - `isFutureDate()`
   - `isPastDate()`
-  - `isTimestamp()`
   - `isStringDate()` also checks if the string passed is a **valid** date
 - `isKey()` is a real key of an object
+- `isLastIndex()` is the index is the last item of array
 - `isNumber()` if the arg is number, and also usable (no infinity)
   - `isInt()`
   - `isEven()`
@@ -43,14 +43,24 @@ Contributions always welcome!
 - `isPWA()`
 - `isReactElement()`
 - `isRegExp()`
+- ⭐ `isSame()` Compare if dates, functions, arrays, objects or anything else are the same
 - `isServer()` if you are on the server
 - `isString()`
 - `isURL()`
 - `isUUID()`
 
+### Math
+
+- `average()`
+- `max()`
+- `min()`
+- `sum()`
+
 ### Helpers
 
 - `array()` create an arbitrary array based on a function
+  - `arrayDiff()`
+  - `arrayIntersection()`
 - `capitalize()` word => Word
 - `cleanSpaces()` trims and turns double spaces into single space
 - `clamp()` clamp number in a range
@@ -59,12 +69,18 @@ Contributions always welcome!
 - `last()` get the last element of an array
 - ⭐ `merge()` deep merge objects
 - `moveToFirst()` move array element to first
+- `moveToIndex()` move array element to desired index
 - `moveToLast()` move array element to last
+- `normalizeNumber()` normalizes between 0 and 1
+- `objectDiff()`
 - ⭐ `parseDate()` pass anything Date-Like, and get a JS Date back
-- `pretty()`
-- `sleep()`
-- `toggleArray()`
+- `pretty()` stringify anything, without breaking on circular dependencies
+- `promiseWithTimeout()` takes a promise, a timeoutMs, and an option error as arguments. Returns a new Promise that either resolves with the value of the input promise or rejects with the provided error or a default error message if the input promise does not resolve or reject within the specified timeoutMs.
+- `sleep()` promise-based sleep
+- `shuffle()` shuffles elements in an array
+- `toggleArrayValue()` remove/add value in array
 - `truncate()` truncate text, does not break emojis
+- `uniqueValues()` gets unique values in an array
 
 ### Random data generators
 
@@ -73,7 +89,9 @@ These functions are optimized for low entropy random data generation useful for 
 - `randomAddress()`
 - `randomAlphaNumericCode()`
 - ⭐ `randomArrayItem()`
+- `randomBankAccount()`
 - `randomBool()`
+- `randomCompany()`
 - ⭐ `randomCoords()`
   - `randomLat()`
   - `randomLng()`
@@ -107,23 +125,31 @@ These functions are optimized for low entropy random data generation useful for 
 - `randomNumericId()` autoincremental process-unique id
 - `randomParagraph()`
 - `randomPassword()`
+- `randomPhoneNumber()`
 - `randomUUID()` lightweight uuid generation, passing UUID validation
 - `randomWord()`
+
+### Checks
+
+Checks are functions that throw an error, if the validation fails
+
+- ⭐ `checkEnvVars()` Make sure env vars are set per-environment
 
 ### TypeScript Helpers
 
 - `Coords`
 - `DateLike`
 - `Dimensions`
-- `Maybe`
-  - `MaybePromise`
-  - `MaybePromiseOrValue`
-  - `MaybePromiseOrValueArray`
+- `Maybe<>`
+  - `MaybePromise<>`
+  - `MaybePromiseOrValue<>`
+  - `MaybePromiseOrValueArray<>`
 - `NonUndefined`
-- `ObjectValues`
+- `ObjectKey<>`
+- `ObjectValue<>`
 - `PlainObject`
 - `Point`
-- `PrismaSelect`
+- `PrismaSelect<>`
 
 ## Development
 

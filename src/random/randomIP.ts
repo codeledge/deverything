@@ -1,11 +1,6 @@
+import { array } from "../helpers/array";
 import { randomInt } from "./randomInt";
 
 export const randomIP = () => {
-  return `${randomInt(0, 255).toString()}.${randomInt(
-    0,
-    255
-  ).toString()}.${randomInt(0, 255).toString()}.${randomInt(
-    0,
-    255
-  ).toString()}`;
+  return array(4, () => randomInt(0, 255).toString()).join(".");
 };

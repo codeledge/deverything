@@ -2,7 +2,10 @@ import { PlainObject } from "../types";
 import { isKey, isObject } from "../validators";
 import { getKeys } from "./getKeys";
 
-// Simple merge function that merges two objects, arrays get overwritten, no options
+/**
+ * @description Simple merge function that merges two objects, arrays get overwritten, no options
+ *
+ */
 export const merge = (target: PlainObject, source: PlainObject) => {
   const merger: PlainObject = {};
   getKeys(target).forEach((key) => {

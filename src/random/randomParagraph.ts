@@ -1,7 +1,9 @@
 import { array } from "../helpers";
 import { capitalize } from "../helpers/capitalize";
+import { randomInt } from "./randomInt";
 import { randomWord } from "./randomWord";
 
+// TODO: add a comma in the middle of the sentence
 /**
  * Generates a random paragraph of text.
  * @param maxCharacters The maximum number of characters. The paragraph will be truncated to this length if it exceeds it. Default is 200.
@@ -16,7 +18,7 @@ export const randomParagraph = ({
   words?: number;
 } = {}) => {
   return capitalize(
-    array(words, () => randomWord())
+    array(randomInt(words, 16), () => randomWord())
       .join(" ")
       .slice(0, maxCharacters - 1) + "."
   );
