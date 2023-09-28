@@ -1,5 +1,11 @@
 # deverything
 
+## 0.17.0
+
+### Minor Changes
+
+- Updated randomParagraph to have the maxCharacters and words variables
+
 ## 0.16.0
 
 ### Minor Changes
