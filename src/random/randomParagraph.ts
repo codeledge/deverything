@@ -12,13 +12,15 @@ import { randomWord } from "./randomWord";
  */
 export const randomParagraph = ({
   maxCharacters = 200,
-  words = 8,
+  minWords = 8,
+  maxWords = 16,
 }: {
   maxCharacters?: number;
-  words?: number;
+  minWords?: number;
+  maxWords?: number;
 } = {}) => {
   return capitalize(
-    array(randomInt(words, 16), () => randomWord())
+    array(randomInt(minWords, maxWords), () => randomWord())
       .join(" ")
       .slice(0, maxCharacters - 1) + "."
   );
