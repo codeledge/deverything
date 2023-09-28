@@ -130,13 +130,7 @@ These functions are optimized for low entropy random data generation useful for 
 After changes, run
 
 ```
-pnpm changeset
-```
-
-then
-
-```
-pnpm changeset version
+pnpm bump
 ```
 
 To bump the version. CI will take care of publishing the package when merged.
