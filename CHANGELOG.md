@@ -1,5 +1,11 @@
 # deverything
 
+## 0.29.0
+
+### Minor Changes
+
+- Added maxCharacters and number of words as variables for randomParagraph. Updated readme to suggest running pnpm bump.
+
 ## 0.28.1
 
 ### Patch Changes

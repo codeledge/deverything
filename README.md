@@ -156,13 +156,7 @@ Checks are functions that throw an error, if the validation fails
 After changes, run
 
 ```
-pnpm changeset
-```
-
-then
-
-```
-pnpm changeset version
+pnpm bump
 ```
 
 To bump the version. CI will take care of publishing the package when merged.
