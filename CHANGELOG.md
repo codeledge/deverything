@@ -1,5 +1,11 @@
 # deverything
 
+## 0.30.0
+
+### Minor Changes
+
+- isNotEmptyString
+
 ## 0.29.0
 
 ### Minor Changes

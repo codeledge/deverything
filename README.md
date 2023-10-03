@@ -31,6 +31,7 @@ Contributions always welcome!
   - `isStringDate()` also checks if the string passed is a **valid** date
 - `isKey()` is a real key of an object
 - `isLastIndex()` is the index is the last item of array
+- `isNotEmptyString()` must have some text, checks for spaces-only
 - `isNumber()` if the arg is number, and also usable (no infinity)
   - `isInt()`
   - `isEven()`

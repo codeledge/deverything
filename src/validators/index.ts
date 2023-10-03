@@ -15,6 +15,7 @@ export * from "./isNumericId";
 export * from "./isObject";
 export * from "./isPastDate";
 export * from "./isPromise";
+export * from "./isNotEmptyString";
 export * from "./isPWA";
 export * from "./isReactElement";
 export * from "./isRegExp";
