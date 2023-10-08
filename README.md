@@ -52,10 +52,11 @@ Contributions always welcome!
 
 ### Math
 
-- `average()`
-- `max()`
-- `min()`
-- `sum()`
+- `average()` numbers of an array
+- `max()` numbers of an array
+- `min()` numbers of an array
+- `multiply()` numbers of an array
+- `sum()` numbers an array
 
 ### Helpers
 

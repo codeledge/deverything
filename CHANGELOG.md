@@ -1,5 +1,11 @@
 # deverything
 
+## 0.31.0
+
+### Minor Changes
+
+- multiply
+
 ## 0.30.0
 
 ### Minor Changes
