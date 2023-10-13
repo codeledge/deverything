@@ -19,6 +19,7 @@ export * from "./omit";
 export * from "./parseDate";
 export * from "./pretty";
 export * from "./promiseWithTimeout";
+export * from "./scrambleText";
 export * from "./serialize";
 export * from "./shuffle";
 export * from "./sleep";

@@ -1,5 +1,11 @@
 # deverything
 
+## 0.32.0
+
+### Minor Changes
+
+- scrambler
+
 ## 0.31.0
 
 ### Minor Changes
