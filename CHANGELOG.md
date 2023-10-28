@@ -1,5 +1,11 @@
 # deverything
 
+## 0.33.0
+
+### Minor Changes
+
+- urls search params
+
 ## 0.32.0
 
 ### Minor Changes

@@ -1,12 +1,9 @@
 import { Maybe } from "../types/Maybe";
+import { getUrlSearchParams } from "./getUrlSearchParams";
 
-export const getUrlSearchParam = (urlString: Maybe<string>, param: string) => {
-  if (!urlString) return undefined;
-  try {
-    const url = new URL(urlString);
-    const value = url.searchParams.get(param);
-    return value ?? undefined;
-  } catch (_e) {
-    return undefined;
-  }
+export const getUrlSearchParam = (
+  urlString: Maybe<string>,
+  param: string
+): string | undefined => {
+  return getUrlSearchParams(urlString)[param];
 };

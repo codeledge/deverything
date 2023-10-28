@@ -27,7 +27,7 @@ describe("getUrlSearchParam", () => {
       "1"
     );
     expect(getUrlSearchParam("http://pippo.com?param=2&param=1", "param")).toBe(
-      "2"
+      "1"
     );
     expect(
       getUrlSearchParam("http://localhost/?param=1&param2=2", "param2")

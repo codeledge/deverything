@@ -6,6 +6,9 @@ describe("isURL", function () {
     expect(isURL("a@a.a")).toBe(false);
     expect(isURL("")).toBe(false);
     expect(isURL(" ")).toBe(false);
+    expect(isURL("/localhost")).toBe(false);
+    expect(isURL("file://../localhost")).toBe(false);
+    expect(isURL("../localhost")).toBe(false);
     expect(isURL("//localhost")).toBe(false);
   });
 
