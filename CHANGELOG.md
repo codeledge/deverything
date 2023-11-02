@@ -1,5 +1,11 @@
 # deverything
 
+## 0.34.0
+
+### Minor Changes
+
+- formatters
+
 ## 0.33.0
 
 ### Minor Changes

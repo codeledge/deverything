@@ -36,8 +36,8 @@ Contributions always welcome!
   - `isInt()`
   - `isEven()`
   - `isOdd()`
-  - `isPositive()`
-  - `isNegative()`
+  - `isPositiveInt()`
+  - `isNegativeInt()`
 - `isNumeric()`
 - ⭐ `isObject()` if it's a js plain Object
 - `isPromise()`
@@ -89,6 +89,10 @@ Contributions always welcome!
 - `toggleArrayValue()` remove/add value in array
 - `truncate()` truncate text, does not break emojis
 - `uniqueValues()` gets unique values in an array
+
+### Formatters
+
+- `formatNumber()` 1000 => "1,000" or "1K"
 
 ### Random data generators
 

@@ -1,7 +1,7 @@
-import { isPositive } from "../validators/isNumber";
+import { isPositiveInt } from "../validators/isNumber";
 
 export const truncate = (arg: string, limit: number, ellipsis = "...") => {
-  if (!isPositive(limit)) return arg;
+  if (!isPositiveInt(limit)) return arg;
 
   const argArray = [...arg]; // convert string to array, emoji and unicode safe
 

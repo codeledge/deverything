@@ -2,10 +2,10 @@ import { expect, it, describe } from "@jest/globals";
 import {
   isEven,
   isInt,
-  isNegative,
+  isNegativeInt,
   isNumber,
   isOdd,
-  isPositive,
+  isPositiveInt,
 } from "./isNumber";
 
 describe("isNumber", function () {
@@ -78,24 +78,24 @@ describe("isNumber", function () {
     });
   });
 
-  describe("isPositive", function () {
+  describe("isPositiveInt", function () {
     it("checks correctly", function () {
-      expect(isPositive(1)).toBe(true);
-      expect(isPositive(0)).toBe(false);
-      expect(isPositive(Infinity)).toBe(false);
-      expect(isPositive(-0)).toBe(false);
-      expect(isPositive("0" as unknown as number)).toBe(false);
+      expect(isPositiveInt(1)).toBe(true);
+      expect(isPositiveInt(0)).toBe(false);
+      expect(isPositiveInt(Infinity)).toBe(false);
+      expect(isPositiveInt(-0)).toBe(false);
+      expect(isPositiveInt("0" as unknown as number)).toBe(false);
     });
   });
 
-  describe("isNegative", function () {
+  describe("isNegativeInt", function () {
     it("checks correctly", function () {
-      expect(isNegative(1)).toBe(false);
-      expect(isNegative(-1e12)).toBe(true);
-      expect(isNegative(0)).toBe(false);
-      expect(isNegative(Infinity)).toBe(false);
-      expect(isNegative(-0)).toBe(false);
-      expect(isNegative("0" as unknown as number)).toBe(false);
+      expect(isNegativeInt(1)).toBe(false);
+      expect(isNegativeInt(-1e12)).toBe(true);
+      expect(isNegativeInt(0)).toBe(false);
+      expect(isNegativeInt(Infinity)).toBe(false);
+      expect(isNegativeInt(-0)).toBe(false);
+      expect(isNegativeInt("0" as unknown as number)).toBe(false);
     });
   });
 });

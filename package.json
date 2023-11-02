@@ -1,6 +1,6 @@
 {
   "name": "deverything",
-  "version": "0.33.0",
+  "version": "0.34.0",
   "description": "Everything you need for Dev",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -29,6 +29,7 @@
     "fake",
     "generator",
     "helpers",
+    "formatters",
     "numbers",
     "random",
     "testing",
