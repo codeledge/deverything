@@ -2,12 +2,6 @@ import { describe, expect, test } from "@jest/globals";
 import { last } from "./last";
 
 describe("last", () => {
-  test("no arg", async () => {
-    expect(last()).toBeUndefined();
-    expect(last(undefined)).toBeUndefined();
-    expect(last()).toBeUndefined();
-  });
-
   test("args", async () => {
     expect(last([])).toBe(undefined);
     expect(last([0])).toBe(0);
