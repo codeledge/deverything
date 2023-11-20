@@ -1,4 +1,5 @@
 import { emojiRegex } from "../regex/emojiRegex";
+
 export const isStringOfEmojis = (string: string) => {
   // Check if the string is empty or contains only whitespace
   if (!string.trim()) {
