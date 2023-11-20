@@ -1,5 +1,11 @@
 # deverything
 
+## 0.36.0
+
+### Minor Changes
+
+- non-uniform distro
+
 ## 0.35.0
 
 ### Minor Changes

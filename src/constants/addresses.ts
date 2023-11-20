@@ -1,4 +1,5 @@
-export type Address = {
+// Prefix with Random to avoid name collision with the Address type from other libs
+export type RandomAddress = {
   city: string;
   country: string;
   countryCode: string;
@@ -9,7 +10,7 @@ export type Address = {
   zip: string;
 };
 
-export const UK_ADDRESSES: Address[] = [
+export const UK_ADDRESSES: RandomAddress[] = [
   {
     city: "London",
     country: "United Kingdom",
@@ -29,7 +30,7 @@ export const UK_ADDRESSES: Address[] = [
   },
 ];
 
-export const US_ADDRESSES: Address[] = [
+export const US_ADDRESSES: RandomAddress[] = [
   {
     city: "New York",
     country: "United States",
@@ -51,7 +52,7 @@ export const US_ADDRESSES: Address[] = [
   },
 ];
 
-export const EUROPE_ADDRESSES: Address[] = [
+export const EUROPE_ADDRESSES: RandomAddress[] = [
   {
     city: "Paris",
     country: "France",
@@ -88,7 +89,7 @@ export const EUROPE_ADDRESSES: Address[] = [
   },
 ];
 
-export const MIXED_ADDRESSES: Address[] = [
+export const MIXED_ADDRESSES: RandomAddress[] = [
   {
     city: "Moscow",
     country: "Russia",
@@ -165,7 +166,7 @@ export const MIXED_ADDRESSES: Address[] = [
   },
 ];
 
-export const ADDRESSES: Address[] = [
+export const ADDRESSES: RandomAddress[] = [
   ...UK_ADDRESSES,
   ...US_ADDRESSES,
   ...EUROPE_ADDRESSES,

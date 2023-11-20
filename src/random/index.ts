@@ -25,6 +25,7 @@ export * from "./randomNumericCode";
 export * from "./randomNumericId";
 export * from "./randomParagraph";
 export * from "./randomPassword";
+export * from "./randomPath";
 export * from "./randomPhoneNumber";
 export * from "./randomString";
 export * from "./randomUUID";

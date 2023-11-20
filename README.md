@@ -73,7 +73,10 @@ Contributions always welcome!
 - `getKeys()` get the keys of an object, includes symbols
 - `getUrlSearchParam()`
 - `getUrlSearchParams()`
+- `incrementalId()` autoincremental SQL-like, process-unique numeric id
+- `keysLength()`
 - `last()` get the last element of an array
+- `lastIndex()` get the last index of an array
 - ⭐ `merge()` deep merge objects
 - `moveToFirst()` move array element to first
 - `moveToIndex()` move array element to desired index
@@ -101,7 +104,7 @@ These functions are optimized for low entropy random data generation useful for 
 
 - `randomAddress()`
 - `randomAlphaNumericCode()`
-- ⭐ `randomArrayItem()`
+- ⭐ `randomArrayItem()` now supporting non-uniform distribution
 - `randomBankAccount()`
 - `randomBool()`
 - `randomChar()`
@@ -136,9 +139,9 @@ These functions are optimized for low entropy random data generation useful for 
   - `randomLastName()`
   - `randomFullName()`
 - `randomNumericCode()`
-- `randomNumericId()` autoincremental process-unique id
 - `randomParagraph()`
 - `randomPassword()`
+- `randomPath()` /path/to/something
 - `randomPhoneNumber()`
 - `randomString()`
 - `randomUUID()` lightweight uuid generation, passing UUID validation
