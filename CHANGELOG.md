@@ -1,5 +1,11 @@
 # deverything
 
+## 0.35.0
+
+### Minor Changes
+
+- added isStringOfEmojis() validator
+
 ## 0.34.0
 
 ### Minor Changes

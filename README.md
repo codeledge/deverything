@@ -47,6 +47,7 @@ Contributions always welcome!
 - ⭐ `isSame()` Compare if dates, functions, arrays, objects or anything else are the same
 - `isServer()` if you are on the server
 - `isString()`
+- `isStringOfEmojis()` if the string contains only emojis
 - `isURL()`
 - `isUUID()`
 
