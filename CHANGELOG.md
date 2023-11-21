@@ -1,5 +1,11 @@
 # deverything
 
+## 0.37.0
+
+### Minor Changes
+
+- map generics
+
 ## 0.36.0
 
 ### Minor Changes

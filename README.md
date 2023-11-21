@@ -153,7 +153,7 @@ Checks are functions that throw an error, if the validation fails
 
 - ⭐ `checkEnvVars()` Make sure env vars are set per-environment
 
-### TypeScript Helpers
+### TypeScript Helpers & Generics
 
 - `Coords`
 - `DateLike`
@@ -164,10 +164,19 @@ Checks are functions that throw an error, if the validation fails
   - `MaybePromiseOrValueArray<>`
 - `NonUndefined`
 - `ObjectKey<>`
+- `ObjectKeys<>`
 - `ObjectValue<>`
-- `PlainObject`
+- `ObjectValues<>`
+- `ObjectEntries<>`
+- ⭐ `PlainObject` use this instead of `Record<,>` or `extends object`, also makes sure it's not an array
 - `Point`
 - `PrismaSelect<>`
+- `HashMap<>`
+- `HashMapKey`
+- `NumberMap`
+- `StringMap`
+- `BoolMap`
+- `TrueMap`
 
 ## Development
 
