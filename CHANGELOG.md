@@ -1,5 +1,11 @@
 # deverything
 
+## 0.38.0
+
+### Minor Changes
+
+- add string to unicode formatter
+
 ## 0.37.0
 
 ### Minor Changes
