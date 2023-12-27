@@ -24,6 +24,7 @@ export * from "./isServer";
 export * from "./isSpacedString";
 export * from "./isString";
 export * from "./isStringDate";
+export * from "./isStringOfEmojis";
 export * from "./isURL";
 export * from "./isUUID";
 export * from "./isValue";
