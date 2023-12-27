@@ -97,6 +97,7 @@ Contributions always welcome!
 ### Formatters
 
 - `formatNumber()` 1000 => "1,000" or "1K"
+- `stringToUnicode()` "hello" => "\u0068\u0065\u006c\u006c\u006f"
 
 ### Random data generators
 
