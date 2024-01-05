@@ -7,13 +7,11 @@ import { randomArrayItem } from "./randomArrayItem";
  * @returns a unique social-like handle
  * @example "john.doe15"
  */
-export const randomHandle = ({ suffix }: { suffix?: string } = {}) =>
+export const randomHandle = ({ suffix }: { suffix?: string } = {}): string =>
   (
     randomArrayItem(WESTERN_FIRST_NAMES) +
     "." +
     randomArrayItem(WESTERN_LAST_NAMES)
   ).toLowerCase() +
   incrementalId() + // process-unique
-  suffix
-    ? suffix
-    : "";
+  (suffix ? suffix : "");

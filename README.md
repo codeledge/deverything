@@ -86,9 +86,10 @@ Contributions always welcome!
 - `pretty()` stringify anything, without breaking on circular dependencies
 - `promiseWithTimeout()` takes a promise, a timeoutMs, and an option error as arguments. Returns a new Promise that either resolves with the value of the input promise or rejects with the provided error or a default error message if the input promise does not resolve or reject within the specified timeoutMs.
 - `scrambleText()` replace alpha chars with random chars
-- `sleep()` promise-based sleep
+- `seriesAll()` executes promises in series, and returns all results
 - `setUrlSearchParams()`
 - `shuffle()` shuffles elements in an array
+- `sleep()` promise-based sleep
 - `toggleArrayValue()` remove/add value in array
 - `truncate()` truncate text, does not break emojis
 - `uniqueValues()` gets unique values in an array

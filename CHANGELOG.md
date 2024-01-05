@@ -1,5 +1,11 @@
 # deverything
 
+## 0.40.0
+
+### Minor Changes
+
+- fix handle bug
+
 ## 0.39.0
 
 ### Minor Changes
