@@ -1,10 +1,19 @@
 import { WESTERN_FIRST_NAMES, WESTERN_LAST_NAMES } from "../constants/names";
+import { incrementalId } from "../helpers/incrementalId";
 import { randomArrayItem } from "./randomArrayItem";
-import { randomNumericId } from "./randomNumericId";
 
-export const randomHandle = () =>
+/**
+ *
+ * @returns a unique social-like handle
+ * @example "john.doe15"
+ */
+export const randomHandle = ({ suffix }: { suffix?: string } = {}) =>
   (
     randomArrayItem(WESTERN_FIRST_NAMES) +
     "." +
     randomArrayItem(WESTERN_LAST_NAMES)
-  ).toLowerCase() + randomNumericId(); // use randomNumericId too keep handles process-unique
+  ).toLowerCase() +
+  incrementalId() + // process-unique
+  suffix
+    ? suffix
+    : "";

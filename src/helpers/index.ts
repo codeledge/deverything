@@ -26,6 +26,7 @@ export * from "./pretty";
 export * from "./promiseWithTimeout";
 export * from "./scrambleText";
 export * from "./serialize";
+export * from "./seriesAll";
 export * from "./setUrlSearchParams";
 export * from "./shuffle";
 export * from "./sleep";

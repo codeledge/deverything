@@ -1,5 +1,11 @@
 # deverything
 
+## 0.39.0
+
+### Minor Changes
+
+- seriesAll and handle suffix
+
 ## 0.38.0
 
 ### Minor Changes

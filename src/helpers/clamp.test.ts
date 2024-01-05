@@ -3,6 +3,7 @@ import { clamp } from "./clamp";
 
 describe("clamp", () => {
   test("args", async () => {
+    expect(clamp({ number: 2, min: 1, max: 3 })).toBe(2);
     expect(clamp({ number: 0, min: 0, max: 0 })).toBe(0);
     expect(clamp({ number: -10, min: 0, max: 0 })).toBe(0);
     expect(clamp({ number: 10, min: 0, max: 0 })).toBe(0);
