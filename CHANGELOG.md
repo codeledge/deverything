@@ -6,6 +6,12 @@
 
 - seriesAll and handle suffix
 
+## 0.38.1
+
+### Patch Changes
+
+- removed isStringOfEmojis
+
 ## 0.38.0
 
 ### Minor Changes
