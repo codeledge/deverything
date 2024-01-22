@@ -22,6 +22,8 @@ export * from "./normalizeNumber";
 export * from "./objectDiff";
 export * from "./omit";
 export * from "./parseDate";
+export * from "./pickObjectKeys";
+export * from "./pickObjectValues";
 export * from "./pretty";
 export * from "./promiseWithTimeout";
 export * from "./scrambleText";
