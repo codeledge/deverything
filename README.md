@@ -98,6 +98,7 @@ Contributions always welcome!
 
 - `formatNumber()` 1000 => "1,000" or "1K"
 - `stringToUnicode()` "hello" => "\u0068\u0065\u006c\u006c\u006f"
+- `stringToCSSUnicode()` "hello" => "\000068\000065\00006c\00006c\00006f" use this for CSS
 
 ### Random data generators
 
