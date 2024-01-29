@@ -28,4 +28,17 @@ describe("formatNumber", () => {
     const formattedValue = formatNumber(123456.123456);
     expect(formattedValue).toEqual("123,456.123");
   });
+
+  test("Percentage no digits", () => {
+    const formattedValue = formatNumber(0.123456, { percentage: true });
+    expect(formattedValue).toEqual("12%");
+  });
+
+  test("Percentage digits", () => {
+    const formattedValue = formatNumber(0.123456, {
+      percentage: true,
+      maxDigits: 2,
+    });
+    expect(formattedValue).toEqual("12.35%");
+  });
 });

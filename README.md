@@ -66,6 +66,8 @@ Contributions always welcome!
 - `capitalize()` word => Word
 - `cleanSpaces()` trims and turns double spaces into single space
 - `clamp()` clamp number in a range
+- `enumKeys()` enum FRUIT { APPLE, PEAR } => ["APPLE", "PEAR"]
+- `enumValues()` enum FRUIT { APPLE = 1, PEAR = 3 } => [1, 3]
 - `first()` get the first element of an array
 - `firstKey()`
 - `firstValue()`
@@ -96,7 +98,7 @@ Contributions always welcome!
 
 ### Formatters
 
-- `formatNumber()` 1000 => "1,000" or "1K"
+- `formatNumber()` 1000 => "1,000" or "1K" or 0.112 => "11.2%"
 - `stringToUnicode()` "hello" => "\u0068\u0065\u006c\u006c\u006f"
 - `stringToCSSUnicode()` "hello" => "\000068\000065\00006c\00006c\00006f" use this for CSS
 

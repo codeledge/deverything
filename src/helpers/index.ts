@@ -5,6 +5,8 @@ export * from "./capitalize";
 export * from "./clamp";
 export * from "./cleanSpaces";
 export * from "./dir";
+export * from "./enumKeys";
+export * from "./enumValues";
 export * from "./first";
 export * from "./firstKey";
 export * from "./firstValue";
