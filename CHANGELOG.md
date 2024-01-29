@@ -1,5 +1,11 @@
 # deverything
 
+## 0.42.2
+
+### Patch Changes
+
+- percentage small fix
+
 ## 0.42.1
 
 ### Patch Changes

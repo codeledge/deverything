@@ -29,16 +29,41 @@ describe("formatNumber", () => {
     expect(formattedValue).toEqual("123,456.123");
   });
 
-  test("Percentage no digits", () => {
-    const formattedValue = formatNumber(0.123456, { percentage: true });
-    expect(formattedValue).toEqual("12%");
-  });
-
-  test("Percentage digits", () => {
-    const formattedValue = formatNumber(0.123456, {
-      percentage: true,
-      maxDigits: 2,
+  describe("Percentage", () => {
+    test("no digits", () => {
+      const formattedValue = formatNumber(0.123456, { percentage: true });
+      expect(formattedValue).toEqual("12%");
     });
-    expect(formattedValue).toEqual("12.35%");
+
+    test("digits", () => {
+      const formattedValue = formatNumber(0.123456, {
+        percentage: true,
+        maxDigits: 2,
+      });
+      expect(formattedValue).toEqual("12.35%");
+    });
+
+    test(" digits roundung", () => {
+      const formattedValue = formatNumber(0.9999, {
+        percentage: true,
+      });
+      expect(formattedValue).toEqual("100%");
+    });
+
+    test("undefined stuff", () => {
+      expect(formatNumber(0 / 0, { percentage: true })).toBe(`0%`);
+      expect(formatNumber(0 / 10, { percentage: true })).toBe(`0%`);
+      expect(formatNumber(10 / 0, { percentage: true })).toBe(`0%`);
+    });
+
+    test("defined stuff", () => {
+      expect(formatNumber(1 / 10, { percentage: true, maxDigits: 2 })).toBe(
+        `10.00%`
+      );
+      expect(formatNumber(2 / 11, { percentage: true, maxDigits: 1 })).toBe(
+        `18.2%`
+      );
+      expect(formatNumber(2 / 12, { percentage: true })).toBe(`17%`);
+    });
   });
 });
