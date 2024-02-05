@@ -1,5 +1,11 @@
 # deverything
 
+## 0.43.0
+
+### Minor Changes
+
+- add 3rd party helpers (no deps)
+
 ## 0.42.2
 
 ### Patch Changes

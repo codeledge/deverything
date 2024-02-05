@@ -1,3 +1,4 @@
-import { PlainObject } from "../types";
+import { ObjectValue, PlainObject } from "../types";
 
-export const firstValue = (arg: PlainObject): any => Object.values(arg)[0];
+export const firstValue = <T extends PlainObject>(arg: T): ObjectValue<T> =>
+  Object.values(arg)[0];

@@ -1,12 +1,14 @@
-export const getKeys = (arg: object) => {
-  return Object.keys(arg).concat(getEnumerableOwnPropertySymbols(arg));
+import { ObjectKeys, PlainObject } from "../types";
+
+export const getKeys = <T extends PlainObject>(obj: T): ObjectKeys<T> => {
+  return Object.keys(obj).concat(getEnumerableOwnPropertySymbols(obj));
 };
 
 // Object.keys does not return enumerable symbols
-export const getEnumerableOwnPropertySymbols = (arg: object): any[] => {
+export const getEnumerableOwnPropertySymbols = (obj: object): any[] => {
   return Object.getOwnPropertySymbols
-    ? Object.getOwnPropertySymbols(arg).filter(function (symbol) {
-        return Object.propertyIsEnumerable.call(arg, symbol);
+    ? Object.getOwnPropertySymbols(obj).filter(function (symbol) {
+        return Object.propertyIsEnumerable.call(obj, symbol);
       })
     : [];
 };

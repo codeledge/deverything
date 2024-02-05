@@ -1,4 +1,5 @@
-import { PlainObject } from "../types";
+import { ObjectKey, PlainObject } from "../types";
 import { getKeys } from "./getKeys";
 
-export const firstKey = (arg: PlainObject): string => getKeys(arg)[0];
+export const firstKey = <T extends PlainObject>(arg: T): ObjectKey<T> =>
+  getKeys(arg)[0];
