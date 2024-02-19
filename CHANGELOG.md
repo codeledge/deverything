@@ -1,5 +1,11 @@
 # deverything
 
+## 0.44.0
+
+### Minor Changes
+
+- randomObject isFile and many more
+
 ## 0.43.0
 
 ### Minor Changes

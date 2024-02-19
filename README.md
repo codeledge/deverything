@@ -18,12 +18,14 @@ Contributions always welcome!
 - `isArray()`
 - `isBoolean()`
 - `isBrowser()` to detect if you are on the browser
+- `isBuffer()`
 - `isClient()` to detect if you are ont the browser/client
 - `isEmail()` this is a relaxed check, use your own validation if you need to be strict
 - ⭐ `isEmpty()` to check for empty object, empty array, empty string, null or undefined
   - `isEmptyString()` trims the string and checks if something is left
   - `isEmptyArray()`
   - `isEmptyObject()`
+- `isFile()`
 - `isFunction()`
 - `isJsDate()` if it's a **valid** javascript's Date
   - `isFutureDate()`
@@ -98,6 +100,7 @@ Contributions always welcome!
 
 ### Formatters
 
+- `formatCamelCase()`
 - `formatNumber()` 1000 => "1,000" or "1K" or 0.112 => "11.2%"
 - `stringToUnicode()` "hello" => "\u0068\u0065\u006c\u006c\u006f"
 - `stringToCSSUnicode()` "hello" => "\000068\000065\00006c\00006c\00006f" use this for CSS
@@ -127,6 +130,7 @@ These functions are optimized for low entropy random data generation useful for 
 - `randomEnumValue()` enum FRUIT { APPLE = 1, PEAR = 3 } => 3
 - `randomFile()`
 - `randomFloat()`
+- `randomObject()`
 - `randomHandle()` useful for social identifiers, or slugs
 - `randomHexColor()`
 - `randomHexValue()`
@@ -149,6 +153,7 @@ These functions are optimized for low entropy random data generation useful for 
 - `randomPhoneNumber()`
 - `randomString()`
 - `randomUUID()` lightweight uuid generation, passing UUID validation
+- `randomValue()`
 - `randomWord()`
 
 ### Checks
@@ -167,20 +172,21 @@ Checks are functions that throw an error, if the validation fails
   - `MaybePromiseOrValue<>`
   - `MaybePromiseOrValueArray<>`
 - `NonUndefined`
+- `Key`
 - `ObjectKey<>`
 - `ObjectKeys<>`
 - `ObjectValue<>`
 - `ObjectValues<>`
+- `ObjectEntry<>`
 - `ObjectEntries<>`
 - ⭐ `PlainObject` use this instead of `Record<,>` or `extends object`, also makes sure it's not an array
 - `Point`
-- `PrismaSelect<>`
 - `HashMap<>`
-- `HashMapKey`
-- `NumberMap`
-- `StringMap`
-- `BoolMap`
-- `TrueMap`
+  - `BoolMap`
+  - `NumberMap`
+  - `StringMap`
+  - `TrueMap`
+- `VoidFn`
 
 ## Development
 

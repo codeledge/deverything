@@ -1,3 +1,4 @@
+export * from "./formatCamelCase";
 export * from "./formatNumber";
-export * from "./stringToUnicode";
 export * from "./stringToCSSUnicode";
+export * from "./stringToUnicode";

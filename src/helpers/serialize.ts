@@ -1,7 +1,7 @@
 import { PlainObject } from "../types";
 
 /**
- * Serialize plain object to a deterministic string,
+ * Serialize shallow object to a deterministic string,
  * for nested objects use [json-stable-stringify](https://www.npmjs.com/package/json-stable-stringify)
  *
  * @example
