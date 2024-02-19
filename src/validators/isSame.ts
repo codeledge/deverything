@@ -1,4 +1,3 @@
-import { getKeys } from "../helpers";
 import { isArray } from "./isArray";
 import { isFunction } from "./isFunction";
 import { isObject } from "./isObject";
@@ -14,8 +13,8 @@ export const isSame = (value1: any, value2: any): boolean => {
   }
 
   if (isObject(value1) && isObject(value2)) {
-    const keys = getKeys(value1);
-    if (keys.length !== getKeys(value2).length) return false;
+    const keys = Object.keys(value1);
+    if (keys.length !== Object.keys(value2).length) return false;
 
     return keys.every((key: string) => {
       return isSame(value1[key], value2[key]);

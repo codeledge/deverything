@@ -152,7 +152,7 @@ export const checkEnvVars = (
           if (isObject(rule))
             validateAdvanced({
               envVarValue,
-              validation: rule,
+              validation: rule as AdvancedValidation,
               envVarKey,
             });
           else
@@ -172,7 +172,7 @@ export const checkEnvVars = (
     } else {
       validateSimple({
         envVarValue,
-        rule,
+        rule: rule as SimpleValidationRule,
         envVarKey,
       });
     }
