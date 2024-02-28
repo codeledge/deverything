@@ -4,11 +4,11 @@
 
 The promise:
 
-- **✅ 1 package**: say goodbye to lodash, faker, this and that and the other package.
+- **✅ 1 package**: say goodbye to lodash, faker, and the other package you don't recall the name of.
 - **⭕ 0 dependencies**: keep it simple and lightweight.
-- **🏆 Pick the best**: the code is minimal and uses the best current practices and is optimized for max performance.
+- **🏆 Pick the best**: the code is minimal and uses the best practices for max performance.
 - **👪🏼 Typescript**: use it, support it and export it.
-- **🌊 Intuitive**: favour always the most intuitive API and common usage, _never_ throw errors unless asked.
+- **🌊 Intuitive**: favour always the most intuitive API and common usage, _never_ throw error unless asked to.
 - **🙈 Semantic**: use simple function names that are easy to remember, no complicated options.
 
 Contributions always welcome!
@@ -19,7 +19,7 @@ Contributions always welcome!
 - `isBoolean()`
 - `isBrowser()` to detect if you are on the browser
 - `isBuffer()`
-- `isClient()` to detect if you are ont the browser/client
+- `isClient()` same as isBrowser
 - `isEmail()` this is a relaxed check, use your own validation if you need to be strict
 - ⭐ `isEmpty()` to check for empty object, empty array, empty string, null or undefined
   - `isEmptyString()` trims the string and checks if something is left
@@ -40,7 +40,7 @@ Contributions always welcome!
   - `isOdd()`
   - `isPositiveInt()`
   - `isNegativeInt()`
-- `isNumeric()`
+- `isNumeric()` if string is representing a number
 - ⭐ `isObject()` if it's a js plain Object
 - `isPromise()`
 - `isPWA()`
@@ -54,11 +54,12 @@ Contributions always welcome!
 
 ### Math
 
-- `average()` numbers of an array
-- `max()` numbers of an array
-- `min()` numbers of an array
-- `multiply()` numbers of an array
-- `sum()` numbers an array
+- `average()`
+- `max()`
+- `min()`
+- `multiply()`
+- `percentageChange()`
+- `sum()`
 
 ### Helpers
 
@@ -73,7 +74,6 @@ Contributions always welcome!
 - `first()` get the first element of an array
 - `firstKey()`
 - `firstValue()`
-- `getKeys()` get the keys of an object, includes symbols
 - `getUrlSearchParam()`
 - `getUrlSearchParams()`
 - `incrementalId()` autoincremental SQL-like, process-unique numeric id
@@ -102,8 +102,10 @@ Contributions always welcome!
 
 - `formatCamelCase()`
 - `formatNumber()` 1000 => "1,000" or "1K" or 0.112 => "11.2%"
-- `stringToUnicode()` "hello" => "\u0068\u0065\u006c\u006c\u006f"
+- `formatPercentage()` 0.11 => "11%"
+- `formatProgress()` => "[2/10]"
 - `stringToCSSUnicode()` "hello" => "\000068\000065\00006c\00006c\00006f" use this for CSS
+- `stringToUnicode()` "hello" => "\u0068\u0065\u006c\u006c\u006f"
 
 ### Random data generators
 
