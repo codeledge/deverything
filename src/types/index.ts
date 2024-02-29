@@ -9,3 +9,4 @@ export * from "./Object";
 export * from "./PlainObject";
 export * from "./Point";
 export * from "./PrismaSelect";
+export * from "./WithDatey";

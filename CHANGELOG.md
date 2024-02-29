@@ -1,5 +1,11 @@
 # deverything
 
+## 0.46.0
+
+### Minor Changes
+
+- WithDatey
+
 ## 0.45.0
 
 ### Minor Changes
