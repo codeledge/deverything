@@ -1,5 +1,11 @@
 # deverything
 
+## 0.46.1
+
+### Patch Changes
+
+- serialized
+
 ## 0.46.0
 
 ### Minor Changes
