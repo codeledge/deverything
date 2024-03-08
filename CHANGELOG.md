@@ -1,5 +1,11 @@
 # deverything
 
+## 0.47.0
+
+### Minor Changes
+
+- get cookie
+
 ## 0.46.1
 
 ### Patch Changes

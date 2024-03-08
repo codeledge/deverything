@@ -14,6 +14,7 @@ export * from "./enumValues";
 export * from "./first";
 export * from "./firstKey";
 export * from "./firstValue";
+export * from "./getCookieByName";
 export * from "./getKeys";
 export * from "./getUrlSearchParam";
 export * from "./getUrlSearchParams";
