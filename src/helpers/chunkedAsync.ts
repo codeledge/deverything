@@ -10,13 +10,13 @@ import { chunkArray } from "./chunkArray";
 export const chunkedAsync = async <T>(
   array: T[],
   chunkSize: number,
-  fn: (chunk: T[]) => Promise<any>
+  fn: (chunk: T[], chunkIndex: number, chunks: T[][]) => Promise<any>
 ): Promise<any[]> => {
   const chunkResults: any[] = [];
 
   const chunks = chunkArray(array, chunkSize);
-  for (const chunk of chunks) {
-    const chunkResult = await fn(chunk);
+  for (const [chunkIndex, chunk] of chunks.entries()) {
+    const chunkResult = await fn(chunk, chunkIndex, chunks);
     chunkResults.push(chunkResult);
   }
 

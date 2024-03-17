@@ -1,5 +1,11 @@
 # deverything
 
+## 0.47.1
+
+### Patch Changes
+
+- chunkedAsync impr
+
 ## 0.47.0
 
 ### Minor Changes
