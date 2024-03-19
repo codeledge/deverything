@@ -1,5 +1,11 @@
 # deverything
 
+## 0.47.2
+
+### Patch Changes
+
+- added position to truncate
+
 ## 0.47.1
 
 ### Patch Changes
