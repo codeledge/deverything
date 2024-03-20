@@ -9,23 +9,46 @@ describe("truncate", () => {
     expect(truncate("", 0)).toBe("");
     expect(truncate("", 1)).toBe("");
     expect(truncate("1", 1)).toBe("1");
-    expect(truncate("1 ", 1)).toBe("1...");
-    expect(truncate("😴😄😃⛔🎠🚓🚇", 4)).toBe("😴😄😃⛔...");
+    expect(truncate("12345", 4)).toBe("1...");
+    expect(truncate("😴😄😃⛔🎠🚓🚇", 4)).toBe("😴...");
   });
-
   test("truncation at the start", () => {
-    expect(truncate("Hello, world!", 5, "...", "start")).toBe("...orld!");
-    expect(truncate("😴😄😃⛔🎠🚓🚇", 3, "...", "start")).toBe("...🎠🚓🚇");
+    expect(
+      truncate("Hello, world!", 8, {
+        position: "start",
+      })
+    ).toBe("...orld!");
+    expect(
+      truncate("😴😄😃⛔🎠🚓🚇", 6, {
+        position: "start",
+      })
+    ).toBe("...🎠🚓🚇");
   });
 
   test("truncation in the middle", () => {
-    expect(truncate("Hello, world!", 8, "...", "middle")).toBe("Hell...rld!");
-    expect(truncate("😴😄😃⛔🎠🚓🚇", 5, "...", "middle")).toBe("😴😄...🚓🚇");
+    expect(
+      truncate("Hello, world!", 11, {
+        position: "middle",
+      })
+    ).toBe("Hell...rld!");
+    expect(
+      truncate("😴😄😃⛔🎠🚓🚇", 5, {
+        position: "middle",
+      })
+    ).toBe("😴...🚇");
   });
 
   test("truncation at the end", () => {
-    expect(truncate("Hello, world!", 10, "...", "end")).toBe("Hello, wor...");
-    expect(truncate("😴😄😃⛔🎠🚓🚇", 5, "...", "end")).toBe("😴😄😃⛔🎠...");
+    expect(
+      truncate("Hello, world!", 10, {
+        position: "end",
+      })
+    ).toBe("Hello, ...");
+    expect(
+      truncate("😴😄😃⛔🎠🚓🚇", 5, {
+        position: "end",
+      })
+    ).toBe("😴😄...");
   });
 
   test("custom ellipsis", () => {
@@ -33,6 +56,11 @@ describe("truncate", () => {
       "https://very-long-url.com/path?query=string&anotherParam=value";
     const expectedUrl =
       "https://very-long-url.com[...]string&anotherParam=value";
-    expect(truncate(originalUrl, 50, "[...]", "middle")).toBe(expectedUrl);
+    expect(
+      truncate(originalUrl, 55, {
+        ellipsis: "[...]",
+        position: "middle",
+      })
+    ).toBe(expectedUrl);
   });
 });
