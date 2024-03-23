@@ -15,42 +15,42 @@ Contributions always welcome!
 
 ### Validators
 
-- `isArray()`
-- `isBoolean()`
+- `isArray()` 
+- `isBoolean()` 
 - `isBrowser()` to detect if you are on the browser
-- `isBuffer()`
+- `isBuffer()` if it's a buffer
 - `isClient()` same as isBrowser
 - `isEmail()` this is a relaxed check, use your own validation if you need to be strict
 - ⭐ `isEmpty()` to check for empty object, empty array, empty string, null or undefined
   - `isEmptyString()` trims the string and checks if something is left
-  - `isEmptyArray()`
-  - `isEmptyObject()`
-- `isFile()`
-- `isFunction()`
+  - `isEmptyArray()` checks if the array has no items
+  - `isEmptyObject()` checks if the object has no keys
+- `isFile()` if it's a file
+- `isFunction()` 
 - `isJsDate()` if it's a **valid** javascript's Date
-  - `isFutureDate()`
-  - `isPastDate()`
+  - `isFutureDate()` 
+  - `isPastDate()` 
   - `isStringDate()` also checks if the string passed is a **valid** date
 - `isKey()` is a real key of an object
 - `isLastIndex()` is the index is the last item of array
 - `isNotEmptyString()` must have some text, checks for spaces-only
 - `isNumber()` if the arg is number, and also usable (no infinity)
-  - `isInt()`
-  - `isEven()`
-  - `isOdd()`
-  - `isPositiveInt()`
-  - `isNegativeInt()`
+  - `isInt()` if it's an integer
+  - `isEven()` 
+  - `isOdd()` 
+  - `isPositiveInt()` 
+  - `isNegativeInt()` 
 - `isNumeric()` if string is representing a number
 - ⭐ `isObject()` if it's a js plain Object
-- `isPromise()`
-- `isPWA()`
-- `isReactElement()`
-- `isRegExp()`
+- `isPromise()` if it's a promise
+- `isPWA()` to detect if you are on a PWA
+- `isReactElement()` if it's a valid React Element
+- `isRegExp()` if it's a valid RegExp
 - ⭐ `isSame()` Compare if dates, functions, arrays, objects or anything else are the same
 - `isServer()` if you are on the server
 - `isString()`
-- `isURL()`
-- `isUUID()`
+- `isURL()` 
+- `isUUID()` if it's a valid UUID
 
 ### Math
 
@@ -64,20 +64,20 @@ Contributions always welcome!
 ### Helpers
 
 - `array()` create an arbitrary array based on a function
-  - `arrayDiff()`
-  - `arrayIntersection()`
+  - `arrayDiff()` get the difference of two arrays
+  - `arrayIntersection()` get the intersection of two arrays
 - `capitalize()` word => Word
 - `cleanSpaces()` trims and turns double spaces into single space
 - `clamp()` clamp number in a range
 - `enumKeys()` enum FRUIT { APPLE, PEAR } => ["APPLE", "PEAR"]
 - `enumValues()` enum FRUIT { APPLE = 1, PEAR = 3 } => [1, 3]
 - `first()` get the first element of an array
-- `firstKey()`
-- `firstValue()`
-- `getUrlSearchParam()`
-- `getUrlSearchParams()`
+- `firstKey()` get the first key of an object
+- `firstValue()` get the first value of an object
+- `getUrlSearchParam()` get URL search param
+- `getUrlSearchParams()` get URL search params
 - `incrementalId()` autoincremental SQL-like, process-unique numeric id
-- `keysLength()`
+- `keysLength()` get the length of keys in an object
 - `last()` get the last element of an array
 - `lastIndex()` get the last index of an array
 - ⭐ `merge()` deep merge objects
@@ -85,13 +85,14 @@ Contributions always welcome!
 - `moveToIndex()` move array element to desired index
 - `moveToLast()` move array element to last
 - `normalizeNumber()` normalizes between 0 and 1
-- `objectDiff()`
+- `objectDiff()` get the difference between two objects
 - ⭐ `parseDate()` pass anything Date-Like, and get a JS Date back
 - `pretty()` stringify anything, without breaking on circular dependencies
 - `promiseWithTimeout()` takes a promise, a timeoutMs, and an option error as arguments. Returns a new Promise that either resolves with the value of the input promise or rejects with the provided error or a default error message if the input promise does not resolve or reject within the specified timeoutMs.
 - `scrambleText()` replace alpha chars with random chars
 - `seriesAll()` executes promises in series, and returns all results
-- `setUrlSearchParams()`
+- `setObjectPath()` set a value in an object by path
+- `setUrlSearchParams()` set URL search params
 - `shuffle()` shuffles elements in an array
 - `sleep()` promise-based sleep
 - `toggleArrayValue()` remove/add value in array
@@ -111,7 +112,7 @@ Contributions always welcome!
 
 These functions are optimized for low entropy random data generation useful for Unit Testing, Storybook, Pass real validations, Reverse hacking, Penetration testing...
 
-- `randomAddress()`
+- `randomAddress()` 
 - `randomAlphaNumericCode()`
 - ⭐ `randomArrayItem()` now supporting non-uniform distribution
 - `randomBankAccount()`

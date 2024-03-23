@@ -1,5 +1,11 @@
 # deverything
 
+## 0.48.0
+
+### Minor Changes
+
+- setObjectPath
+
 ## 0.47.2
 
 ### Patch Changes
