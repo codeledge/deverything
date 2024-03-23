@@ -38,4 +38,17 @@ describe("setObjectPath", () => {
       },
     });
   });
+
+  test("merges nested", () => {
+    const obj = { a: { b: { c: 1 } } };
+    setObjectPath(obj, "a.b.g", { lol: 1 });
+    expect(obj).toEqual({
+      a: {
+        b: {
+          c: 1,
+          g: { lol: 1 },
+        },
+      },
+    });
+  });
 });
