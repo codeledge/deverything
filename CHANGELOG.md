@@ -1,5 +1,11 @@
 # deverything
 
+## 0.48.1
+
+### Patch Changes
+
+- better way to set default values for the truncate function
+
 ## 0.48.0
 
 ### Minor Changes
