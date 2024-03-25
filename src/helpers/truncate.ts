@@ -4,13 +4,10 @@ export const truncate = (
   arg: string,
   limit: number,
   {
-    ellipsis,
-    position,
+    ellipsis = "...",
+    position = "end",
   }: { ellipsis?: string; position?: "start" | "middle" | "end" } = {}
 ) => {
-  if (!ellipsis) ellipsis = "...";
-  if (!position) position = "end";
-
   if (!isPositiveInt(limit)) return arg;
 
   const argArray = [...arg]; // convert string to array, emoji and unicode safe
