@@ -1,4 +1,4 @@
-import { PlainObject } from "../types/PlainObject";
+import { PlainObject } from "../types";
 import { isObject } from "../validators/isObject";
 
 /**

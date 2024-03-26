@@ -1,5 +1,11 @@
 # deverything
 
+## 0.48.1
+
+### Patch Changes
+
+- fix Key having symbols
+
 ## 0.48.0
 
 ### Minor Changes

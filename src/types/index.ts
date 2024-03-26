@@ -6,7 +6,6 @@ export * from "./Matrix";
 export * from "./Maybe";
 export * from "./NonUndefined";
 export * from "./Object";
-export * from "./PlainObject";
 export * from "./Point";
 export * from "./PrismaSelect";
 export * from "./Serialized";

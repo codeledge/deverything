@@ -1,5 +1,4 @@
-import { ObjectValues } from "../types/Object";
-import { PlainObject } from "../types/PlainObject";
+import { ObjectValues, PlainObject } from "../types/Object";
 
 export const pickObjectValues = <T extends PlainObject>(
   obj: T,

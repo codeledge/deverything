@@ -183,6 +183,7 @@ Checks are functions that throw an error, if the validation fails
 - `ObjectEntry<>`
 - `ObjectEntries<>`
 - ⭐ `PlainObject` use this instead of `Record<,>` or `extends object`, also makes sure it's not an array
+- `PlainKey`
 - `Point`
 - `HashMap<>`
   - `BoolMap`
