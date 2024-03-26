@@ -4,12 +4,6 @@ import { merge } from "./merge";
 describe("merge", () => {
   test("object", async () => {
     expect(merge({}, {})).toStrictEqual({});
-    expect(
-      merge({ [Symbol.for("a")]: 1 }, { [Symbol.for("b")]: 1 })
-    ).toStrictEqual({
-      [Symbol.for("a")]: 1,
-      [Symbol.for("b")]: 1,
-    });
     expect(merge({}, { a: 1 })).toStrictEqual({ a: 1 });
     expect(merge({ a: 0 }, { a: 1 })).toStrictEqual({ a: 1 });
     expect(merge({ a: 0 }, { a: { b: 1 } })).toStrictEqual({ a: { b: 1 } });

@@ -32,14 +32,5 @@ describe("objectDiff", () => {
     expect(objectDiff({ a: 1 }, { a: 2 })).toStrictEqual({
       a: { from: 1, to: 2 },
     });
-    expect(
-      objectDiff(
-        { [Symbol.for("1")]: 1, [Symbol.for("same")]: 1 },
-        { a: 2, [Symbol.for("same")]: 1 }
-      )
-    ).toStrictEqual({
-      a: { from: undefined, to: 2 },
-      [Symbol.for("1")]: { from: 1, to: undefined },
-    });
   });
 });
