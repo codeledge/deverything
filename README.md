@@ -15,8 +15,8 @@ Contributions always welcome!
 
 ### Validators
 
-- `isArray()` 
-- `isBoolean()` 
+- `isArray()`
+- `isBoolean()`
 - `isBrowser()` to detect if you are on the browser
 - `isBuffer()` if it's a buffer
 - `isClient()` same as isBrowser
@@ -26,20 +26,20 @@ Contributions always welcome!
   - `isEmptyArray()` checks if the array has no items
   - `isEmptyObject()` checks if the object has no keys
 - `isFile()` if it's a file
-- `isFunction()` 
+- `isFunction()`
 - `isJsDate()` if it's a **valid** javascript's Date
-  - `isFutureDate()` 
-  - `isPastDate()` 
+  - `isFutureDate()`
+  - `isPastDate()`
   - `isStringDate()` also checks if the string passed is a **valid** date
 - `isKey()` is a real key of an object
 - `isLastIndex()` is the index is the last item of array
 - `isNotEmptyString()` must have some text, checks for spaces-only
 - `isNumber()` if the arg is number, and also usable (no infinity)
   - `isInt()` if it's an integer
-  - `isEven()` 
-  - `isOdd()` 
-  - `isPositiveInt()` 
-  - `isNegativeInt()` 
+  - `isEven()`
+  - `isOdd()`
+  - `isPositiveInt()`
+  - `isNegativeInt()`
 - `isNumeric()` if string is representing a number
 - ⭐ `isObject()` if it's a js plain Object
 - `isPromise()` if it's a promise
@@ -49,12 +49,15 @@ Contributions always welcome!
 - ⭐ `isSame()` Compare if dates, functions, arrays, objects or anything else are the same
 - `isServer()` if you are on the server
 - `isString()`
-- `isURL()` 
+- `isURL()`
 - `isUUID()` if it's a valid UUID
 
 ### Math
 
 - `average()`
+- `isBetween()`
+- `isOutside()`
+- `isStrictlyBetween()`
 - `max()`
 - `min()`
 - `multiply()`
@@ -112,7 +115,7 @@ Contributions always welcome!
 
 These functions are optimized for low entropy random data generation useful for Unit Testing, Storybook, Pass real validations, Reverse hacking, Penetration testing...
 
-- `randomAddress()` 
+- `randomAddress()`
 - `randomAlphaNumericCode()`
 - ⭐ `randomArrayItem()` now supporting non-uniform distribution
 - `randomBankAccount()`

@@ -1,5 +1,11 @@
 # deverything
 
+## 0.49.0
+
+### Minor Changes
+
+- isStrictlyBetween
+
 ## 0.48.1
 
 ### Patch Changes
