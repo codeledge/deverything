@@ -1,5 +1,11 @@
 # deverything
 
+## 0.50.0
+
+### Minor Changes
+
+- dates
+
 ## 0.49.0
 
 ### Minor Changes

@@ -1,4 +1,5 @@
 export * from "./checks";
+export * from "./dates";
 export * from "./formatters";
 export * from "./helpers";
 export * from "./math";
