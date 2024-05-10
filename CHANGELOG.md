@@ -1,5 +1,11 @@
 # deverything
 
+## 0.51.0
+
+### Minor Changes
+
+- startOfDay
+
 ## 0.50.0
 
 ### Minor Changes

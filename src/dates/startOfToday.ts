@@ -1,4 +1,6 @@
-export const startOfToday = () => {
+import { startOfDay } from "./startOfDay";
+
+export const startOfToday = (): Date => {
   const now = new Date();
-  return new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  return startOfDay(now);
 };
