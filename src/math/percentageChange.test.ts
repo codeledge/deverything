@@ -8,7 +8,13 @@ describe("percentageChange", () => {
         current: 10,
         previous: 12,
       })
-    ).toBe(-16.67);
+    ).toBe(-0.1667);
+    expect(
+      percentageChange({
+        current: 12,
+        previous: 10,
+      })
+    ).toBe(0.2);
     expect(
       percentageChange({
         current: 0,

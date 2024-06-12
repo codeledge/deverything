@@ -8,8 +8,8 @@ describe("randomInt", () => {
   });
 
   test("args", async () => {
-    expect(randomInt(12, 20)).toBeGreaterThanOrEqual(12);
-    expect(randomInt(12, 12)).toBeLessThanOrEqual(12);
-    expect(randomInt(11, 12)).toBeLessThanOrEqual(13);
+    expect(randomInt({ min: 12, max: 20 })).toBeGreaterThanOrEqual(12);
+    expect(randomInt({ min: 12, max: 12 })).toBeLessThanOrEqual(12);
+    expect(randomInt({ min: 11, max: 12 })).toBeLessThanOrEqual(13);
   });
 });
