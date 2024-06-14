@@ -10,6 +10,9 @@ describe("setUrlSearchParams", () => {
 
   test("relative url", () => {
     expect(setUrlSearchParams("/signin")).toBe("/signin");
+    expect(setUrlSearchParams("/signin/", { ok: true })).toBe(
+      "/signin/?ok=true"
+    );
     expect(setUrlSearchParams("/signin?")).toBe("/signin");
     expect(setUrlSearchParams("/signin?in")).toBe("/signin?in");
     expect(setUrlSearchParams("/signin?in#sec")).toBe("/signin?in#sec");
