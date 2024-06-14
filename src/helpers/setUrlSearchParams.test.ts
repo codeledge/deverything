@@ -2,6 +2,12 @@ import { expect, describe, test } from "@jest/globals";
 import { setUrlSearchParams } from "./setUrlSearchParams";
 
 describe("setUrlSearchParams", () => {
+  test("no nullish", () => {
+    expect(
+      setUrlSearchParams("/signin?token#hash", { n: null, u: undefined, z: 0 })
+    ).toBe("/signin?token=&z=0#hash");
+  });
+
   test("relative url", () => {
     expect(setUrlSearchParams("/signin")).toBe("/signin");
     expect(setUrlSearchParams("/signin?")).toBe("/signin");

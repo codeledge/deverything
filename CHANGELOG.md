@@ -1,5 +1,11 @@
 # deverything
 
+## 0.51.1
+
+### Patch Changes
+
+- setUrlSearchParams fix
+
 ## 0.51.0
 
 ### Minor Changes
