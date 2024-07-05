@@ -1,13 +1,11 @@
-import { isPositiveInt } from "../validators";
-
-export const percentageChange = ({
-  previous,
-  current,
-}: {
-  previous: number;
-  current: number;
-}): number => {
-  if (!isPositiveInt(previous) || !isPositiveInt(current)) return 0;
+/**
+ *
+ * @param previous Positive percentage i.e. 0.1 for 10%
+ * @param current Positive percentage i.e. 0.2 for 20%
+ * @returns
+ */
+export const percentageChange = (previous: number, current: number): number => {
+  if (previous < 0 || current < 0) return 0;
   if (current === 0 && previous === 0) return 0;
   if (current === 0 && previous !== 0) return -1;
   if (current !== 0 && previous === 0) return 1;

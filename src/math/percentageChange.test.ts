@@ -3,35 +3,12 @@ import { percentageChange } from "./percentageChange";
 
 describe("percentageChange", () => {
   test("simple", async () => {
-    expect(
-      percentageChange({
-        current: 10,
-        previous: 12,
-      })
-    ).toBe(-0.1667);
-    expect(
-      percentageChange({
-        current: 12,
-        previous: 10,
-      })
-    ).toBe(0.2);
-    expect(
-      percentageChange({
-        current: 0,
-        previous: 12,
-      })
-    ).toBe(0);
-    expect(
-      percentageChange({
-        current: 0,
-        previous: 0,
-      })
-    ).toBe(0);
-    expect(
-      percentageChange({
-        current: 99,
-        previous: 0,
-      })
-    ).toBe(0);
+    expect(percentageChange(-0.1, 0.2)).toBe(0);
+    expect(percentageChange(0.2, 0.1)).toBe(-0.5);
+    expect(percentageChange(0.1, 0.2)).toBe(1);
+    expect(percentageChange(0.3, 0.333)).toBe(0.11);
+    expect(percentageChange(0, 0.12)).toBe(0);
+    expect(percentageChange(0, 0)).toBe(0);
+    expect(percentageChange(0.99, 0)).toBe(0);
   });
 });
