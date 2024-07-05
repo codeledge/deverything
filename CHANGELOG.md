@@ -1,5 +1,29 @@
 # deverything
 
+## 0.51.1
+
+### Patch Changes
+
+- setUrlSearchParams fix
+
+## 0.51.0
+
+### Minor Changes
+
+- startOfDay
+
+## 0.50.0
+
+### Minor Changes
+
+- dates
+
+## 0.49.0
+
+### Minor Changes
+
+- isStrictlyBetween
+
 ## 0.48.1
 
 ### Patch Changes

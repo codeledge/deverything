@@ -52,9 +52,21 @@ Contributions always welcome!
 - `isURL()`
 - `isUUID()` if it's a valid UUID
 
+### Dates
+
+- `isOver18()`
+- `startOfNextMonth()`
+- `startOfNextWeek()`
+- `startOfThisWeek()`
+- `startOfToday()`
+- `startOfTomorrow()`
+
 ### Math
 
 - `average()`
+- `isBetween()`
+- `isOutside()`
+- `isStrictlyBetween()`
 - `max()`
 - `min()`
 - `multiply()`

@@ -1,6 +1,7 @@
 export * from "./average";
 export * from "./isBetween";
 export * from "./isOutside";
+export * from "./isStrictlyBetween";
 export * from "./max";
 export * from "./min";
 export * from "./multiply";

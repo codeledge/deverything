@@ -1,6 +1,8 @@
+import { Maybe } from "../types";
+
 export const setUrlSearchParams = (
   currentURL: string,
-  searchParams: Record<string, string | number | boolean> = {}
+  searchParams: Record<string, Maybe<string | number | boolean>> = {}
 ) => {
   const isRelativeUrl = currentURL.startsWith("/");
   const url = new URL(
@@ -9,6 +11,7 @@ export const setUrlSearchParams = (
   );
 
   Object.entries(searchParams).forEach(([paramKey, paramValue]) => {
+    if (paramValue === null || paramValue === undefined) return;
     url.searchParams.set(paramKey, paramValue.toString());
   });
 
