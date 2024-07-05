@@ -10,4 +10,4 @@ export const randomPassword = ({
   randomString({ length: 1 }).toUpperCase() + // Upper case
   randomString({ length: randomInt({ min: minChars, max: maxChars }) - 3 }) + // At least 9 chars
   randomArrayItem(SPECIAL_CHARACTERS) + // Special character
-  randomInt(1, 9); // Number
+  randomInt({ min: 1, max: 9 }); // Number
