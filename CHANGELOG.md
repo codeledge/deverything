@@ -1,5 +1,17 @@
 # deverything
 
+## 1.0.0
+
+### Major Changes
+
+- Breaking changes on args
+  - percentageChange
+  - randomInt
+  - randomPositiveInt
+  - randomNegativeInt
+  - randomDate
+  - randomMaxDate
+
 ## 0.51.1
 
 ### Patch Changes

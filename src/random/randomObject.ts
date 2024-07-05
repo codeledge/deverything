@@ -8,7 +8,7 @@ export const randomObject = ({ maxDepth = 5 }: { maxDepth?: number } = {}) => {
   const getRandomObject = (depth: number): PlainObject => {
     if (depth >= maxDepth) return {};
 
-    const keys = array(randomInt(1, 5), randomNoun);
+    const keys = array(randomInt({ min: 1, max: 5 }), randomNoun);
     return keys.reduce((partial, key) => {
       partial[key] = randomValue() || getRandomObject(depth + 1);
       return partial;

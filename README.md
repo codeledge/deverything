@@ -70,6 +70,8 @@ Contributions always welcome!
 - `max()`
 - `min()`
 - `multiply()`
+- `normaliseArray()`
+- `normaliseNumber()`
 - `percentageChange()`
 - `sum()`
 

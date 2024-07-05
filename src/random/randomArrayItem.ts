@@ -22,5 +22,5 @@ export const randomArrayItem = <T>(
     return last(array);
   }
 
-  return array[randomInt(0, lastIndex(array))];
+  return array[randomInt({ min: 0, max: lastIndex(array) })];
 };
