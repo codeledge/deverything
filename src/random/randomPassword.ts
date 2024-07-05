@@ -8,6 +8,6 @@ export const randomPassword = ({
   maxChars = 32,
 }: { minChars?: number; maxChars?: number } = {}) =>
   randomString({ length: 1 }).toUpperCase() + // Upper case
-  randomString({ length: randomInt(minChars, maxChars) - 3 }) + // At least 9 chars
+  randomString({ length: randomInt({ min: minChars, max: maxChars }) - 3 }) + // At least 9 chars
   randomArrayItem(SPECIAL_CHARACTERS) + // Special character
   randomInt(1, 9); // Number

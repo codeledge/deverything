@@ -30,7 +30,9 @@ export const randomDate = (startDate?: DateLike, endDate?: DateLike) => {
       ? new Date(parsedStartDate.getTime() + MILLISECONDS_IN_DECADE)
       : nowPlusMs(MILLISECONDS_IN_DECADE));
 
-  return new Date(randomInt(finalStartDate.getTime(), finalEndDate.getTime()));
+  return new Date(
+    randomInt({ min: finalStartDate.getTime(), max: finalEndDate.getTime() })
+  );
 };
 
 export const randomMaxDate = (start?: Date, end?: Date) => {
