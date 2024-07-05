@@ -6,8 +6,18 @@ describe(`randomDate`, () => {
     expect(randomDate().getTime()).toBeGreaterThan(0);
   });
   it(`args`, () => {
-    expect(randomDate("2010", "2011").toISOString().substring(0, 3)).toBe(
-      "201"
+    expect(
+      randomDate({ startDate: "2010", endDate: "2011" })
+        .toISOString()
+        .substring(0, 3)
+    ).toBe("201");
+  });
+  it(`no start`, () => {
+    expect(randomDate({ endDate: "2011" }).getFullYear()).toBeLessThan(2011);
+  });
+  it(`no end`, () => {
+    expect(randomDate({ startDate: "2012" }).getFullYear()).toBeGreaterThan(
+      2011
     );
   });
 });

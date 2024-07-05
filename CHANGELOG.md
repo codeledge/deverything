@@ -9,6 +9,7 @@
   - randomInt
   - randomPositiveInt
   - randomNegativeInt
+  - randomDate
 
 ## 0.51.1
 
