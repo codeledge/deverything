@@ -11,6 +11,7 @@
   - randomNegativeInt
   - randomDate
   - randomMaxDate
+  - checkEnvVars is dropped
 
 ## 0.51.1
 
