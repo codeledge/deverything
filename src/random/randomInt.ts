@@ -12,7 +12,7 @@ export const randomInt = ({
 
 export const randomPositiveInt = ({
   min = 1,
-  max = 100,
+  max,
 }: {
   min?: number;
   max?: number;
@@ -23,7 +23,7 @@ export const randomPositiveInt = ({
   });
 
 export const randomNegativeInt = ({
-  min = -100,
+  min,
   max = -1,
 }: {
   min?: number;

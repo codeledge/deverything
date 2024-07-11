@@ -12,6 +12,7 @@
   - randomDate
   - randomMaxDate
   - checkEnvVars is dropped
+  - randomPercentage is dropped
 
 ## 0.51.1
 
