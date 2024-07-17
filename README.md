@@ -81,10 +81,11 @@ Contributions always welcome!
   - `arrayDiff()` get the difference of two arrays
   - `arrayIntersection()` get the intersection of two arrays
 - `capitalize()` word => Word
-- `cleanSpaces()` trims and turns double spaces into single space
 - `clamp()` clamp number in a range
+- `cleanSpaces()` trims and turns double spaces into single space
 - `enumKeys()` enum FRUIT { APPLE, PEAR } => ["APPLE", "PEAR"]
 - `enumValues()` enum FRUIT { APPLE = 1, PEAR = 3 } => [1, 3]
+- `filterAlphanumeric()` remove non-alphanumeric characters
 - `first()` get the first element of an array
 - `firstKey()` get the first key of an object
 - `firstValue()` get the first value of an object
@@ -116,6 +117,7 @@ Contributions always welcome!
 ### Formatters
 
 - `formatCamelCase()`
+- `formatCookies()` { cookie1: "1", cookie2: "2" } => "cookie1=1; cookie2=2"
 - `formatNumber()` 1000 => "1,000" or "1K" or 0.112 => "11.2%"
 - `formatPercentage()` 0.11 => "11%"
 - `formatProgress()` => "[2/10]"

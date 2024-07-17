@@ -3,12 +3,41 @@ import { seriesAll } from "./seriesAll";
 import { sleep } from "./sleep";
 
 describe("seriesAll", () => {
-  const fn1 = () => Promise.resolve(1);
-  const fn2 = () => sleep(100).then(() => 2);
-  const fn3 = () => 3;
-
   test("simple", async () => {
-    expect(seriesAll<number>([fn1, fn2, fn3])).resolves.toEqual([1, 2, 3]);
-    expect(await seriesAll([() => true])).toStrictEqual([true]);
+    expect(
+      await seriesAll<number>([
+        Promise.resolve(1),
+        sleep(1).then(() => 2),
+        () => Promise.resolve(3),
+        () => 4,
+        async () => 5,
+        async () => {
+          await sleep(1);
+          return 6;
+        },
+        async () => {
+          return sleep(1).then(() => 7);
+        },
+      ])
+    ).toStrictEqual([1, 2, 3, 4, 5, 6, 7]);
+  });
+
+  test("throw new Error", () => {
+    expect(
+      seriesAll([
+        () => {
+          throw new Error("1");
+        },
+        () => {
+          throw new Error("2");
+        },
+      ])
+    ).rejects.toThrowError("1");
+  });
+
+  test("Promise.reject", () => {
+    expect(
+      seriesAll([Promise.reject("3"), () => Promise.reject("4")])
+    ).rejects.toEqual("3");
   });
 });

@@ -1,5 +1,11 @@
 # deverything
 
+## 1.1.0
+
+### Minor Changes
+
+- minor fixes and more helpers
+
 ## 1.0.0
 
 ### Major Changes
@@ -13,6 +19,7 @@
   - randomMaxDate
   - checkEnvVars is dropped
   - randomPercentage is dropped
+  - randomPositivePercentage is dropped
 
 ## 0.51.1
 

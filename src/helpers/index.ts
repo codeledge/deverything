@@ -11,6 +11,7 @@ export * from "./cyclicalItem";
 export * from "./dir";
 export * from "./enumKeys";
 export * from "./enumValues";
+export * from "./filterAlphanumeric";
 export * from "./first";
 export * from "./firstKey";
 export * from "./firstValue";
