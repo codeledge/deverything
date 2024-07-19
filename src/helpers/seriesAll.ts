@@ -12,16 +12,19 @@ import { isFunction, isPromise } from "../validators";
  * ]); => [1, 2, 3, 4]
  */
 export const seriesAll = async <T>(
-  series: (Promise<T> | Function)[]
+  series: (Promise<T> | (() => Promise<T>))[]
 ): Promise<T[]> => {
-  const results: T[] = [];
+  const results = [];
   for (const fn of series) {
     if (isPromise(fn)) results.push(await fn);
     else if (isFunction(fn)) results.push(await fn());
-    // pure value? just return it
-    else results.push(fn);
+    else throw new Error("seriesAll: invalid type");
   }
-  return results;
+
+  // TODO: "as T[];" fix TS error
+  // error TS2345: Argument of type '(() => Promise<T>) | Awaited<T>' is not assignable to parameter of type 'T'.
+  // 'T' could be instantiated with an arbitrary type which could be unrelated to '(() => Promise<T>) | Awaited<T>'.
+  return results as T[];
 };
 
 // TODO: rename to seriesAsync

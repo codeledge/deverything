@@ -9,7 +9,6 @@ describe("seriesAll", () => {
         Promise.resolve(1),
         sleep(1).then(() => 2),
         () => Promise.resolve(3),
-        () => 4,
         async () => 5,
         async () => {
           await sleep(1);
@@ -19,7 +18,7 @@ describe("seriesAll", () => {
           return sleep(1).then(() => 7);
         },
       ])
-    ).toStrictEqual([1, 2, 3, 4, 5, 6, 7]);
+    ).toStrictEqual([1, 2, 3, 5, 6, 7]);
   });
 
   test("throw new Error", () => {
