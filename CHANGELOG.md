@@ -1,5 +1,14 @@
 # deverything
 
+## 1.2.0
+
+### Minor Changes
+
+- Add new helpers
+- Remove deprecated
+  - `pretty` is now `stringify`
+  - `randomNumericId` is now `incrementalId`
+
 ## 1.1.0
 
 ### Minor Changes

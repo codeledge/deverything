@@ -102,7 +102,6 @@ Contributions always welcome!
 - `normalizeNumber()` normalizes between 0 and 1
 - `objectDiff()` get the difference between two objects
 - ⭐ `parseDate()` pass anything Date-Like, and get a JS Date back
-- `pretty()` stringify anything, without breaking on circular dependencies
 - `promiseWithTimeout()` takes a promise, a timeoutMs, and an option error as arguments. Returns a new Promise that either resolves with the value of the input promise or rejects with the provided error or a default error message if the input promise does not resolve or reject within the specified timeoutMs.
 - `scrambleText()` replace alpha chars with random chars
 - `seriesAll()` executes promises in series, and returns all results
@@ -110,6 +109,7 @@ Contributions always welcome!
 - `setUrlSearchParams()` set URL search params
 - `shuffle()` shuffles elements in an array
 - `sleep()` promise-based sleep
+- `stringify()` stringify anything, without breaking on circular dependencies
 - `toggleArrayValue()` remove/add value in array
 - `truncate()` truncate text, does not break emojis
 - `uniqueValues()` gets unique values in an array
@@ -130,6 +130,7 @@ These functions are optimized for low entropy random data generation useful for 
 
 - `randomAddress()`
 - `randomAlphaNumericCode()`
+- `randomArray()`
 - ⭐ `randomArrayItem()` now supporting non-uniform distribution
 - `randomBankAccount()`
 - `randomBool()`
@@ -156,21 +157,24 @@ These functions are optimized for low entropy random data generation useful for 
 - `randomHtmlColorName()`
 - `randomIBAN()`
 - `randomInt()`
-  - `randomPositiveInt()` > 0
-  - `randomNegativeInt()` < 0
-  - `randomMaxSafeInt()` Range of very BIG integers, which are still safe to use tho
+  - `randomBigInt()`
   - `randomMaxInt()` Range within the Maximum integer supported by js
+  - `randomMaxSafeInt()` Range of very BIG integers, which are still safe to use tho
+  - `randomNegativeInt()` < 0
+  - `randomPositiveInt()` > 0
 - `randomIP()`
 - `randomName()`
   - `randomFirstName()`
   - `randomLastName()`
   - `randomFullName()`
 - `randomNumericCode()`
+- `randomObject()`
 - `randomParagraph()`
 - `randomPassword()`
 - `randomPath()` /path/to/something
 - `randomPhoneNumber()`
 - `randomString()`
+- `randomSymbol()`
 - `randomUUID()` lightweight uuid generation, passing UUID validation
 - `randomValue()`
 - `randomWord()`

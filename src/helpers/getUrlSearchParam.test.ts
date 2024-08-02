@@ -2,7 +2,7 @@ import { describe, expect, test } from "@jest/globals";
 import { getUrlSearchParam } from "./getUrlSearchParam";
 
 describe("getUrlSearchParam", () => {
-  test("undefined", async () => {
+  test("undefined", () => {
     expect(getUrlSearchParam(undefined, "")).toBeUndefined();
     expect(getUrlSearchParam(undefined, "param")).toBeUndefined();
     expect(getUrlSearchParam("", "param")).toBeUndefined();
@@ -20,7 +20,13 @@ describe("getUrlSearchParam", () => {
     expect(getUrlSearchParam("https://www.ciao.com", "param2")).toBeUndefined();
   });
 
-  test("found", async () => {
+  test("does not work with window.location.search", () => {
+    expect(
+      getUrlSearchParam("?q=app+config&oq=app+cofig", "q")
+    ).toBeUndefined();
+  });
+
+  test("found", () => {
     expect(getUrlSearchParam("https://www.ciao.com/?param=", "param")).toBe("");
     expect(getUrlSearchParam("https://www.ciao.com/?param", "param")).toBe("");
     expect(getUrlSearchParam("https://www.ciao.com/?param=1", "param")).toBe(

@@ -10,6 +10,10 @@ export const randomInt = ({
   return Math.floor(Math.random() * (max - min + 1) + min);
 };
 
+export const randomBigInt = (): BigInt => {
+  return BigInt(randomInt());
+};
+
 export const randomPositiveInt = ({
   min = 1,
   max,
