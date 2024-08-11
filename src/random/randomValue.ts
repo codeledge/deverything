@@ -5,6 +5,7 @@ import { randomBigInt, randomInt } from "./randomInt";
 import { randomString } from "./randomString";
 import { randomSymbol } from "./randomSymbol";
 
+// This must return true with `isValue` assertion
 export const randomValue = () => {
   return randomArrayItem([
     randomBool(),
@@ -13,9 +14,5 @@ export const randomValue = () => {
     randomDate(),
     randomBigInt(),
     randomSymbol(),
-    undefined,
-    null,
-    NaN,
-    Infinity,
   ]);
 };
