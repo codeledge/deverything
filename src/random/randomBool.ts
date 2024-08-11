@@ -1,3 +1,3 @@
-import { randomInt } from "./randomInt";
+import { randomArrayItem } from "./randomArrayItem";
 
-export const randomBool = () => !!randomInt(0, 1);
+export const randomBool = () => randomArrayItem([true, false]);

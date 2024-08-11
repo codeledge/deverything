@@ -20,7 +20,7 @@ export const randomParagraph = ({
   maxWords?: number;
 } = {}) => {
   return capitalize(
-    array(randomInt(minWords, maxWords), () => randomWord())
+    array(randomInt({ min: minWords, max: maxWords }), () => randomWord())
       .join(" ")
       .slice(0, maxCharacters - 1) + "."
   );

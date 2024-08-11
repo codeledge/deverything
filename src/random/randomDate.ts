@@ -4,13 +4,19 @@ import {
   MILLISECONDS_IN_MINUTE,
 } from "../constants/time";
 import { parseDate } from "../helpers/parseDate";
-import { DateLike, DateRange } from "../types";
+import { DateRange } from "../types";
 import { isFutureDate, isPastDate } from "../validators";
 import { randomInt } from "./randomInt";
 
-const nowPlusMs = (ms: number) => new Date(new Date().getTime() + ms);
+const datePlusDecade = (date: Date = new Date()) =>
+  datePlusMs(date, MILLISECONDS_IN_DECADE);
 
-export const randomDate = (startDate?: DateLike, endDate?: DateLike) => {
+const dateMinusDecade = (date: Date = new Date()) =>
+  datePlusMs(date, -MILLISECONDS_IN_DECADE);
+
+const datePlusMs = (date: Date, ms: number) => new Date(date.getTime() + ms);
+
+export const randomDate = ({ startDate, endDate }: Partial<DateRange> = {}) => {
   const parsedStartDate = parseDate(startDate);
   const parsedEndDate = parseDate(endDate);
 
@@ -19,24 +25,22 @@ export const randomDate = (startDate?: DateLike, endDate?: DateLike) => {
   }
 
   const finalStartDate =
-    parsedStartDate ||
-    (parsedEndDate
-      ? new Date(parsedEndDate.getTime() - MILLISECONDS_IN_DECADE)
-      : nowPlusMs(-MILLISECONDS_IN_DECADE));
+    parsedStartDate || //
+    dateMinusDecade(parsedEndDate); // uses now if undefined
 
   const finalEndDate =
-    parsedEndDate ||
-    (parsedStartDate
-      ? new Date(parsedStartDate.getTime() + MILLISECONDS_IN_DECADE)
-      : nowPlusMs(MILLISECONDS_IN_DECADE));
+    parsedEndDate || //
+    datePlusDecade(parsedStartDate); // uses now if undefined
 
-  return new Date(randomInt(finalStartDate.getTime(), finalEndDate.getTime()));
+  return new Date(
+    randomInt({ min: finalStartDate.getTime(), max: finalEndDate.getTime() })
+  );
 };
 
-export const randomMaxDate = (start?: Date, end?: Date) => {
-  const startDate = start || new Date(-MAX_DATE_MILLISECONDS);
-  const endDate = end || new Date(MAX_DATE_MILLISECONDS);
-  return randomDate(startDate, endDate);
+export const randomMaxDate = ({ startDate, endDate }: Partial<DateRange>) => {
+  startDate = startDate || new Date(-MAX_DATE_MILLISECONDS);
+  endDate = endDate || new Date(MAX_DATE_MILLISECONDS);
+  return randomDate({ startDate, endDate });
 };
 
 export const randomFutureDate = ({
@@ -51,9 +55,9 @@ export const randomFutureDate = ({
   }
 
   const finalStartDate =
-    parseDate(startDate) || nowPlusMs(5 * MILLISECONDS_IN_MINUTE); // Add a safe margin in the future (i.e. lagging tests)
+    parseDate(startDate) || datePlusMs(new Date(), 5 * MILLISECONDS_IN_MINUTE); // Add a safe margin in the future (i.e. lagging tests)
 
-  return randomDate(finalStartDate, endDate);
+  return randomDate({ startDate: finalStartDate, endDate });
 };
 
 export const randomPastDate = ({
@@ -68,12 +72,12 @@ export const randomPastDate = ({
   }
 
   const finalEndDate = parseDate(endDate) || new Date();
-  return randomDate(startDate, finalEndDate);
+  return randomDate({ startDate, endDate: finalEndDate });
 };
 
 export const randomDateRange = () => {
   const startDate = randomDate();
-  const endDate = randomDate(startDate);
+  const endDate = randomDate({ startDate });
 
   return {
     endDate,

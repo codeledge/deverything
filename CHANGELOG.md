@@ -1,5 +1,65 @@
 # deverything
 
+## 1.3.0
+
+### Minor Changes
+
+- randomEmptyValue
+
+## 1.2.0
+
+### Minor Changes
+
+- Add new helpers
+- Remove deprecated
+  - `pretty` is now `stringify`
+  - `randomNumericId` is now `incrementalId`
+
+## 1.1.0
+
+### Minor Changes
+
+- minor fixes and more helpers
+
+## 1.0.0
+
+### Major Changes
+
+- Breaking changes on args
+  - percentageChange
+  - randomInt
+  - randomPositiveInt
+  - randomNegativeInt
+  - randomDate
+  - randomMaxDate
+  - checkEnvVars is dropped
+  - randomPercentage is dropped
+  - randomPositivePercentage is dropped
+
+## 0.51.1
+
+### Patch Changes
+
+- setUrlSearchParams fix
+
+## 0.51.0
+
+### Minor Changes
+
+- startOfDay
+
+## 0.50.0
+
+### Minor Changes
+
+- dates
+
+## 0.49.0
+
+### Minor Changes
+
+- isStrictlyBetween
+
 ## 0.48.1
 
 ### Patch Changes

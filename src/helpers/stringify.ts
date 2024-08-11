@@ -1,6 +1,5 @@
 import { objectSerializer } from "../_internals/objectSerializer";
 
-// TODO: deprecate and rename to stringify
-export const pretty = (arg?: any) => {
+export const stringify = (arg?: any) => {
   return JSON.stringify(arg, objectSerializer(), 2);
 };

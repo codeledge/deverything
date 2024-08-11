@@ -1,5 +1,5 @@
 import { randomInt } from "./randomInt";
 
 export const randomChar = () => {
-  return String.fromCharCode(randomInt(97, 122));
+  return String.fromCharCode(randomInt({ min: 97, max: 122 }));
 };

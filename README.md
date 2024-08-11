@@ -15,8 +15,8 @@ Contributions always welcome!
 
 ### Validators
 
-- `isArray()` 
-- `isBoolean()` 
+- `isArray()`
+- `isBoolean()`
 - `isBrowser()` to detect if you are on the browser
 - `isBuffer()` if it's a buffer
 - `isClient()` same as isBrowser
@@ -26,20 +26,20 @@ Contributions always welcome!
   - `isEmptyArray()` checks if the array has no items
   - `isEmptyObject()` checks if the object has no keys
 - `isFile()` if it's a file
-- `isFunction()` 
+- `isFunction()`
 - `isJsDate()` if it's a **valid** javascript's Date
-  - `isFutureDate()` 
-  - `isPastDate()` 
+  - `isFutureDate()`
+  - `isPastDate()`
   - `isStringDate()` also checks if the string passed is a **valid** date
 - `isKey()` is a real key of an object
 - `isLastIndex()` is the index is the last item of array
 - `isNotEmptyString()` must have some text, checks for spaces-only
 - `isNumber()` if the arg is number, and also usable (no infinity)
   - `isInt()` if it's an integer
-  - `isEven()` 
-  - `isOdd()` 
-  - `isPositiveInt()` 
-  - `isNegativeInt()` 
+  - `isEven()`
+  - `isOdd()`
+  - `isPositiveInt()`
+  - `isNegativeInt()`
 - `isNumeric()` if string is representing a number
 - ⭐ `isObject()` if it's a js plain Object
 - `isPromise()` if it's a promise
@@ -49,15 +49,29 @@ Contributions always welcome!
 - ⭐ `isSame()` Compare if dates, functions, arrays, objects or anything else are the same
 - `isServer()` if you are on the server
 - `isString()`
-- `isURL()` 
+- `isURL()`
 - `isUUID()` if it's a valid UUID
+
+### Dates
+
+- `isOver18()`
+- `startOfNextMonth()`
+- `startOfNextWeek()`
+- `startOfThisWeek()`
+- `startOfToday()`
+- `startOfTomorrow()`
 
 ### Math
 
 - `average()`
+- `isBetween()`
+- `isOutside()`
+- `isStrictlyBetween()`
 - `max()`
 - `min()`
 - `multiply()`
+- `normaliseArray()`
+- `normaliseNumber()`
 - `percentageChange()`
 - `sum()`
 
@@ -67,10 +81,11 @@ Contributions always welcome!
   - `arrayDiff()` get the difference of two arrays
   - `arrayIntersection()` get the intersection of two arrays
 - `capitalize()` word => Word
-- `cleanSpaces()` trims and turns double spaces into single space
 - `clamp()` clamp number in a range
+- `cleanSpaces()` trims and turns double spaces into single space
 - `enumKeys()` enum FRUIT { APPLE, PEAR } => ["APPLE", "PEAR"]
 - `enumValues()` enum FRUIT { APPLE = 1, PEAR = 3 } => [1, 3]
+- `filterAlphanumeric()` remove non-alphanumeric characters
 - `first()` get the first element of an array
 - `firstKey()` get the first key of an object
 - `firstValue()` get the first value of an object
@@ -87,7 +102,6 @@ Contributions always welcome!
 - `normalizeNumber()` normalizes between 0 and 1
 - `objectDiff()` get the difference between two objects
 - ⭐ `parseDate()` pass anything Date-Like, and get a JS Date back
-- `pretty()` stringify anything, without breaking on circular dependencies
 - `promiseWithTimeout()` takes a promise, a timeoutMs, and an option error as arguments. Returns a new Promise that either resolves with the value of the input promise or rejects with the provided error or a default error message if the input promise does not resolve or reject within the specified timeoutMs.
 - `scrambleText()` replace alpha chars with random chars
 - `seriesAll()` executes promises in series, and returns all results
@@ -95,6 +109,7 @@ Contributions always welcome!
 - `setUrlSearchParams()` set URL search params
 - `shuffle()` shuffles elements in an array
 - `sleep()` promise-based sleep
+- `stringify()` stringify anything, without breaking on circular dependencies
 - `toggleArrayValue()` remove/add value in array
 - `truncate()` truncate text, does not break emojis
 - `uniqueValues()` gets unique values in an array
@@ -102,6 +117,7 @@ Contributions always welcome!
 ### Formatters
 
 - `formatCamelCase()`
+- `formatCookies()` { cookie1: "1", cookie2: "2" } => "cookie1=1; cookie2=2"
 - `formatNumber()` 1000 => "1,000" or "1K" or 0.112 => "11.2%"
 - `formatPercentage()` 0.11 => "11%"
 - `formatProgress()` => "[2/10]"
@@ -112,8 +128,9 @@ Contributions always welcome!
 
 These functions are optimized for low entropy random data generation useful for Unit Testing, Storybook, Pass real validations, Reverse hacking, Penetration testing...
 
-- `randomAddress()` 
+- `randomAddress()`
 - `randomAlphaNumericCode()`
+- `randomArray()`
 - ⭐ `randomArrayItem()` now supporting non-uniform distribution
 - `randomBankAccount()`
 - `randomBool()`
@@ -140,30 +157,27 @@ These functions are optimized for low entropy random data generation useful for 
 - `randomHtmlColorName()`
 - `randomIBAN()`
 - `randomInt()`
-  - `randomPositiveInt()` > 0
-  - `randomNegativeInt()` < 0
-  - `randomMaxSafeInt()` Range of very BIG integers, which are still safe to use tho
+  - `randomBigInt()`
   - `randomMaxInt()` Range within the Maximum integer supported by js
+  - `randomMaxSafeInt()` Range of very BIG integers, which are still safe to use tho
+  - `randomNegativeInt()` < 0
+  - `randomPositiveInt()` > 0
 - `randomIP()`
 - `randomName()`
   - `randomFirstName()`
   - `randomLastName()`
   - `randomFullName()`
 - `randomNumericCode()`
+- `randomObject()`
 - `randomParagraph()`
 - `randomPassword()`
 - `randomPath()` /path/to/something
 - `randomPhoneNumber()`
 - `randomString()`
+- `randomSymbol()`
 - `randomUUID()` lightweight uuid generation, passing UUID validation
 - `randomValue()`
 - `randomWord()`
-
-### Checks
-
-Checks are functions that throw an error, if the validation fails
-
-- ⭐ `checkEnvVars()` Make sure env vars are set per-environment
 
 ### TypeScript Helpers & Generics
 

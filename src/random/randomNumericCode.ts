@@ -15,5 +15,7 @@ export const randomNumericCode = ({ length = 6 }: { length?: number } = {}) => {
   if (length < 1)
     throw new Error("randomNumericCode: Length must be greater than 0.");
 
-  return array(length, (_, index) => randomInt(!index ? 1 : 0, 9)).join("");
+  return array(length, (_, index) =>
+    randomInt({ min: !index ? 1 : 0, max: 9 })
+  ).join("");
 };
