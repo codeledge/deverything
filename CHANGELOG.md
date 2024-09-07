@@ -1,10 +1,10 @@
 # deverything
 
-## 1.3.1
+## 1.4.0
 
-### Patch Changes
+### Minor Changes
 
-- fix `first()` return type
+- setCookie util
 
 ## 1.3.0
 
