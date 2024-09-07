@@ -1,5 +1,11 @@
 # deverything
 
+## 1.4.1
+
+### Patch Changes
+
+- fix `first()` return type
+
 ## 1.4.0
 
 ### Minor Changes
