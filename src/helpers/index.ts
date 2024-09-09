@@ -5,6 +5,7 @@ export * from "./capitalize";
 export * from "./chunkArray";
 export * from "./chunkedAll";
 export * from "./chunkedAsync";
+export * from "./chunkedDynamic";
 export * from "./clamp";
 export * from "./cleanSpaces";
 export * from "./cyclicalItem";
