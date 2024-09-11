@@ -12,7 +12,7 @@ import { sleep } from "./sleep";
 export const chunkedDynamic = async <T>(
   array: T[],
   initialChunkSize: number,
-  fn: (chunk: T[], currentChunkSize: number) => Promise<any>,
+  fn: (chunk: T[], currentChunkIndex: number) => Promise<any>,
   {
     sleepTime,
     maxChunkDuration,
@@ -26,13 +26,14 @@ export const chunkedDynamic = async <T>(
   const chunkResults: any[] = [];
 
   let currentIndex = 0;
+  let chunkIndex = 0;
   let currentChunkSize = initialChunkSize;
   const step = chunkSizeStep || 1;
 
   while (currentIndex < array.length) {
     const start = performance.now();
     const chunk = array.slice(currentIndex, currentIndex + currentChunkSize);
-    const chunkResult = await fn(chunk, currentChunkSize);
+    const chunkResult = await fn(chunk, chunkIndex);
     chunkResults.push(chunkResult);
     if (sleepTime) await sleep(sleepTime);
     if (maxChunkDuration) {
@@ -51,6 +52,7 @@ export const chunkedDynamic = async <T>(
     }
 
     currentIndex += currentChunkSize;
+    chunkIndex += 1;
   }
 
   return chunkResults;
