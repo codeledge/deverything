@@ -1,5 +1,11 @@
 # deverything
 
+## 1.5.1
+
+### Patch Changes
+
+- return chunkedDynamic.fn index
+
 ## 1.5.0
 
 ### Minor Changes
