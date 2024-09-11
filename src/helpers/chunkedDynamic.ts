@@ -7,6 +7,7 @@ import { sleep } from "./sleep";
  * @param fn - Function to run on each chunk
  * @param options.sleepTime - Time to sleep between each chunk
  * @param options.maxChunkDuration - Time to sleep between each chunk
+ * @param options.chunkSizeStep - Step to increase/decrease chunk size (works only if maxChunkDuration is set)
  */
 export const chunkedDynamic = async <T>(
   array: T[],
@@ -15,15 +16,18 @@ export const chunkedDynamic = async <T>(
   {
     sleepTime,
     maxChunkDuration,
+    chunkSizeStep,
   }: {
     sleepTime?: number;
     maxChunkDuration?: number;
+    chunkSizeStep?: number;
   } = {}
 ): Promise<any[]> => {
   const chunkResults: any[] = [];
 
   let currentIndex = 0;
   let currentChunkSize = initialChunkSize;
+  const step = chunkSizeStep || 1;
 
   while (currentIndex < array.length) {
     const start = performance.now();
@@ -35,10 +39,14 @@ export const chunkedDynamic = async <T>(
       const duration = performance.now() - start;
       if (duration > maxChunkDuration) {
         if (currentChunkSize <= 1)
+          // < is just for safety, should not go below 1
           await sleep(duration - maxChunkDuration); // Sleep the remaining time
-        else currentChunkSize -= 1; // decrease chunk size to slow down
+        else {
+          if (currentChunkSize - step < 1) currentChunkSize = 1;
+          else currentChunkSize -= step; // decrease chunk size to slow down
+        }
       } else {
-        currentChunkSize += 1; // increase chunk size to speed up
+        currentChunkSize += step; // increase chunk size to speed up
       }
     }
 
