@@ -1,3 +1,4 @@
+import { clamp } from "./clamp";
 import { sleep } from "./sleep";
 
 /**
@@ -5,22 +6,25 @@ import { sleep } from "./sleep";
  * @param array - Array to chunk
  * @param initialChunkSize - Size of initial chunk
  * @param fn - Function to run on each chunk
- * @param options.sleepTime - Time to sleep between each chunk
- * @param options.maxChunkDuration - Time to sleep between each chunk
- * @param options.chunkSizeStep - Step to increase/decrease chunk size (works only if maxChunkDuration is set)
+ * @param options.idealChunkDuration - Ideal time to process each chunk, the chunk size will adjust to meet this duration
+ * @param options.sleepTimeMs - Time to sleep between each chunk
+ * @param options.maxChunkSize - Maximum chunk size (default 200)
+ * @param options.minChunkSize - Minimum chunk size (default 1)
  */
 export const chunkedDynamic = async <T>(
   array: T[],
   initialChunkSize: number,
   fn: (chunk: T[], currentChunkIndex: number) => Promise<any>,
   {
-    sleepTime,
-    maxChunkDuration,
-    chunkSizeStep,
+    idealChunkDuration,
+    maxChunkSize,
+    minChunkSize,
+    sleepTimeMs,
   }: {
-    sleepTime?: number;
-    maxChunkDuration?: number;
-    chunkSizeStep?: number;
+    idealChunkDuration?: number;
+    maxChunkSize?: number;
+    minChunkSize?: number;
+    sleepTimeMs?: number;
   } = {}
 ): Promise<any[]> => {
   const chunkResults: any[] = [];
@@ -28,27 +32,20 @@ export const chunkedDynamic = async <T>(
   let currentIndex = 0;
   let chunkIndex = 0;
   let currentChunkSize = initialChunkSize;
-  const step = chunkSizeStep || 1;
 
   while (currentIndex < array.length) {
     const start = performance.now();
     const chunk = array.slice(currentIndex, currentIndex + currentChunkSize);
     const chunkResult = await fn(chunk, chunkIndex);
     chunkResults.push(chunkResult);
-    if (sleepTime) await sleep(sleepTime);
-    if (maxChunkDuration) {
+    if (sleepTimeMs) await sleep(sleepTimeMs);
+    if (idealChunkDuration) {
       const duration = performance.now() - start;
-      if (duration > maxChunkDuration) {
-        if (currentChunkSize <= 1)
-          // < is just for safety, should not go below 1
-          await sleep(duration - maxChunkDuration); // Sleep the remaining time
-        else {
-          if (currentChunkSize - step < 1) currentChunkSize = 1;
-          else currentChunkSize -= step; // decrease chunk size to slow down
-        }
-      } else {
-        currentChunkSize += step; // increase chunk size to speed up
-      }
+      currentChunkSize = clamp({
+        number: Math.round(currentChunkSize * (idealChunkDuration / duration)),
+        min: minChunkSize || 1,
+        max: maxChunkSize || 200,
+      });
     }
 
     currentIndex += currentChunkSize;

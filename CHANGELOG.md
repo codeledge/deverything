@@ -1,5 +1,11 @@
 # deverything
 
+## 1.5.2
+
+### Patch Changes
+
+- idealChunkDuration
+
 ## 1.5.1
 
 ### Patch Changes
