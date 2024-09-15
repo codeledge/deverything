@@ -1,5 +1,11 @@
 # deverything
 
+## 1.5.3
+
+### Patch Changes
+
+- fix chunkedDynamic
+
 ## 1.5.2
 
 ### Patch Changes

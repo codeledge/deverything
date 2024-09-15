@@ -36,7 +36,11 @@ export const chunkedDynamic = async <T>(
   while (currentIndex < array.length) {
     const start = performance.now();
     const chunk = array.slice(currentIndex, currentIndex + currentChunkSize);
+    // update pointer before currentChunkSize is updated
+    currentIndex += currentChunkSize;
     const chunkResult = await fn(chunk, chunkIndex);
+    // update chunk index after processing
+    chunkIndex += 1;
     chunkResults.push(chunkResult);
     if (sleepTimeMs) await sleep(sleepTimeMs);
     if (idealChunkDuration) {
@@ -47,9 +51,6 @@ export const chunkedDynamic = async <T>(
         max: maxChunkSize || 200,
       });
     }
-
-    currentIndex += currentChunkSize;
-    chunkIndex += 1;
   }
 
   return chunkResults;
