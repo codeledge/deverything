@@ -7,9 +7,9 @@ import { sleep } from "./sleep";
  * @param initialChunkSize - Size of initial chunk
  * @param fn - Function to run on each chunk
  * @param options.idealChunkDuration - Ideal time to process each chunk, the chunk size will adjust to meet this duration
- * @param options.sleepTimeMs - Time to sleep between each chunk
  * @param options.maxChunkSize - Maximum chunk size (default 200)
  * @param options.minChunkSize - Minimum chunk size (default 1)
+ * @param options.sleepTimeMs - Time to sleep between each chunk
  */
 export const chunkedDynamic = async <T>(
   array: T[],

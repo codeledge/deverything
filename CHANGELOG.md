@@ -1,5 +1,11 @@
 # deverything
 
+## 1.5.4
+
+### Patch Changes
+
+- add minChunkTimeMs option
+
 ## 1.5.3
 
 ### Patch Changes
