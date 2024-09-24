@@ -1,5 +1,11 @@
 # deverything
 
+## 1.6.1
+
+### Patch Changes
+
+- NonNullable on Required
+
 ## 1.6.0
 
 ### Minor Changes
