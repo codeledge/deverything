@@ -1,5 +1,11 @@
 # deverything
 
+## 1.6.0
+
+### Minor Changes
+
+- Required and PickRequired Generics
+
 ## 1.5.4
 
 ### Patch Changes
