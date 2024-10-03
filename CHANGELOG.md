@@ -1,5 +1,11 @@
 # deverything
 
+## 1.7.0
+
+### Minor Changes
+
+- noop
+
 ## 1.6.1
 
 ### Patch Changes

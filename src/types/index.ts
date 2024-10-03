@@ -1,6 +1,7 @@
 export * from "./Coords";
 export * from "./Date";
 export * from "./Dimensions";
+export * from "./Function";
 export * from "./HashMap";
 export * from "./Matrix";
 export * from "./Maybe";
