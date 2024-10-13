@@ -10,6 +10,7 @@ import {
   isOutsideInt4,
   isPositiveInt,
 } from "./isNumber";
+import { INT4_MAX } from "../constants/numbers";
 
 describe("isNumber", function () {
   describe("isNumber", function () {
@@ -136,7 +137,7 @@ describe("isOutsideInt4", function () {
   });
 
   it("checks false", function () {
-    expect(isOutsideInt4(Number.MAX_SAFE_INTEGER)).toBe(false);
+    expect(isOutsideInt4(INT4_MAX)).toBe(false);
     expect(isOutsideInt4(1)).toBe(false);
     expect(isOutsideInt4(0)).toBe(false);
     expect(isOutsideInt4(12345678901234567890 / 10e9)).toBe(false);
