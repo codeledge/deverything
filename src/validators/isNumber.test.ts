@@ -1,10 +1,13 @@
 import { expect, it, describe } from "@jest/globals";
 import {
+  isBigInt,
+  isBigIntString,
   isEven,
   isInt,
   isNegativeInt,
   isNumber,
   isOdd,
+  isOutsideInt4,
   isPositiveInt,
 } from "./isNumber";
 
@@ -97,5 +100,45 @@ describe("isNumber", function () {
       expect(isNegativeInt(-0)).toBe(false);
       expect(isNegativeInt("0" as unknown as number)).toBe(false);
     });
+  });
+
+  describe("isBigInt", function () {
+    it("checks true", function () {
+      expect(isBigInt(BigInt(12345678901234567890))).toBe(true);
+      expect(isBigInt(1n)).toBe(true);
+      expect(isBigInt(0n)).toBe(true);
+    });
+
+    it("checks false", function () {
+      expect(isBigInt(Number.MAX_SAFE_INTEGER)).toBe(false);
+      expect(isBigInt(Number.MAX_SAFE_INTEGER + 1)).toBe(false); // ???
+      expect(isBigInt(1)).toBe(false);
+      expect(isBigInt(0)).toBe(false);
+    });
+  });
+});
+
+describe("isBigIntString", function () {
+  it("checks true", function () {
+    expect(isBigIntString("12345678901234567890")).toBe(true);
+  });
+
+  it("checks false", function () {
+    expect(isBigIntString(Number.MAX_SAFE_INTEGER.toString())).toBe(false);
+    expect(isBigIntString("1")).toBe(false);
+  });
+});
+
+describe("isOutsideInt4", function () {
+  it("checks true", function () {
+    expect(isOutsideInt4(12345678901234567890)).toBe(true);
+    expect(isOutsideInt4(-12345678901234567890)).toBe(true);
+  });
+
+  it("checks false", function () {
+    expect(isOutsideInt4(Number.MAX_SAFE_INTEGER)).toBe(false);
+    expect(isOutsideInt4(1)).toBe(false);
+    expect(isOutsideInt4(0)).toBe(false);
+    expect(isOutsideInt4(12345678901234567890 / 10e9)).toBe(false);
   });
 });

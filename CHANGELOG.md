@@ -1,5 +1,11 @@
 # deverything
 
+## 1.8.0
+
+### Minor Changes
+
+- BigInt helpers and Forbid type
+
 ## 1.7.0
 
 ### Minor Changes

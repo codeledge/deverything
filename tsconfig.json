@@ -6,7 +6,7 @@
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
     "types": ["node"],
-    "target": "es6",
+    "target": "ES2020",
     "composite": false,
     "declaration": true,
     "declarationMap": true,

@@ -10,6 +10,14 @@ export type ISODate = string;
  */
 export type ISODay = string;
 /**
+ * @example "2021-01"
+ */
+export type ISOMonth = string;
+/**
+ * @example "2021"
+ */
+export type ISOYear = string;
+/**
  * @example "America/New_York"
  */
 export type Timezone = string;

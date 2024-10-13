@@ -11,4 +11,3 @@ export * from "./Point";
 export * from "./PrismaSelect";
 export * from "./Required";
 export * from "./Serialized";
-export * from "./WithDatey";

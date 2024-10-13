@@ -184,26 +184,29 @@ These functions are optimized for low entropy random data generation useful for 
 - `Coords`
 - `DateLike`
 - `Dimensions`
-- `Maybe<>`
-  - `MaybePromise<>`
-  - `MaybePromiseOrValue<>`
-  - `MaybePromiseOrValueArray<>`
-- `NonUndefined`
-- `Key`
-- `ObjectKey<>`
-- `ObjectKeys<>`
-- `ObjectValue<>`
-- `ObjectValues<>`
-- `ObjectEntry<>`
-- `ObjectEntries<>`
-- ⭐ `PlainObject` use this instead of `Record<,>` or `extends object`, also makes sure it's not an array
-- `PlainKey`
-- `Point`
 - `HashMap<>`
   - `BoolMap`
   - `NumberMap`
   - `StringMap`
   - `TrueMap`
+- `Forbid<>`
+- `Key`
+- `Maybe<>`
+  - `MaybePromise<>`
+  - `MaybePromiseOrValue<>`
+  - `MaybePromiseOrValueArray<>`
+- `NonUndefined`
+- `ObjectEntries<>`
+- `ObjectEntry<>`
+- `ObjectKey<>`
+- `ObjectKeys<>`
+- `ObjectValue<>`
+- `ObjectValues<>`
+- ⭐ `PlainObject` use this instead of `Record<,>` or `extends object`, also makes sure it's not an array
+- `PickRequired<>`
+- `PlainKey`
+- `Point`
+- `Required<>`
 - `VoidFn`
 
 ## Development
