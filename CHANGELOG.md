@@ -1,5 +1,13 @@
 # deverything
 
+## 1.9.0
+
+### Minor Changes
+
+- namedSeriesAll
+- update docs command pnpm bump -> pnpm release
+- fix seriesAll test type error
+
 ## 1.8.1
 
 ### Patch Changes
