@@ -214,7 +214,7 @@ These functions are optimized for low entropy random data generation useful for 
 After changes, run
 
 ```
-pnpm bump
+pnpm release
 ```
 
 To bump the version. CI will take care of publishing the package when merged.
