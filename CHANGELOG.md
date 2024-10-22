@@ -1,5 +1,11 @@
 # deverything
 
+## 1.8.1
+
+### Patch Changes
+
+- seriesAll support tuple type
+
 ## 1.8.0
 
 ### Minor Changes
