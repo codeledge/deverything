@@ -1,4 +1,12 @@
-import { isFunction, isPromise } from "../validators";
+import { isFunction, isPromise } from '../validators'
+
+type SeriesResult<T extends readonly unknown[]> = {
+  [K in keyof T]: T[K] extends Promise<infer U>
+    ? U
+    : T[K] extends () => Promise<infer U>
+    ? U
+    : never
+}
 
 /**
  *
@@ -11,20 +19,16 @@ import { isFunction, isPromise } from "../validators";
  *  async () => 4,
  * ]); => [1, 2, 3, 4]
  */
-export const seriesAll = async <T>(
-  series: (Promise<T> | (() => Promise<T>))[]
-): Promise<T[]> => {
-  const results = [];
+export const seriesAll = async <T extends readonly unknown[]>(
+  series: readonly [...T],
+): Promise<SeriesResult<T>> => {
+  const results: unknown[] = []
   for (const fn of series) {
-    if (isPromise(fn)) results.push(await fn);
-    else if (isFunction(fn)) results.push(await fn());
-    else throw new Error("seriesAll: invalid type");
+    if (isPromise(fn)) results.push(await fn)
+    else if (isFunction(fn)) results.push(await fn())
+    else throw new Error('seriesAll: invalid type')
   }
-
-  // TODO: "as T[];" fix TS error
-  // error TS2345: Argument of type '(() => Promise<T>) | Awaited<T>' is not assignable to parameter of type 'T'.
-  // 'T' could be instantiated with an arbitrary type which could be unrelated to '(() => Promise<T>) | Awaited<T>'.
-  return results as T[];
-};
+  return results as SeriesResult<T>
+}
 
 // TODO: rename to seriesAsync
