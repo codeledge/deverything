@@ -5,7 +5,7 @@ import { sleep } from "./sleep";
 describe("seriesAll", () => {
   test("simple", async () => {
     expect(
-      await seriesAll<number>([
+      await seriesAll([
         Promise.resolve(1),
         sleep(1).then(() => 2),
         () => Promise.resolve(3),
