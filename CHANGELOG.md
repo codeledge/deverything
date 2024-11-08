@@ -1,5 +1,12 @@
 # deverything
 
+## 1.10.0
+
+### Minor Changes
+
+- add removeUndefinedValues
+- add options.minChunkDuration
+
 ## 1.9.0
 
 ### Minor Changes

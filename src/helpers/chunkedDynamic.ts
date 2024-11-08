@@ -8,6 +8,7 @@ import { sleep } from "./sleep";
  * @param fn - Function to run on each chunk
  * @param options.idealChunkDuration - Ideal time to process each chunk, the chunk size will adjust to meet this duration
  * @param options.maxChunkSize - Maximum chunk size (default 200)
+ * @param options.minChunkDuration - Minimum time to process each chunk (useful for rate limiting)
  * @param options.minChunkSize - Minimum chunk size (default 1)
  * @param options.sleepTimeMs - Time to sleep between each chunk
  */
@@ -18,11 +19,13 @@ export const chunkedDynamic = async <T>(
   {
     idealChunkDuration,
     maxChunkSize,
+    minChunkDuration,
     minChunkSize,
     sleepTimeMs,
   }: {
     idealChunkDuration?: number;
     maxChunkSize?: number;
+    minChunkDuration?: number;
     minChunkSize?: number;
     sleepTimeMs?: number;
   } = {}
@@ -50,6 +53,12 @@ export const chunkedDynamic = async <T>(
         min: minChunkSize || 1,
         max: maxChunkSize || 200,
       });
+    }
+    if (minChunkDuration) {
+      const duration = performance.now() - start;
+      if (duration < minChunkDuration) {
+        await sleep(minChunkDuration - duration);
+      }
     }
   }
 
