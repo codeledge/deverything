@@ -1,5 +1,11 @@
 # deverything
 
+## 1.10.1
+
+### Patch Changes
+
+- export function
+
 ## 1.10.0
 
 ### Minor Changes
