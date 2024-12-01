@@ -47,6 +47,7 @@ Contributions always welcome!
 - `isReactElement()` if it's a valid React Element
 - `isRegExp()` if it's a valid RegExp
 - ⭐ `isSame()` Compare if dates, functions, arrays, objects or anything else are the same
+- `isSequence()` if the array is a perfect sequence
 - `isServer()` if you are on the server
 - `isString()`
 - `isURL()`
