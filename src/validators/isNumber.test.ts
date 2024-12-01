@@ -89,6 +89,11 @@ describe("isNumber", function () {
       expect(isPositiveInt(Infinity)).toBe(false);
       expect(isPositiveInt(-0)).toBe(false);
       expect(isPositiveInt("0" as unknown as number)).toBe(false);
+      expect(isPositiveInt("-20" as unknown as number)).toBe(false);
+      expect(isPositiveInt(+"-20")).toBe(false);
+      expect(isPositiveInt(+"20")).toBe(true);
+      expect(isPositiveInt(Number("20e2"))).toBe(true);
+      expect(isPositiveInt(Number("0"))).toBe(false);
     });
   });
 
