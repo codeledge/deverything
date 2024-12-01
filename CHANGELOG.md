@@ -1,5 +1,11 @@
 # deverything
 
+## 1.11.0
+
+### Minor Changes
+
+- Various fixes on helpers and types
+
 ## 1.10.1
 
 ### Patch Changes
