@@ -183,13 +183,13 @@ These functions are optimized for low entropy random data generation useful for 
 
 - `Coords`
 - `DateLike`
+- `DefinedKeys<>`
 - `Dimensions`
 - `HashMap<>`
   - `BoolMap`
   - `NumberMap`
   - `StringMap`
   - `TrueMap`
-- `Forbid<>`
 - `Key`
 - `Maybe<>`
   - `MaybePromise<>`
