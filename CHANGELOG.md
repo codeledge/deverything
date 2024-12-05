@@ -1,5 +1,11 @@
 # deverything
 
+## 1.11.1
+
+### Patch Changes
+
+- fix parseDate to be always local
+
 ## 1.11.0
 
 ### Minor Changes
