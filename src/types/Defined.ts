@@ -1,5 +1,5 @@
 /**
- * Makes all keys in required and removes undefined and null from the value types.
+ * Makes all keys required and removes undefined and null from the value types.
  * @example
  * type Example = {
  *  a: string;
@@ -7,7 +7,7 @@
  *  c?: string;
  *  d?: number | null;
  * };
- * type Result = DefinedKeys<Example>;
+ * type Result = Defined<Example>;
  * {
  *  a: string,
  *  b: string,
@@ -15,6 +15,6 @@
  *  d: number
  * }
  */
-export type DefinedKeys<T> = {
+export type Defined<T> = {
   [P in keyof T]-?: NonNullable<T[P]>;
 };

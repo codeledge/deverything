@@ -1,5 +1,7 @@
+import { Defined } from "./Defined";
+
 /**
- * Makes picked keys required. (does not remove undefined and null from the value types)
+ * Makes picked keys required and defined.
  * @example
  * type Example = {
  *  a: string;
@@ -7,14 +9,14 @@
  *  c?: string;
  *  d?: number | null;
  * };
- * type Result = PickRequired<Example, "a" | "b" | "d">;
+ * type Result = PickDefined<Example, "a" | "b" | "d">;
  * {
  *  a: string;
  *  b: string | undefined;
  *  d: number | null;
  * }
  */
-export type PickRequired<T, K extends keyof T> = Pick<Required<T>, K>;
+export type PickDefined<T, K extends keyof T> = Pick<Defined<T>, K>;
 
 // Test
 // type Example = {
@@ -25,4 +27,4 @@ export type PickRequired<T, K extends keyof T> = Pick<Required<T>, K>;
 //   e: never;
 // };
 
-// type Result = PickRequired<Example, "a" | "b" | "c" | "d" | "e">;
+// type Result = PickDefined<Example, "a" | "b" | "c" | "d" | "e">;

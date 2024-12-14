@@ -1,5 +1,11 @@
 # deverything
 
+## 1.11.2
+
+### Patch Changes
+
+- small patch on helper and 2 type renames
+
 ## 1.11.1
 
 ### Patch Changes

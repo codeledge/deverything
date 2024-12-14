@@ -184,7 +184,7 @@ These functions are optimized for low entropy random data generation useful for 
 
 - `Coords`
 - `DateLike`
-- `DefinedKeys<>`
+- `Defined<T>`
 - `Dimensions`
 - `HashMap<>`
   - `BoolMap`
@@ -204,10 +204,10 @@ These functions are optimized for low entropy random data generation useful for 
 - `ObjectValue<>`
 - `ObjectValues<>`
 - ⭐ `PlainObject` use this instead of `Record<,>` or `extends object`, also makes sure it's not an array
-- `PickRequired<>`
+- `PickDefined<T, K>`
+- `PickRequired<T, K>`
 - `PlainKey`
 - `Point`
-- `Required<>`
 - `VoidFn`
 
 ## Development

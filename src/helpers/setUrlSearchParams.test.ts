@@ -21,8 +21,14 @@ describe("setUrlSearchParams", () => {
       "/signin?in=&UPPER=CASE#sec"
     );
     expect(
-      setUrlSearchParams("/signin?in#sec", { and: "&", equals: "=" })
-    ).toBe("/signin?in=&and=%26&equals=%3D#sec");
+      setUrlSearchParams("/signin?in#sec", {
+        and: "&",
+        equals: "=",
+        filter: { date: "2024" },
+      })
+    ).toBe(
+      "/signin?in=&and=%26&equals=%3D&filter=%7B%22date%22%3A%222024%22%7D#sec"
+    );
   });
 
   test("ip", () => {
