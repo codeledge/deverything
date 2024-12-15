@@ -1,5 +1,11 @@
 # deverything
 
+## 1.12.0
+
+### Minor Changes
+
+- getDateSeries
+
 ## 1.11.2
 
 ### Patch Changes
