@@ -1,5 +1,11 @@
 # deverything
 
+## 1.12.1
+
+### Patch Changes
+
+- array
+
 ## 1.12.0
 
 ### Minor Changes

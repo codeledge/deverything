@@ -4,8 +4,8 @@ export const getDateSeries = (
   startDate: Date,
   endDate: Date,
   unit: "days" | "hours" | "minutes" | "seconds"
-): Record<ISODate, number> => {
-  const series: Record<ISODate, number> = {};
+): ISODate[] => {
+  const series: ISODate[] = [];
   const unitMap: Record<typeof unit, number> = {
     days: 24 * 60 * 60 * 1000, // milliseconds in a day
     hours: 60 * 60 * 1000, // milliseconds in an hour
@@ -20,7 +20,7 @@ export const getDateSeries = (
   const end = endDate.getTime();
 
   while (current <= end) {
-    series[new Date(current).toISOString()] = 0;
+    series.push(new Date(current).toISOString());
     current += increment; // Move forward by the specified unit
   }
 
