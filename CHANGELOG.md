@@ -1,5 +1,11 @@
 # deverything
 
+## 1.13.0
+
+### Minor Changes
+
+- parseDate add asUTC option
+
 ## 1.12.1
 
 ### Patch Changes

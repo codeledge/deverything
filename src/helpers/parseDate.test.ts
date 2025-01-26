@@ -45,6 +45,18 @@ describe("parseDate", () => {
       expect(parseDate("2000-02-32")).toBeUndefined();
 
       expect(parseDate("2000-02-21")).toStrictEqual(
+        new Date("2000-02-21T00:00:00+10:30")
+      );
+
+      expect(parseDate("2000-02-21", { asUTC: true })).toStrictEqual(
+        new Date("2000-02-21T00:00:00Z")
+      );
+    });
+
+    test("hours", async () => {
+      expect(parseDate("2000-02-02T40:00")).toBeUndefined();
+
+      expect(parseDate("2000-02-21T00:00")).toStrictEqual(
         new Date("2000-02-21T00:00:00.000+10:30")
       );
     });
