@@ -1,5 +1,11 @@
 # deverything
 
+## 2.0.0
+
+### Major Changes
+
+- seriesAll => seriesAsync
+
 ## 1.13.0
 
 ### Minor Changes

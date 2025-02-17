@@ -1,14 +1,14 @@
 import { describe, expect, test } from "@jest/globals";
-import { seriesAll } from "./seriesAll";
+import { seriesAsync } from "./seriesAsync";
 import { sleep } from "./sleep";
 
-describe("seriesAll", () => {
+describe("seriesAsync", () => {
   test("simple", async () => {
     expect(
-      await seriesAll([
-        Promise.resolve(1),
-        sleep(1).then(() => 2),
-        () => Promise.resolve(3),
+      await seriesAsync([
+        () => Promise.resolve(1),
+        () => sleep(1).then(() => 2),
+        () => Promise.resolve("3"),
         async () => 5,
         async () => {
           await sleep(1);
@@ -18,13 +18,14 @@ describe("seriesAll", () => {
           return sleep(1).then(() => 7);
         },
       ])
-    ).toStrictEqual([1, 2, 3, 5, 6, 7]);
+    ).toStrictEqual([1, 2, "3", 5, 6, 7]);
   });
 
   test("throw new Error", () => {
     expect(
-      seriesAll([
-        () => {
+      seriesAsync([
+        async () => {
+          await sleep(1); // make sure it throws before the next function anywway
           throw new Error("1");
         },
         () => {
@@ -36,7 +37,11 @@ describe("seriesAll", () => {
 
   test("Promise.reject", () => {
     expect(
-      seriesAll([Promise.reject("3"), () => Promise.reject("4")])
+      seriesAsync([
+        () => Promise.reject("3"),
+        () => 3.5,
+        () => Promise.reject("4"),
+      ])
     ).rejects.toEqual("3");
   });
 });

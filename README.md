@@ -105,7 +105,7 @@ Contributions always welcome!
 - ⭐ `parseDate()` pass anything Date-Like, and get a JS Date back
 - `promiseWithTimeout()` takes a promise, a timeoutMs, and an option error as arguments. Returns a new Promise that either resolves with the value of the input promise or rejects with the provided error or a default error message if the input promise does not resolve or reject within the specified timeoutMs.
 - `scrambleText()` replace alpha chars with random chars
-- `seriesAll()` executes promises in series, and returns all results
+- `seriesAsync()` executes promises in series, and returns all results
 - `setObjectPath()` set a value in an object by path
 - `setUrlSearchParams()` set URL search params
 - `shuffle()` shuffles elements in an array

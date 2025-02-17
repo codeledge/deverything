@@ -38,7 +38,7 @@ export * from "./promiseWithTimeout";
 export * from "./removeUndefinedValues";
 export * from "./scrambleText";
 export * from "./serialize";
-export * from "./seriesAll";
+export * from "./seriesAsync";
 export * from "./setObjectPath";
 export * from "./setUrlSearchParams";
 export * from "./shuffle";
