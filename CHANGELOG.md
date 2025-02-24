@@ -1,5 +1,11 @@
 # deverything
 
+## 2.0.1
+
+### Patch Changes
+
+- unique values return type
+
 ## 2.0.0
 
 ### Major Changes

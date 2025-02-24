@@ -1,10 +1,7 @@
 import { clamp } from "../helpers";
 
 /**
- *
- * @example formatProgress({ index: -1, total: 10 }) => [1/10] capped
- * @example formatProgress({ index: 1, total: 10 }) => [2/10]
- * @example formatProgress({ index: 11, total: 10 }) => [10/10] capped
+ * @deprecated Use `formatIndexProgress` instead.
  */
 export const formatProgress = ({
   index,
