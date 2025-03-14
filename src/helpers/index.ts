@@ -20,6 +20,7 @@ export * from "./getCookieByName";
 export * from "./getKeys";
 export * from "./getUrlSearchParam";
 export * from "./getUrlSearchParams";
+export * from "./groupBy";
 export * from "./incrementalId";
 export * from "./keysLength";
 export * from "./last";
