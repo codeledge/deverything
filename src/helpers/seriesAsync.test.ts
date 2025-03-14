@@ -3,6 +3,12 @@ import { seriesAsync } from "./seriesAsync";
 import { sleep } from "./sleep";
 
 describe("seriesAsync", () => {
+  test("invalid arg", () => {
+    expect(seriesAsync([Promise.resolve(10)])).rejects.toThrowError();
+    expect(seriesAsync([new Promise(() => {})])).rejects.toThrowError();
+    expect(seriesAsync([sleep(1)])).rejects.toThrowError();
+  });
+
   test("simple", async () => {
     expect(
       await seriesAsync([
@@ -17,8 +23,11 @@ describe("seriesAsync", () => {
         async () => {
           return sleep(1).then(() => 7);
         },
+        async () => {
+          return await sleep(1);
+        },
       ])
-    ).toStrictEqual([1, 2, "3", 5, 6, 7]);
+    ).toStrictEqual([1, 2, "3", 5, 6, 7, undefined]);
   });
 
   test("throw new Error", () => {

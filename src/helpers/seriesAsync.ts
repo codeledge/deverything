@@ -21,7 +21,10 @@ export const seriesAsync = async <T extends readonly unknown[]>(
   const results: unknown[] = [];
   for (const fn of series) {
     if (isFunction(fn)) results.push(await fn());
-    else throw new Error("seriesAsync: invalid type");
+    else
+      throw new Error(
+        `seriesAsync: invalid type received "${typeof fn}", make sure all items are functions, not promises, otherwise they would've been executed already`
+      );
   }
   return results as SeriesResult<T>;
 };
