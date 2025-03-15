@@ -1,5 +1,5 @@
 import { Maybe } from "../types";
 
-export const isValue = (arg?: Maybe<any>): boolean => {
+export const isValue = <T>(arg?: Maybe<T>): arg is T => {
   return arg !== undefined && arg !== null && !Number.isNaN(arg);
 };

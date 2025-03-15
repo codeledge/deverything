@@ -23,4 +23,10 @@ describe("groupBy", () => {
       1: [{ id: 1 }, { id: 1 }],
     });
   });
+  test("groups by 0 and empty string", async () => {
+    expect(groupBy([{ id: 0 }, { id: "" }], "id")).toStrictEqual({
+      0: [{ id: 0 }],
+      "": [{ id: "" }],
+    });
+  });
 });
