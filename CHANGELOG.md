@@ -1,5 +1,11 @@
 # deverything
 
+## 2.2.0
+
+### Minor Changes
+
+- implement arrayDiff and arrayIntersection optimizations, add mapByKey and pluck helpers, and enhance tests
+
 ## 2.1.2
 
 ### Patch Changes
