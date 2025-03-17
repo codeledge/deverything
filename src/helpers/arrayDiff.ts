@@ -4,13 +4,13 @@
  * arrayDiff([1, 2, 3], [2, 3, 4]); // [1, 4]
  */
 export const arrayDiff = (arr1: any[], arr2: any[]) => {
-  const arr1Set = new Set(arr1);
-  const arr2Set = new Set(arr2);
+  
+  const set1 = new Set(arr1);
+  const set2 = new Set(arr2);
 
-  return (
-    [...arr1Set]
-      .filter((value) => !arr2Set.has(value))
-      // NOTE: need to do for both directions, or values from arr2 will be missed
-      .concat([...arr2Set].filter((value) => !arr1Set.has(value)))
-  );
+  const diff1 = [...set1].filter((value) => !set2.has(value));
+  // NOTE: need to do for both directions, or values from arr2 not contained in arr1 will be missed
+  const diff2 = [...set2].filter((value) => !set1.has(value));
+
+  return [...diff1, ...diff2];
 };

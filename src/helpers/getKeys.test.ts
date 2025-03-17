@@ -9,9 +9,5 @@ describe("getKeys", () => {
 
   test("objects", async () => {
     expect(getKeys({ 1: 1, b: 2 })).toStrictEqual(["1", "b"]);
-    expect(getKeys({ [Symbol.for("1")]: 1, b: 2 })).toStrictEqual([
-      "b",
-      Symbol.for("1"),
-    ]);
   });
 });

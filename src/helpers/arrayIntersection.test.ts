@@ -1,11 +1,21 @@
 import { describe, expect, test } from "@jest/globals";
 import { arrayIntersection } from "./arrayIntersection";
+import { array } from "./array";
 
 describe("arrayIntersection", () => {
   test("no arg", async () => {
     expect(arrayIntersection([], [])).toStrictEqual([]);
     expect(arrayIntersection([true], [false])).toStrictEqual([]);
     expect(arrayIntersection([() => {}], [() => {}])).toStrictEqual([]);
+  });
+
+  test("big number", async () => {
+    expect(
+      arrayIntersection(
+        array(10000, (_, i) => i),
+        [2, 3, 4]
+      )
+    ).toStrictEqual([2, 3, 4]);
   });
 
   test("args", async () => {

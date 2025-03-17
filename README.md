@@ -92,10 +92,12 @@ Contributions always welcome!
 - `firstValue()` get the first value of an object
 - `getUrlSearchParam()` get URL search param
 - `getUrlSearchParams()` get URL search params
+- `groupByKey()`
 - `incrementalId()` autoincremental SQL-like, process-unique numeric id
 - `keysLength()` get the length of keys in an object
 - `last()` get the last element of an array
 - `lastIndex()` get the last index of an array
+- `mapByKey()`
 - ⭐ `merge()` deep merge objects
 - `moveToFirst()` move array element to first
 - `moveToIndex()` move array element to desired index
@@ -103,6 +105,7 @@ Contributions always welcome!
 - `normalizeNumber()` normalizes between 0 and 1
 - `objectDiff()` get the difference between two objects
 - ⭐ `parseDate()` pass anything Date-Like, and get a JS Date back
+- `pluck()` make array of value from object keys
 - `promiseWithTimeout()` takes a promise, a timeoutMs, and an option error as arguments. Returns a new Promise that either resolves with the value of the input promise or rejects with the provided error or a default error message if the input promise does not resolve or reject within the specified timeoutMs.
 - `scrambleText()` replace alpha chars with random chars
 - `seriesAsync()` executes promises in series, and returns all results

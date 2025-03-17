@@ -13,7 +13,7 @@ import { isValue } from "../validators/isValue";
  *   { externalId: 2, value: 100 },
  *   { mis_spelled_externalId: 2, value: 90 }, // not included in any group
  * ];
- * const ordersByInstrument = groupBy(items, "externalId");
+ * const ordersByInstrument = groupByKey(items, "externalId");
  * // {
  * //   1: [
  * //     { externalId: 1, value: 100 },
@@ -25,7 +25,10 @@ import { isValue } from "../validators/isValue";
  * //   ],
  * // }
  */
-export const groupBy = <T>(items: T[], key: keyof T): Record<keyof T, T[]> => {
+export const groupByKey = <T, K extends keyof T>(
+  items: T[],
+  key: K
+): Record<keyof T, T[]> => {
   return items.reduce((acc, item) => {
     const groupKey = item[key] as keyof T;
     if (!isValue(groupKey)) {

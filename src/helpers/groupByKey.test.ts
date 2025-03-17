@@ -1,15 +1,15 @@
 import { describe, expect, test } from "@jest/globals";
-import { groupBy } from "./groupBy";
+import { groupByKey } from "./groupByKey";
 
-describe("groupBy", () => {
+describe("groupByKey", () => {
   test("args", async () => {
-    expect(groupBy([], "ciao")).toStrictEqual({});
-    expect(groupBy([{ id: 1 }, { id: 2 }], "id")).toStrictEqual({
+    expect(groupByKey([], "ciao")).toStrictEqual({});
+    expect(groupByKey([{ id: 1 }, { id: 2 }], "id")).toStrictEqual({
       1: [{ id: 1 }],
       2: [{ id: 2 }],
     });
     expect(
-      groupBy(
+      groupByKey(
         [
           { id: 1, m: 2 },
           { id: 2, uuid: 1 },
@@ -19,12 +19,12 @@ describe("groupBy", () => {
     ).toStrictEqual({
       1: [{ id: 2, uuid: 1 }],
     });
-    expect(groupBy([{ id: 1 }, { id: 1 }], "id")).toStrictEqual({
+    expect(groupByKey([{ id: 1 }, { id: 1 }], "id")).toStrictEqual({
       1: [{ id: 1 }, { id: 1 }],
     });
   });
   test("groups by 0 and empty string", async () => {
-    expect(groupBy([{ id: 0 }, { id: "" }], "id")).toStrictEqual({
+    expect(groupByKey([{ id: 0 }, { id: "" }], "id")).toStrictEqual({
       0: [{ id: 0 }],
       "": [{ id: "" }],
     });
