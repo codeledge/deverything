@@ -1,5 +1,3 @@
-import { uniqueValues } from "./uniqueValues";
-
 /**
  * Given 2 arrays, returns the (unique) elements that belong to each but not both at the same time.
  * @example
