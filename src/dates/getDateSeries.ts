@@ -1,5 +1,9 @@
 import { ISODate } from "../types";
 
+/**
+ *
+ * @deprecated use getDateRangeSeries instead
+ */
 export const getDateSeries = (
   startDate: Date,
   endDate: Date,

@@ -1,5 +1,11 @@
 # deverything
 
+## 3.1.0
+
+### Minor Changes
+
+- getDateRangeSeries
+
 ## 3.0.0
 
 ### Major Changes
