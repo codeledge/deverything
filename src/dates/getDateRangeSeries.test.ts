@@ -17,6 +17,21 @@ describe("getDateRangeSeries", () => {
     ]);
   });
 
+  it("should preserve timezone", async () => {
+    const startDate = new Date("2024-01-01T00:00:00+1030");
+    const endDate = new Date("2024-01-05T00:00:00+1030");
+    const unit = "days";
+
+    const result = getDateRangeSeries({ startDate, endDate }, unit);
+
+    expect(result).toEqual([
+      "2023-12-31T13:30:00.000Z",
+      "2024-01-01T13:30:00.000Z",
+      "2024-01-02T13:30:00.000Z",
+      "2024-01-03T13:30:00.000Z",
+    ]);
+  });
+
   it("should handle a series for hours", () => {
     const startDate = new Date("2024-01-01T00:00:00.000Z");
     const endDate = new Date("2024-01-01T03:00:00.000Z");

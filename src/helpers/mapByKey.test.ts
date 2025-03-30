@@ -44,13 +44,13 @@ describe("mapByKey", () => {
 
   it("should handle string keys", () => {
     const items = [
-      { id: 1, value: "100" },
-      { id: 2, value: "200" },
+      { id: 1, value: "100", [Symbol.for("1")]: 1 },
+      { id: 2, value: "200", [String("aasd")]: BigInt(1) },
       { id: 3, value: "200" },
     ];
     const result = mapByKey(items, "value");
     expect(result).toEqual({
-      100: { id: 1, value: "100" },
+      100: { id: 1, value: "100", [Symbol.for("1")]: 1 },
       200: { id: 3, value: "200" },
     });
   });

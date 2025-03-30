@@ -1,5 +1,11 @@
 # deverything
 
+## 3.1.1
+
+### Patch Changes
+
+- fix return types
+
 ## 3.1.0
 
 ### Minor Changes
