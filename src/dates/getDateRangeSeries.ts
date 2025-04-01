@@ -29,7 +29,7 @@ export const getDateRangeSeries = (
       case "calendarMonth":
         if (start.getUTCDate() > 28) {
           throw new Error(
-            "Cannot add months when the start date is greater than 28"
+            "Cannot add months when the start day of month is greater than 28, it may lead to unexpected results"
           );
         }
         const currentMonth = current.getUTCMonth();
