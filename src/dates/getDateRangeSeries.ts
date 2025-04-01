@@ -8,18 +8,8 @@ import { DateRange, ISODate } from "../types";
  */
 export const getDateRangeSeries = (
   dateRange: DateRange,
-  unit: "days" | "hours" | "minutes" | "seconds"
+  unit: "day" | "hour" | "minute" | "second" | "calendarMonth"
 ): ISODate[] => {
-  const series: ISODate[] = [];
-  const unitMap: Record<typeof unit, number> = {
-    days: 24 * 60 * 60 * 1000, // milliseconds in a day
-    hours: 60 * 60 * 1000, // milliseconds in an hour
-    minutes: 60 * 1000, // milliseconds in a minute
-    seconds: 1000, // milliseconds in a second
-  };
-
-  const increment = unitMap[unit];
-
   const { startDate, endDate } = dateRange;
 
   const start = parseDate(startDate);
@@ -29,13 +19,43 @@ export const getDateRangeSeries = (
     throw new Error("Invalid date range");
   }
 
-  // Ensure we are working with time in milliseconds
-  let currentTime = start.getTime();
-  const endTime = end.getTime();
+  const series: string[] = [];
+  const current = new Date(start.getTime()); // Clone the startDate to avoid mutating it
 
-  while (currentTime < endTime) {
-    series.push(new Date(currentTime).toISOString());
-    currentTime += increment; // Move forward by the specified unit
+  while (current < end) {
+    series.push(current.toISOString());
+
+    switch (unit) {
+      case "calendarMonth":
+        if (start.getUTCDate() > 28) {
+          throw new Error(
+            "Cannot add months when the start date is greater than 28"
+          );
+        }
+        const currentMonth = current.getUTCMonth();
+        current.setUTCMonth(currentMonth + 1);
+
+        break;
+
+      case "day":
+        current.setUTCDate(current.getUTCDate() + 1);
+        break;
+
+      case "hour":
+        current.setUTCHours(current.getUTCHours() + 1);
+        break;
+
+      case "minute":
+        current.setUTCMinutes(current.getUTCMinutes() + 1);
+        break;
+
+      case "second":
+        current.setUTCSeconds(current.getUTCSeconds() + 1);
+        break;
+
+      default:
+        throw new Error(`Unsupported unit: ${unit}`);
+    }
   }
 
   return series;
