@@ -7,6 +7,7 @@ The promise:
 - **✅ 1 package**: say goodbye to lodash, faker, and the other package you don't recall the name of.
 - **⭕ 0 dependencies**: keep it simple and lightweight.
 - **🏆 Pick the best**: the code is minimal and uses the best practices for max performance.
+- **🤖 AI**: Functions are reviewed by AI to make sure all corner cases are covered.
 - **👪🏼 Typescript**: use it, support it and export it.
 - **🌊 Intuitive**: favour always the most intuitive API and common usage, _never_ throw error unless asked to.
 - **🙈 Semantic**: use simple function names that are easy to remember, no complicated options.
