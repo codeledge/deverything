@@ -1,5 +1,11 @@
 # deverything
 
+## 3.2.0
+
+### Breaking Changes for getDateRangeSeries (not bumping major pkg version)
+
+- refactor getDateRangeSeries to support singular units and add calendarMonth handling in tests
+
 ## 3.1.1
 
 ### Patch Changes
