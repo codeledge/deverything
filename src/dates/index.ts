@@ -1,5 +1,6 @@
 export * from "./getDateRangeSeries";
 export * from "./getDateSeries";
+export * from "./getDateSeriesRange";
 export * from "./isOver18";
 export * from "./startOfDay";
 export * from "./startOfNextMonth";
@@ -8,3 +9,4 @@ export * from "./startOfThisWeek";
 export * from "./startOfToday";
 export * from "./startOfTomorrow";
 export * from "./startOfUTCDay";
+export * from "./startOfUTCTomorrow";

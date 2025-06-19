@@ -9,6 +9,8 @@ describe("percentageChange", () => {
     expect(percentageChange(0.3, 0.333)).toBe(0.11);
     expect(percentageChange(0, 0.12)).toBe(1);
     expect(percentageChange(0, 0)).toBe(0);
+    expect(percentageChange(1, 1)).toBe(0);
+    expect(percentageChange(0.00001, 0.00001)).toBe(0);
     expect(percentageChange(0.99, 0)).toBe(-1);
   });
 });

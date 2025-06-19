@@ -1,5 +1,11 @@
 # deverything
 
+## 3.3.0
+
+### Minor Changes
+
+- utc tomorrow
+
 ## 3.2.0
 
 ### Breaking Changes for getDateRangeSeries (not bumping major pkg version)

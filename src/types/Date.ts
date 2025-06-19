@@ -22,7 +22,9 @@ export type ISOYear = string;
  */
 export type Timezone = string;
 
-export type DateRange = {
-  startDate: DateLike;
-  endDate: DateLike;
+export type DateRange<T extends DateLike = DateLike> = {
+  startDate: T;
+  endDate: T;
 };
+
+export type DateSeries<T extends DateLike = DateLike> = T[];
