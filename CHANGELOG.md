@@ -1,5 +1,11 @@
 # deverything
 
+## 4.0.0
+
+### Major Changes
+
+- bucketSortedDates
+
 ## 3.3.1
 
 ### Patch Changes
