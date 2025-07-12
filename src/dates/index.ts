@@ -1,5 +1,5 @@
+export * from "./bucketSortedDates";
 export * from "./getDateRangeSeries";
-export * from "./getDateSeries";
 export * from "./getDateSeriesRange";
 export * from "./isOver18";
 export * from "./startOfDay";
