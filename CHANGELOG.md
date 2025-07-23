@@ -1,5 +1,15 @@
 # deverything
 
+## 4.0.0
+
+### Major Changes
+
+- add bucketSortedDates
+- remove formatProgress
+- remove toggleArray
+- remove isPositive
+- remove isNegative
+
 ## 3.3.1
 
 ### Patch Changes

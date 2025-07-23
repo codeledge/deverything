@@ -15,11 +15,3 @@ export const toggleArrayValue = <T>(array: T[], value: T) => {
 
   return copy;
 };
-
-/**
- * @deprecated Use toggleArrayValue instead
- * @param {T[]} array
- * @param {T} value
- * @returns {T[]}
- */
-export const toggleArray = toggleArrayValue;
