@@ -4,9 +4,9 @@ import { sleep } from "./sleep";
 
 describe("seriesAsync", () => {
   test("invalid arg", () => {
-    expect(seriesAsync([Promise.resolve(10)] as any)).rejects.toThrowError();
-    expect(seriesAsync([new Promise(() => {})] as any)).rejects.toThrowError();
-    expect(seriesAsync([sleep(1)] as any)).rejects.toThrowError();
+    expect(seriesAsync([Promise.resolve(10)] as any)).rejects.toThrow();
+    expect(seriesAsync([new Promise(() => {})] as any)).rejects.toThrow();
+    expect(seriesAsync([sleep(1)] as any)).rejects.toThrow();
   });
 
   test("simple", async () => {
@@ -34,14 +34,14 @@ describe("seriesAsync", () => {
     expect(
       seriesAsync([
         async () => {
-          await sleep(1); // make sure it throws before the next function anywway
+          await sleep(1); // make sure it throws before the next function anyway
           throw new Error("1");
         },
         () => {
           throw new Error("2");
         },
       ])
-    ).rejects.toThrowError("1");
+    ).rejects.toThrow("1");
   });
 
   test("Promise.reject", () => {
