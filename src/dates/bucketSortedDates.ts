@@ -1,3 +1,4 @@
+import { parseDate } from "../helpers/parseDate";
 import { ISODate } from "../types";
 
 /**
@@ -12,8 +13,6 @@ export const bucketSortedDates = (
   dates: ISODate[],
   unit: "day" | "hour" | "minute" | "second"
 ): Record<ISODate, ISODate[]> => {
-  const bucketedDates: Record<ISODate, ISODate[]> = {};
-
   // Calculate interval based on unit for virtual right edge
   const getIntervalMs = (
     unit: "day" | "hour" | "minute" | "second"
@@ -41,6 +40,7 @@ export const bucketSortedDates = (
     };
   });
 
+  const bucketedDates: Record<ISODate, ISODate[]> = {};
   // Initialize each bucket with an empty array
   bucketData.forEach(({ normalizedKey }) => {
     bucketedDates[normalizedKey] = [];
@@ -50,7 +50,9 @@ export const bucketSortedDates = (
   let bucketIndex = 0;
 
   dates.forEach((date) => {
-    const dateObj = new Date(date);
+    const dateObj = parseDate(date);
+    if (!dateObj) return;
+
     const dateTimestamp = dateObj.getTime();
     const normalizedDate = dateObj.toISOString();
 
