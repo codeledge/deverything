@@ -4,7 +4,11 @@
 
 ### Major Changes
 
-- bucketSortedDates
+- add bucketSortedDates
+- remove formatProgress
+- remove toggleArray
+- remove isPositive
+- remove isNegative
 
 ## 3.3.1
 
