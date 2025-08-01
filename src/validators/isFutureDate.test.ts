@@ -1,4 +1,4 @@
-import { expect, it, describe } from "@jest/globals";
+import { expect, it, describe } from "vitest";
 import { isFutureDate } from "./isFutureDate";
 
 describe("isFutureDate", function () {

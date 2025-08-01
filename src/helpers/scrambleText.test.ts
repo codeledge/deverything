@@ -1,4 +1,4 @@
-import { expect, test } from "@jest/globals";
+import { expect, test } from "vitest";
 import { scrambleText } from "./scrambleText";
 
 test("scrambleText", async () => {

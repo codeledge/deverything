@@ -1,4 +1,4 @@
-import { afterAll, beforeAll, describe, expect, test } from "@jest/globals";
+import { afterAll, beforeAll, describe, expect, test } from "vitest";
 import { MAX_DATE_MILLISECONDS } from "../constants/time";
 import { parseDate } from "./parseDate";
 import timezoneMock from "timezone-mock";
@@ -100,6 +100,24 @@ describe("parseDate", () => {
       expect(parseDate("2000-02-21T00:00:00")).toStrictEqual(
         new Date("2000-02-21T00:00:00.000Z")
       );
+    });
+  });
+
+  describe("Invalid date formats", () => {
+    test("invalid hour (25)", async () => {
+      expect(parseDate("2025-01-01T25:00:00Z")).toBeUndefined();
+    });
+
+    test("invalid minute (60)", async () => {
+      expect(parseDate("2025-01-01T00:60:00Z")).toBeUndefined();
+    });
+
+    test("invalid second (60)", async () => {
+      expect(parseDate("2025-01-01T00:00:60Z")).toBeUndefined();
+    });
+
+    test("invalid timezone offset (+25:00)", async () => {
+      expect(parseDate("2025-01-01T00:00:00+25:00")).toBeUndefined();
     });
   });
 });

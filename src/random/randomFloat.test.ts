@@ -1,4 +1,4 @@
-import { describe, it, expect } from "@jest/globals";
+import { describe, it, expect } from "vitest";
 import { JS_MAX_DIGITS, randomFloat } from "./randomFloat";
 
 describe(`randomFloat`, () => {

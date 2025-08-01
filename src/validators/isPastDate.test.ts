@@ -1,4 +1,4 @@
-import { expect, it, describe } from "@jest/globals";
+import { expect, it, describe } from "vitest";
 import { isPastDate } from "./isPastDate";
 
 describe("isPastDate", function () {
@@ -6,7 +6,6 @@ describe("isPastDate", function () {
     expect(isPastDate(new Date().getTime() - 1)).toBe(true);
     expect(isPastDate(new Date("2012"))).toBe(true);
     expect(isPastDate(22220)).toBe(true);
-    expect(isPastDate(12220.234)).toBe(true);
   });
 
   it("false", function () {

@@ -1,6 +1,6 @@
 import { mapByKey } from "./mapByKey";
 import { PlainObject } from "../types";
-import { describe, it, expect } from "@jest/globals";
+import { describe, it, expect } from "vitest";
 
 describe("mapByKey", () => {
   it("should map items by the given key", () => {

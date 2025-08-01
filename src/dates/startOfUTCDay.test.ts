@@ -1,4 +1,4 @@
-import { afterAll, beforeAll, describe, expect, test } from "@jest/globals";
+import { afterAll, beforeAll, describe, expect, test } from "vitest";
 import { startOfUTCDay } from "./startOfUTCDay";
 import timezoneMock from "timezone-mock";
 

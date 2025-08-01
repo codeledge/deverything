@@ -1,9 +1,8 @@
-import { expect, test } from "@jest/globals";
+import { expect, test, vi } from "vitest";
 import { promiseWithTimeout } from "./promiseWithTimeout";
-import { jest } from "@jest/globals";
 
 test("promiseWithTimeout", async () => {
-  jest.useFakeTimers();
+  vi.useFakeTimers();
 
   const testPromise = () =>
     new Promise((resolve) => {
@@ -18,7 +17,7 @@ test("promiseWithTimeout", async () => {
     new Error("custom error")
   );
 
-  jest.advanceTimersByTime(220);
+  vi.advanceTimersByTime(220);
 
   await expect(result).resolves.toEqual("success");
   await expect(resultError).rejects.toThrow();

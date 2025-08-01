@@ -1,4 +1,4 @@
-import { describe, expect, test } from "@jest/globals";
+import { describe, expect, test } from "vitest";
 import { serialize } from "./serialize";
 import { PRIMITIVES_OBJECT } from "../constants/primitives";
 import { omit } from "./omit";

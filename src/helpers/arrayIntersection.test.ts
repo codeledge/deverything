@@ -1,4 +1,4 @@
-import { describe, expect, test } from "@jest/globals";
+import { describe, expect, test } from "vitest";
 import { arrayIntersection } from "./arrayIntersection";
 import { array } from "./array";
 

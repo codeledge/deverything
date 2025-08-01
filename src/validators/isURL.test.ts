@@ -1,4 +1,4 @@
-import { expect, describe, it } from "@jest/globals";
+import { expect, describe, it } from "vitest";
 import { isURL } from "./isURL";
 
 describe("isURL", function () {

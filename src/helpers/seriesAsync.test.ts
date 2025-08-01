@@ -1,12 +1,12 @@
-import { describe, expect, test } from "@jest/globals";
+import { describe, expect, test } from "vitest";
 import { seriesAsync } from "./seriesAsync";
 import { sleep } from "./sleep";
 
 describe("seriesAsync", () => {
-  test("invalid arg", () => {
-    expect(seriesAsync([Promise.resolve(10)] as any)).rejects.toThrow();
-    expect(seriesAsync([new Promise(() => {})] as any)).rejects.toThrow();
-    expect(seriesAsync([sleep(1)] as any)).rejects.toThrow();
+  test("invalid arg", async () => {
+    await expect(seriesAsync([Promise.resolve(10)] as any)).rejects.toThrow();
+    await expect(seriesAsync([new Promise(() => {})] as any)).rejects.toThrow();
+    await expect(seriesAsync([sleep(1)] as any)).rejects.toThrow();
   });
 
   test("simple", async () => {
@@ -30,8 +30,8 @@ describe("seriesAsync", () => {
     ).toStrictEqual([1, 2, "3", 5, 6, 7, undefined]);
   });
 
-  test("throw new Error", () => {
-    expect(
+  test("throw new Error", async () => {
+    await expect(
       seriesAsync([
         async () => {
           await sleep(1); // make sure it throws before the next function anyway
@@ -44,8 +44,8 @@ describe("seriesAsync", () => {
     ).rejects.toThrow("1");
   });
 
-  test("Promise.reject", () => {
-    expect(
+  test("Promise.reject", async () => {
+    await expect(
       seriesAsync([
         () => Promise.reject("3"),
         async () => 3.5,

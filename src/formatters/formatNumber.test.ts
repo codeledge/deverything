@@ -1,4 +1,4 @@
-import { describe, expect, test } from "@jest/globals";
+import { describe, expect, test } from "vitest";
 import { formatNumber } from "./formatNumber";
 import { randomInt } from "../random/randomInt";
 

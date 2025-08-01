@@ -1,6 +1,8 @@
 import { DateLike, Maybe } from "../types";
+import { MAX_DATE_MILLISECONDS } from "../constants/time";
 import { isEmpty } from "../validators/isEmpty";
 import { isJsDate } from "../validators/isJsDate";
+import { isNumber } from "../validators/isNumber";
 import { isString } from "../validators/isString";
 
 const partialDateRegex = /^\d{4}(-\d{2})?(-\d{2})?$/;
@@ -18,6 +20,17 @@ export const parseDate = (
   }
 ) => {
   if (isEmpty(arg)) return;
+
+  if (isNumber(arg)) {
+    // Return undefined for non-integer numbers (decimals like 12.1)
+    if (!Number.isInteger(arg)) return;
+    
+    // Return undefined for numbers outside valid JavaScript Date range
+    if (arg < -MAX_DATE_MILLISECONDS || arg > MAX_DATE_MILLISECONDS) return;
+    
+    // Return undefined for NaN or infinite numbers
+    if (!Number.isFinite(arg)) return;
+  }
 
   if (isString(arg) && partialDateRegex.test(arg)) {
     // Add time to date string because it will be interpreted

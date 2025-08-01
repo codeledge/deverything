@@ -1,4 +1,4 @@
-import { expect, describe, test } from "@jest/globals";
+import { expect, describe, test } from "vitest";
 import { setUrlSearchParams } from "./setUrlSearchParams";
 
 describe("setUrlSearchParams", () => {

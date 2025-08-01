@@ -1,4 +1,4 @@
-import { describe, expect, test } from "@jest/globals";
+import { describe, expect, test } from "vitest";
 import {
   ARABIC_FIRST_NAMES,
   CYRILLIC_FIRST_NAMES,
