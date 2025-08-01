@@ -15,9 +15,9 @@ describe("isBetweenDates", () => {
     ).toBe(true);
   });
 
-  it("should return true when date equals start or end date (inclusive)", () => {
-    expect(isBetweenDates("2023-01-01", dateRange)).toBe(true);
-    expect(isBetweenDates("2023-12-31", dateRange)).toBe(true);
+  it("should return true when date equals start date, false when equals end date (left inclusive)", () => {
+    expect(isBetweenDates("2023-01-01", dateRange)).toBe(true); // includes start
+    expect(isBetweenDates("2023-12-31", dateRange)).toBe(false); // excludes end
   });
 
   it("should return false when date is outside the range", () => {
@@ -65,7 +65,7 @@ describe("isBetweenDates", () => {
 
     it("should handle same start and end dates", () => {
       const sameRange = { startDate: "2023-01-01", endDate: "2023-01-01" };
-      expect(isBetweenDates("2023-01-01", sameRange)).toBe(true);
+      expect(isBetweenDates("2023-01-01", sameRange)).toBe(false); // left inclusive means start >= date < end, so when start === end, nothing is included
       expect(isBetweenDates("2023-01-02", sameRange)).toBe(false);
     });
 
@@ -78,6 +78,7 @@ describe("isBetweenDates", () => {
       expect(isBetweenDates("2023-06-15T12:00:00.000Z", timeRange)).toBe(true);
       expect(isBetweenDates("2023-06-15T09:00:00.000Z", timeRange)).toBe(false);
       expect(isBetweenDates("2023-06-15T15:00:00.000Z", timeRange)).toBe(false);
+      expect(isBetweenDates("2023-06-15T14:00:00.000Z", timeRange)).toBe(false); // excludes end time
     });
   });
 });
