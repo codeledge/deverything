@@ -19,4 +19,46 @@ describe("isFutureDate", () => {
     expect(isFutureDate(new Date())).toBe(false); // too fast
     expect(isFutureDate(new Date().getTime())).toBe(false);
   });
+
+  describe("with referenceDate", () => {
+    it("should return true when date is after referenceDate", () => {
+      const referenceDate = new Date("2023-01-01");
+      expect(isFutureDate("2023-06-01", { referenceDate })).toBe(true);
+      expect(isFutureDate("2024-01-01", { referenceDate })).toBe(true);
+      expect(isFutureDate(new Date("2023-12-31"), { referenceDate })).toBe(
+        true
+      );
+    });
+
+    it("should return false when date is before or equal to referenceDate", () => {
+      const referenceDate = new Date("2023-06-01");
+      expect(isFutureDate("2023-01-01", { referenceDate })).toBe(false);
+      expect(isFutureDate("2022-12-31", { referenceDate })).toBe(false);
+      expect(isFutureDate("2023-06-01", { referenceDate })).toBe(false); // same date
+    });
+
+    it("should work with different date formats as referenceDate", () => {
+      expect(isFutureDate("2023-06-01", { referenceDate: "2023-01-01" })).toBe(
+        true
+      );
+      expect(isFutureDate("2023-06-01", { referenceDate: 1672531200000 })).toBe(
+        true
+      ); // 2023-01-01 timestamp
+      expect(isFutureDate("2022-06-01", { referenceDate: "2023-01-01" })).toBe(
+        false
+      );
+    });
+
+    it("should fall back to current date when referenceDate is invalid", () => {
+      const futureDate = new Date();
+      futureDate.setFullYear(futureDate.getFullYear() + 1);
+
+      expect(isFutureDate(futureDate, { referenceDate: "invalid-date" })).toBe(
+        true
+      );
+      expect(isFutureDate(futureDate, { referenceDate: null as any })).toBe(
+        true
+      );
+    });
+  });
 });

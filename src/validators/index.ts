@@ -1,5 +1,6 @@
 export * from "./isArray";
 export * from "./isArrayIncluded";
+export * from "./isBetweenDates";
 export * from "./isBoolean";
 export * from "./isBrowser";
 export * from "./isBuffer";

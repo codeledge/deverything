@@ -1,6 +1,6 @@
 {
   "name": "deverything",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "Everything you need for Dev",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

@@ -30,8 +30,9 @@ Contributions always welcome!
 - `isFile()` if it's a file
 - `isFunction()`
 - `isJsDate()` if it's a **valid** javascript's Date
-  - `isFutureDate()`
-  - `isPastDate()`
+  - `isBetweenDates()` check if date falls between two other dates (left inclusive: includes start, excludes end)
+  - `isFutureDate()` check if date is in the future, optionally against a reference date
+  - `isPastDate()` check if date is in the past, optionally against a reference date
   - `isStringDate()` also checks if the string passed is a **valid** date
 - `isKey()` is a real key of an object
 - `isLastIndex()` is the index is the last item of array
@@ -61,7 +62,9 @@ Contributions always welcome!
 ### Dates
 
 - `getDateRangeSeries()` generate a series of dates within a range
-- `isOver18()`
+- `getDateSeriesRange()` get the smallest and biggest dates from an array of dates
+- `groupByDateBucket()` group items into date buckets based on their dates and specified time intervals
+- `isOver18()` check if someone is over 18 years old
 - `startOfDay()` get the start of a specific day
 - `startOfNextMonth()`
 - `startOfNextWeek()`

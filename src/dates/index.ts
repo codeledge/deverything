@@ -1,6 +1,7 @@
 export * from "./bucketSortedDates";
 export * from "./getDateRangeSeries";
 export * from "./getDateSeriesRange";
+export * from "./groupByDateBucket";
 export * from "./isOver18";
 export * from "./startOfDay";
 export * from "./startOfNextMonth";

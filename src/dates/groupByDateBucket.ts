@@ -1,19 +1,28 @@
 import { parseDate } from "../helpers/parseDate";
 import { ISODate } from "../types";
+import { PropertyAccessor } from "../_internals/getProp";
+import { getProp } from "../_internals/getProp";
 
 /**
- * Buckets dates into groups based on a date series
- * @deprecated Use `groupByDateBucket` instead. This function will be removed in the next major version.
- * @param dateSeries Array of dates that define the buckets, must be sorted in ascending order
- * @param dates Array of dates to be bucketed, must be sorted in ascending order
- * @param unit The time unit to use for bucketing ('day', 'hour', 'minute', 'second')
- * @returns Record mapping each bucket date to an array of dates that fall within that bucket
+ * Groups items into date buckets based on their dates and specified time intervals
+ * @param dateBuckets Array of ISO date strings that define the bucket boundaries, must be sorted in ascending order
+ * @param items Array of items to be grouped into buckets, should be sorted in ascending order by the date property for optimal performance
+ * @param unit The time unit to use for bucket intervals ('day', 'hour', 'minute', 'second')
+ * @param accessor Optional property accessor for extracting dates from items. If not provided, assumes items are ISO date strings
+ * @returns Record where keys are ISO date strings from dateBuckets and values are arrays of items that fall within each bucket's time range
  */
-export const bucketSortedDates = (
-  dateSeries: ISODate[],
-  dates: ISODate[],
-  unit: "day" | "hour" | "minute" | "second"
-): Record<ISODate, ISODate[]> => {
+
+export function groupByDateBucket<T>({
+  dateBuckets,
+  items,
+  unit,
+  accessor,
+}: {
+  dateBuckets: ISODate[];
+  items: T[];
+  unit: "day" | "hour" | "minute" | "second";
+  accessor?: PropertyAccessor<T>;
+}): Record<ISODate, T[]> {
   // Calculate interval based on unit for virtual right edge
   const getIntervalMs = (
     unit: "day" | "hour" | "minute" | "second"
@@ -32,30 +41,43 @@ export const bucketSortedDates = (
 
   const intervalMs = getIntervalMs(unit);
 
-  // Pre-compute timestamps and normalized keys for dateSeries
-  const bucketData = dateSeries.map((date) => {
-    const dateObj = new Date(date);
+  // Pre-compute timestamps and normalized keys for dateBuckets
+  const bucketData = dateBuckets.map((date) => {
+    const dateObj = parseDate(date);
+    if (!dateObj)
+      throw new Error(`[groupByDateBucket] Invalid dateBucket: ${date}`);
     return {
       timestamp: dateObj.getTime(),
       normalizedKey: dateObj.toISOString(),
     };
   });
 
-  const bucketedDates: Record<ISODate, ISODate[]> = {};
+  const bucketedDates: Record<ISODate, T[]> = {};
   // Initialize each bucket with an empty array
   bucketData.forEach(({ normalizedKey }) => {
     bucketedDates[normalizedKey] = [];
   });
 
+  // Helper function to extract date from item
+  const extractDate = (item: T): ISODate | null => {
+    if (accessor) {
+      return getProp(item as any, accessor as any);
+    }
+    // If no accessor, assume T is ISODate
+    return item as unknown as ISODate;
+  };
+
   // Single-pass algorithm assuming both arrays are sorted
   let bucketIndex = 0;
 
-  dates.forEach((date) => {
-    const dateObj = parseDate(date);
+  items.forEach((item) => {
+    const dateValue = extractDate(item);
+    if (!dateValue) return;
+
+    const dateObj = parseDate(dateValue);
     if (!dateObj) return;
 
     const dateTimestamp = dateObj.getTime();
-    const normalizedDate = dateObj.toISOString();
 
     // Find the appropriate bucket for this date
     // Since both arrays are sorted, we can advance the bucket index as needed
@@ -71,9 +93,7 @@ export const bucketSortedDates = (
         dateTimestamp >= currentBucketTimestamp &&
         dateTimestamp < nextBucketTimestamp
       ) {
-        bucketedDates[bucketData[bucketIndex].normalizedKey].push(
-          normalizedDate
-        );
+        bucketedDates[bucketData[bucketIndex].normalizedKey].push(item);
         break;
       }
 
@@ -89,4 +109,4 @@ export const bucketSortedDates = (
   });
 
   return bucketedDates;
-};
+}

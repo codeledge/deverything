@@ -1,5 +1,16 @@
 # deverything
 
+## 4.1.0
+
+### Minor Changes
+
+- new date helpers and validators:
+  - `groupByDateBucket()` - group items into date buckets based on their dates and specified time intervals
+  - `getDateSeriesRange()` - get the smallest and biggest dates from an array of dates
+  - `isBetweenDates()` - check if date falls between two other dates (left inclusive)
+  - Enhanced `isFutureDate()` and `isPastDate()` with optional `referenceDate` parameter
+  - Deprecated `bucketSortedDates()` in favor of `groupByDateBucket()`
+
 ## 4.0.0
 
 ### Major Changes
