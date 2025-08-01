@@ -1,5 +1,5 @@
-import {describe, expect, test} from "vitest"
-import {capitalize} from "./capitalize";
+import { describe, expect, test } from "vitest";
+import { capitalize } from "./capitalize";
 
 describe("capitalize", () => {
   test("args", async () => {
@@ -8,5 +8,5 @@ describe("capitalize", () => {
     expect(capitalize("tEST")).toBe("Test");
     expect(capitalize("TEST")).toBe("Test");
     expect(capitalize("TEST Test")).toBe("Test test");
-  })
-})
+  });
+});

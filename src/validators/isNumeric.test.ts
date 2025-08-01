@@ -1,8 +1,8 @@
 import { expect, it, describe } from "vitest";
 import { isNumeric } from "./isNumeric";
 
-describe("isNumeric", function () {
-  it("checks true", function () {
+describe("isNumeric", () => {
+  it("checks true", () => {
     expect(isNumeric("33")).toBe(true);
     expect(isNumeric("-33")).toBe(true);
     expect(isNumeric("2e12")).toBe(true);
@@ -17,7 +17,7 @@ describe("isNumeric", function () {
     expect(isNumeric("0.255e3")).toBe(true);
   });
 
-  it("checks false", function () {
+  it("checks false", () => {
     expect(isNumeric("570f0248-1e00-4cbf-9a01-ea1fe20ce0b5")).toBe(false);
     expect(isNumeric("string")).toBe(false);
     expect(isNumeric("")).toBe(false);

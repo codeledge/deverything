@@ -1,8 +1,8 @@
 import { expect, it, describe } from "vitest";
 import { isReactElement } from "./isReactElement";
 
-describe("isReactElement", function () {
-  it("checks correctly", function () {
+describe("isReactElement", () => {
+  it("checks correctly", () => {
     expect(isReactElement("<br />")).toBe(false);
   });
 });

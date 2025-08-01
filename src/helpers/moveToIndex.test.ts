@@ -13,6 +13,8 @@ describe("moveToIndex", () => {
   test("args", () => {
     expect(moveToIndex([1, 2, 3, 4, 5], 2, 0)).toStrictEqual([3, 1, 2, 4, 5]);
     expect(moveToIndex([1, 2], 1, 0)).toStrictEqual([2, 1]);
-    expect(moveToIndex(Array.from("deveryhingt"), 10, 6).join("")).toBe("deverything");
+    expect(moveToIndex(Array.from("deveryhingt"), 10, 6).join("")).toBe(
+      "deverything"
+    );
   });
 });

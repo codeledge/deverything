@@ -5,7 +5,7 @@ export const objectDiff = (
   leftObject: PlainObject,
   rightObject: PlainObject
 ) => {
-  var diff: PlainObject = {};
+  let diff: PlainObject = {};
   const allKeys = new Set([
     ...Object.keys(leftObject),
     ...Object.keys(rightObject),

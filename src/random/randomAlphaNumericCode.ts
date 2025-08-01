@@ -1,7 +1,7 @@
 import { array } from "../helpers/array";
 import { randomArrayItem } from "./randomArrayItem";
 
-//avoid 0s and Os as they get confused with each other
+// avoid 0s and Os as they get confused with each other
 const chars = "123456789ABCDEFGHIJKLMNPQRSTUVWXYZ".split("");
 
 /**

@@ -23,7 +23,7 @@ describe("cleanSpaces", () => {
     expect(cleanSpaces("\r")).toBe("");
     expect(
       cleanSpaces(
-        String.fromCharCode(8233) + "" + String.fromCharCode(8232) + " a"
+        String(String.fromCharCode(8233)) + String.fromCharCode(8232) + " a"
       )
     ).toBe("a");
     expect(cleanSpaces("t\na±!@£$%^&*()_`")).toBe("t a±!@£$%^&*()_`");

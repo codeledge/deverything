@@ -12,9 +12,9 @@ import {
 } from "./isNumber";
 import { INT4_MAX } from "../constants/numbers";
 
-describe("isNumber", function () {
-  describe("isNumber", function () {
-    it("checks correctly", function () {
+describe("isNumber", () => {
+  describe("isNumber", () => {
+    it("checks correctly", () => {
       expect(isNumber("string")).toBe(false);
       expect(isNumber("33")).toBe(false);
       expect(isNumber("-33")).toBe(false);
@@ -40,8 +40,8 @@ describe("isNumber", function () {
     });
   });
 
-  describe("isInt", function () {
-    it("checks correctly", function () {
+  describe("isInt", () => {
+    it("checks correctly", () => {
       expect(isInt("string" as unknown as number)).toBe(false);
       expect(isInt("33" as unknown as number)).toBe(false);
       expect(isInt("-33" as unknown as number)).toBe(false);
@@ -63,8 +63,8 @@ describe("isNumber", function () {
     });
   });
 
-  describe("isOdd", function () {
-    it("checks correctly", function () {
+  describe("isOdd", () => {
+    it("checks correctly", () => {
       expect(isOdd("string" as unknown as number)).toBe(false);
       expect(isOdd(1)).toBe(true);
       expect(isOdd(1.1)).toBe(false);
@@ -72,8 +72,8 @@ describe("isNumber", function () {
     });
   });
 
-  describe("isEven", function () {
-    it("checks correctly", function () {
+  describe("isEven", () => {
+    it("checks correctly", () => {
       expect(isEven("string" as unknown as number)).toBe(false);
       expect(isEven(1)).toBe(false);
       expect(isEven(0)).toBe(true);
@@ -82,23 +82,23 @@ describe("isNumber", function () {
     });
   });
 
-  describe("isPositiveInt", function () {
-    it("checks correctly", function () {
+  describe("isPositiveInt", () => {
+    it("checks correctly", () => {
       expect(isPositiveInt(1)).toBe(true);
       expect(isPositiveInt(0)).toBe(false);
       expect(isPositiveInt(Infinity)).toBe(false);
       expect(isPositiveInt(-0)).toBe(false);
       expect(isPositiveInt("0" as unknown as number)).toBe(false);
       expect(isPositiveInt("-20" as unknown as number)).toBe(false);
-      expect(isPositiveInt(+"-20")).toBe(false);
-      expect(isPositiveInt(+"20")).toBe(true);
+      expect(isPositiveInt(Number("-20"))).toBe(false);
+      expect(isPositiveInt(Number("20"))).toBe(true);
       expect(isPositiveInt(Number("20e2"))).toBe(true);
       expect(isPositiveInt(Number("0"))).toBe(false);
     });
   });
 
-  describe("isNegativeInt", function () {
-    it("checks correctly", function () {
+  describe("isNegativeInt", () => {
+    it("checks correctly", () => {
       expect(isNegativeInt(1)).toBe(false);
       expect(isNegativeInt(-1e12)).toBe(true);
       expect(isNegativeInt(0)).toBe(false);
@@ -108,14 +108,14 @@ describe("isNumber", function () {
     });
   });
 
-  describe("isBigInt", function () {
-    it("checks true", function () {
+  describe("isBigInt", () => {
+    it("checks true", () => {
       expect(isBigInt(BigInt(12345678901234567890))).toBe(true);
       expect(isBigInt(1n)).toBe(true);
       expect(isBigInt(0n)).toBe(true);
     });
 
-    it("checks false", function () {
+    it("checks false", () => {
       expect(isBigInt(Number.MAX_SAFE_INTEGER)).toBe(false);
       expect(isBigInt(Number.MAX_SAFE_INTEGER + 1)).toBe(false); // ???
       expect(isBigInt(1)).toBe(false);
@@ -124,24 +124,24 @@ describe("isNumber", function () {
   });
 });
 
-describe("isBigIntString", function () {
-  it("checks true", function () {
+describe("isBigIntString", () => {
+  it("checks true", () => {
     expect(isBigIntString("12345678901234567890")).toBe(true);
   });
 
-  it("checks false", function () {
+  it("checks false", () => {
     expect(isBigIntString(Number.MAX_SAFE_INTEGER.toString())).toBe(false);
     expect(isBigIntString("1")).toBe(false);
   });
 });
 
-describe("isOutsideInt4", function () {
-  it("checks true", function () {
+describe("isOutsideInt4", () => {
+  it("checks true", () => {
     expect(isOutsideInt4(12345678901234567890)).toBe(true);
     expect(isOutsideInt4(-12345678901234567890)).toBe(true);
   });
 
-  it("checks false", function () {
+  it("checks false", () => {
     expect(isOutsideInt4(INT4_MAX)).toBe(false);
     expect(isOutsideInt4(1)).toBe(false);
     expect(isOutsideInt4(0)).toBe(false);

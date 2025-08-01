@@ -1,8 +1,8 @@
 import { expect, it, describe } from "vitest";
 import { isObject } from "./isObject";
 
-describe("isObject", function () {
-  it("checks correctly", function () {
+describe("isObject", () => {
+  it("checks correctly", () => {
     const objectUnkonwn = {} as unknown;
     expect(isObject(objectUnkonwn)).toBe(true);
     enum ENUM {}

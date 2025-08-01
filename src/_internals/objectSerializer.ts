@@ -18,7 +18,8 @@ export const objectSerializer = () => {
       const thisPos = stack.indexOf(this);
       ~thisPos ? stack.splice(thisPos + 1) : stack.push(this);
       ~thisPos ? keys.splice(thisPos, Infinity, key) : keys.push(key);
-      if (~stack.indexOf(value)) value = cycleReplacer.call(this, key, value);
+      if (stack.indexOf(value) !== -1)
+        value = cycleReplacer.call(this, key, value);
 
       // TODO: also sort keys! so it can be used for deep serialization
     } else stack.push(value);

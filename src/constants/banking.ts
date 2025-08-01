@@ -21,16 +21,16 @@ export const BIC_SWIFT_SAMPLES = [
 ];
 
 export const CARD_NUMBER_SAMPLES = [
-  "371449635398431", //american express
-  "30569309025904", //diners club
-  "6011111111111117", //discover
-  "3530111333300000", //jcb
-  "6304000000000000", //laser
-  "5555555555554444", //mastercard
-  "4111111111111111", //visa
+  "371449635398431", // american express
+  "30569309025904", // diners club
+  "6011111111111117", // discover
+  "3530111333300000", // jcb
+  "6304000000000000", // laser
+  "5555555555554444", // mastercard
+  "4111111111111111", // visa
 ];
 
-//An ABA routing number is a nine-digit code that identifies banks in the U.S.
+// An ABA routing number is a nine-digit code that identifies banks in the U.S.
 export const ABA_NUMBER_SAMPLES = [
   "111000025",
   "081000210",

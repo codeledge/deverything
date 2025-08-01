@@ -13,7 +13,7 @@ export const randomObject = ({
   maxDepth?: number;
   circular?: boolean;
 } = {}) => {
-  const getRandomObject = (depth: number = 0): PlainObject => {
+  const getRandomObject = (depth = 0): PlainObject => {
     if (depth >= maxDepth) return {};
 
     const keys = array(randomInt({ min: 1, max: 5 }), randomNoun);

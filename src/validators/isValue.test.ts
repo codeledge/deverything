@@ -1,13 +1,13 @@
 import { expect, describe, it } from "vitest";
 import { isValue } from "./isValue";
 
-describe("isValue", function () {
-  it("bool", function () {
+describe("isValue", () => {
+  it("bool", () => {
     expect(isValue(true)).toBe(true);
     expect(isValue(false)).toBe(true);
   });
 
-  it("voids", function () {
+  it("voids", () => {
     expect(isValue(void 0)).toBe(false);
     expect(
       isValue(
@@ -22,7 +22,7 @@ describe("isValue", function () {
     expect(isValue(0 / 0)).toBe(false);
   });
 
-  it("empties", function () {
+  it("empties", () => {
     expect(isValue("")).toBe(true);
     expect(isValue(0)).toBe(true);
     expect(isValue(0 * 0)).toBe(true);

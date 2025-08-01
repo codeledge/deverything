@@ -24,10 +24,10 @@ export const parseDate = (
   if (isNumber(arg)) {
     // Return undefined for non-integer numbers (decimals like 12.1)
     if (!Number.isInteger(arg)) return;
-    
+
     // Return undefined for numbers outside valid JavaScript Date range
     if (arg < -MAX_DATE_MILLISECONDS || arg > MAX_DATE_MILLISECONDS) return;
-    
+
     // Return undefined for NaN or infinite numbers
     if (!Number.isFinite(arg)) return;
   }

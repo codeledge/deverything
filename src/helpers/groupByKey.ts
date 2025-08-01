@@ -29,16 +29,19 @@ export const groupByKey = <T, K extends keyof T>(
   items: T[],
   key: K
 ): Record<keyof T, T[]> => {
-  return items.reduce((acc, item) => {
-    const groupKey = item[key] as keyof T;
-    if (!isValue(groupKey)) {
-      // if item does not have the key, don't group it
+  return items.reduce(
+    (acc, item) => {
+      const groupKey = item[key] as keyof T;
+      if (!isValue(groupKey)) {
+        // if item does not have the key, don't group it
+        return acc;
+      }
+      if (!acc[groupKey]) {
+        acc[groupKey] = [];
+      }
+      acc[groupKey].push(item);
       return acc;
-    }
-    if (!acc[groupKey]) {
-      acc[groupKey] = [];
-    }
-    acc[groupKey].push(item);
-    return acc;
-  }, {} as Record<keyof T, T[]>);
+    },
+    {} as Record<keyof T, T[]>
+  );
 };

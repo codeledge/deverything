@@ -22,6 +22,7 @@ export const getDateRangeSeries = (
   const series: string[] = [];
   const current = new Date(start.getTime()); // Clone the startDate to avoid mutating it
 
+  // eslint-disable-next-line no-unmodified-loop-condition
   while (current < end) {
     series.push(current.toISOString());
 
@@ -32,8 +33,10 @@ export const getDateRangeSeries = (
             "Cannot add months when the start day of month is greater than 28, it may lead to unexpected results"
           );
         }
-        const currentMonth = current.getUTCMonth();
-        current.setUTCMonth(currentMonth + 1);
+        {
+          const currentMonth = current.getUTCMonth();
+          current.setUTCMonth(currentMonth + 1);
+        }
 
         break;
 

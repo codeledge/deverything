@@ -9,6 +9,9 @@ import { PlainObject } from "../types";
  */
 export const serialize = <T extends PlainObject>(obj: T) => {
   const allKeys = new Set<string>();
-  JSON.stringify(obj, (key, value) => (allKeys.add(key), value));
+  JSON.stringify(obj, (key, value) => {
+    allKeys.add(key);
+    return value;
+  });
   return JSON.stringify(obj, Array.from(allKeys).sort());
 };

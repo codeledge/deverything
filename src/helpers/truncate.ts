@@ -20,9 +20,10 @@ export const truncate = (
   if (argArray.length <= limit) return arg;
 
   switch (position) {
-    case "start":
+    case "start": {
       const startSliceLength = limit - ellipsisLength;
       return ellipsis + argArray.slice(-startSliceLength).join("");
+    }
     case "middle": {
       const startSliceLength = Math.ceil((limit - ellipsisLength) / 2);
       const endSliceStart =

@@ -3,7 +3,11 @@ export const moveToIndex = <T>(
   itemToMoveIndex: number,
   destinationIndex: number
 ): T[] => {
-  if (!items.length || itemToMoveIndex > items.length || destinationIndex > items.length)
+  if (
+    !items.length ||
+    itemToMoveIndex > items.length ||
+    destinationIndex > items.length
+  )
     return items;
 
   const newArray = [...items];

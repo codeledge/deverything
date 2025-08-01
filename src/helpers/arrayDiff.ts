@@ -4,7 +4,6 @@
  * arrayDiff([1, 2, 3], [2, 3, 4]); // [1, 4]
  */
 export const arrayDiff = (arr1: any[], arr2: any[]) => {
-  
   const set1 = new Set(arr1);
   const set2 = new Set(arr2);
 
