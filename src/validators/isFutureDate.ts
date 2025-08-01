@@ -7,5 +7,9 @@ export const isFutureDate = (
 ): boolean => {
   const date = parseDate(arg);
 
-  return !!date && date > (parseDate(referenceDate) ?? new Date());
+  const reference = referenceDate ? parseDate(referenceDate) : new Date();
+  if (!reference)
+    throw new Error(`[isFutureDate] Invalid referenceDate: ${referenceDate}`);
+
+  return !!date && date > reference;
 };

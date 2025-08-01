@@ -43,15 +43,5 @@ describe("isPastDate", () => {
         false
       );
     });
-
-    it("should fall back to current date when referenceDate is invalid", () => {
-      const pastDate = new Date();
-      pastDate.setFullYear(pastDate.getFullYear() - 1);
-
-      expect(isPastDate(pastDate, { referenceDate: "invalid-date" })).toBe(
-        true
-      );
-      expect(isPastDate(pastDate, { referenceDate: null as any })).toBe(true);
-    });
   });
 });

@@ -48,17 +48,5 @@ describe("isFutureDate", () => {
         false
       );
     });
-
-    it("should fall back to current date when referenceDate is invalid", () => {
-      const futureDate = new Date();
-      futureDate.setFullYear(futureDate.getFullYear() + 1);
-
-      expect(isFutureDate(futureDate, { referenceDate: "invalid-date" })).toBe(
-        true
-      );
-      expect(isFutureDate(futureDate, { referenceDate: null as any })).toBe(
-        true
-      );
-    });
   });
 });
