@@ -1,5 +1,11 @@
 # deverything
 
+## 4.2.1
+
+### Patch Changes
+
+- fix export
+
 ## 4.2.0
 
 ### Minor Changes

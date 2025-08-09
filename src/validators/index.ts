@@ -24,6 +24,7 @@ export * from "./isPWA";
 export * from "./isReactElement";
 export * from "./isRegExp";
 export * from "./isSame";
+export * from "./isSameUTCDay";
 export * from "./isSequence";
 export * from "./isServer";
 export * from "./isSpacedString";
