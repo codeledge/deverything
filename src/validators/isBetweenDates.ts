@@ -7,6 +7,8 @@ import { DateLike, DateRange } from "../types";
  * @param dateRange The date range to check against
  * @returns true if the date is between the start and end dates (includes startDate, excludes endDate)
  *
+ * @alias isInDateRange
+ *
  * @example
  * isBetweenDates("2023-06-15", { startDate: "2023-01-01", endDate: "2023-12-31" }) // true
  * isBetweenDates("2023-01-01", { startDate: "2023-01-01", endDate: "2023-12-31" }) // true (includes start)
@@ -27,3 +29,5 @@ export const isBetweenDates = (
 
   return targetDate >= start && targetDate < end;
 };
+
+export const isInDateRange = isBetweenDates;
