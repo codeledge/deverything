@@ -1,5 +1,11 @@
 # deverything
 
+## 4.3.0
+
+### Minor Changes
+
+- week in dateRangeSeries
+
 ## 4.2.1
 
 ### Patch Changes

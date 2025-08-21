@@ -4,11 +4,11 @@ import { DateRange, ISODate } from "../types";
 /**
  *
  * @description Generate a series of dates between the start and end dates
- * NOTE: it does NOT include the end date
+ * NOTE: it does NOT include the end date, this is intentional
  */
 export const getDateRangeSeries = (
   dateRange: DateRange,
-  unit: "day" | "hour" | "minute" | "second" | "calendarMonth"
+  unit: "day" | "week" | "hour" | "minute" | "second" | "calendarMonth"
 ): ISODate[] => {
   const { startDate, endDate } = dateRange;
 
@@ -42,6 +42,10 @@ export const getDateRangeSeries = (
 
       case "day":
         current.setUTCDate(current.getUTCDate() + 1);
+        break;
+
+      case "week":
+        current.setUTCDate(current.getUTCDate() + 7);
         break;
 
       case "hour":
