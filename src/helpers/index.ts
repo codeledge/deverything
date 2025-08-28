@@ -29,6 +29,7 @@ export * from "./mapByKey";
 export * from "./merge";
 export * from "./mergeArrays";
 export * from "./moveToFirst";
+export * from "./moveToIndex";
 export * from "./moveToLast";
 export * from "./normalizeNumber";
 export * from "./objectDiff";
