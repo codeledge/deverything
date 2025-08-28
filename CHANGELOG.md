@@ -1,5 +1,11 @@
 # deverything
 
+## 4.3.1
+
+### Patch Changes
+
+- Added moveToIndex to helpers/index.ts
+
 ## 4.3.0
 
 ### Minor Changes
