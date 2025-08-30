@@ -1,5 +1,11 @@
 # deverything
 
+## 4.3.2
+
+### Patch Changes
+
+- step option in date range series
+
 ## 4.3.1
 
 ### Patch Changes

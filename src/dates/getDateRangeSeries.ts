@@ -8,7 +8,10 @@ import { DateRange, ISODate } from "../types";
  */
 export const getDateRangeSeries = (
   dateRange: DateRange,
-  unit: "day" | "week" | "hour" | "minute" | "second" | "calendarMonth"
+  unit: "day" | "week" | "hour" | "minute" | "second" | "calendarMonth",
+  options: {
+    step?: number;
+  } = {}
 ): ISODate[] => {
   const { startDate, endDate } = dateRange;
 
@@ -21,6 +24,8 @@ export const getDateRangeSeries = (
 
   const series: string[] = [];
   const current = new Date(start.getTime()); // Clone the startDate to avoid mutating it
+
+  const step = options?.step ?? 1;
 
   // eslint-disable-next-line no-unmodified-loop-condition
   while (current < end) {
@@ -35,29 +40,29 @@ export const getDateRangeSeries = (
         }
         {
           const currentMonth = current.getUTCMonth();
-          current.setUTCMonth(currentMonth + 1);
+          current.setUTCMonth(currentMonth + step);
         }
 
         break;
 
       case "day":
-        current.setUTCDate(current.getUTCDate() + 1);
+        current.setUTCDate(current.getUTCDate() + step);
         break;
 
       case "week":
-        current.setUTCDate(current.getUTCDate() + 7);
+        current.setUTCDate(current.getUTCDate() + step * 7);
         break;
 
       case "hour":
-        current.setUTCHours(current.getUTCHours() + 1);
+        current.setUTCHours(current.getUTCHours() + step);
         break;
 
       case "minute":
-        current.setUTCMinutes(current.getUTCMinutes() + 1);
+        current.setUTCMinutes(current.getUTCMinutes() + step);
         break;
 
       case "second":
-        current.setUTCSeconds(current.getUTCSeconds() + 1);
+        current.setUTCSeconds(current.getUTCSeconds() + step);
         break;
 
       default:
