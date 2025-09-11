@@ -1,4 +1,4 @@
-export const startOfNextWeek = () => {
+export const startOfNextWeek = (): Date => {
   const now = new Date();
   return new Date(
     now.getFullYear(),

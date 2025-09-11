@@ -8,7 +8,14 @@ import { DateRange, ISODate } from "../types";
  */
 export const getDateRangeSeries = (
   dateRange: DateRange,
-  unit: "day" | "week" | "hour" | "minute" | "second" | "calendarMonth",
+  unit:
+    | "second"
+    | "minute"
+    | "hour"
+    | "day"
+    | "week"
+    | "calendarMonth"
+    | "calendarYear",
   options: {
     step?: number;
   } = {}
@@ -32,6 +39,19 @@ export const getDateRangeSeries = (
     series.push(current.toISOString());
 
     switch (unit) {
+      case "calendarYear":
+        if (start.getUTCMonth() === 1 && start.getUTCDate() === 29) {
+          throw new Error(
+            "Cannot add years when the start date is Feb 29, it may lead to unexpected results"
+          );
+        }
+        {
+          const currentYear = current.getUTCFullYear();
+          current.setUTCFullYear(currentYear + step);
+        }
+
+        break;
+
       case "calendarMonth":
         if (start.getUTCDate() > 28) {
           throw new Error(
