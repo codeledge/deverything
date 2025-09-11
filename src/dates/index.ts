@@ -9,5 +9,6 @@ export * from "./startOfNextWeek";
 export * from "./startOfThisWeek";
 export * from "./startOfToday";
 export * from "./startOfTomorrow";
+export * from "./startOfYesterday";
 export * from "./startOfUTCDay";
 export * from "./startOfUTCTomorrow";
