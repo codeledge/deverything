@@ -32,6 +32,7 @@ export * from "./moveToFirst";
 export * from "./moveToIndex";
 export * from "./moveToLast";
 export * from "./normalizeNumber";
+export * from "./normalizeString";
 export * from "./objectDiff";
 export * from "./omit";
 export * from "./parseDate";

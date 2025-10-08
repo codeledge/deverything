@@ -1,5 +1,11 @@
 # deverything
 
+## 4.5.0
+
+### Minor Changes
+
+- normalizeString
+
 ## 4.4.1
 
 ### Patch Changes
