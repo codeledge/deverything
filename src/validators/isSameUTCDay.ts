@@ -19,7 +19,6 @@ export const isSameUTCDay = (
   const date2UTC = parseDate(date2Input, { asUTC: true });
   if (!date1UTC || !date2UTC) return false;
 
-  console.log(date1UTC.toISOString(), date2UTC.toISOString());
   return (
     date1UTC.getUTCFullYear() === date2UTC.getUTCFullYear() &&
     date1UTC.getUTCMonth() === date2UTC.getUTCMonth() &&

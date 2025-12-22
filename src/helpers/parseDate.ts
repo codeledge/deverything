@@ -58,8 +58,6 @@ export const parseDate = (
     }
   }
 
-  console.log(arg);
-
   const date = new Date(arg!); // ! => isEmpty cannot narrow type
 
   if (!isJsDate(date)) return;
