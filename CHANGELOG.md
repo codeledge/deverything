@@ -1,5 +1,11 @@
 # deverything
 
+## 4.6.0
+
+### Minor Changes
+
+- format progress and object random key value
+
 ## 4.5.0
 
 ### Minor Changes
