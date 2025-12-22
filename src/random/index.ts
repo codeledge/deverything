@@ -25,6 +25,8 @@ export * from "./randomIP";
 export * from "./randomName";
 export * from "./randomNumericCode";
 export * from "./randomObject";
+export * from "./randomObjectKey";
+export * from "./randomObjectValue";
 export * from "./randomParagraph";
 export * from "./randomPassword";
 export * from "./randomPath";
