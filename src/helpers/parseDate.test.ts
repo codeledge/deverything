@@ -107,6 +107,18 @@ describe("parseDate", () => {
       expect(parseDate("2000-02-21T00:00:01", { asUTC: true })).toStrictEqual(
         new Date("2000-02-21T00:00:01.000Z")
       );
+
+      expect(
+        parseDate("2000-02-21T00:00:01.001", { asUTC: true })
+      ).toStrictEqual(new Date("2000-02-21T00:00:01.001Z"));
+
+      expect(
+        parseDate("2000-02-21T00:00:01.001Z") // no asUTC
+      ).toStrictEqual(new Date("2000-02-21T00:00:01.001Z"));
+
+      expect(
+        parseDate("2000-02-21T00:00:01.001Z", { asUTC: true }) // asUTC
+      ).toStrictEqual(new Date("2000-02-21T00:00:01.001Z"));
     });
   });
 

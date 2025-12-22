@@ -6,6 +6,9 @@ import { isNumber } from "../validators/isNumber";
 import { isString } from "../validators/isString";
 
 const partialDateRegex = /^\d{4}(-\d{2})?(-\d{2})?$/;
+// Matches complete date-time without timezone: YYYY-MM-DD or YYYY-MM-DDTHH:MM:SS or YYYY-MM-DDTHH:MM:SS.mmm
+// Does NOT match dates ending with Z or +/-HH:MM timezone offsets
+const noTimezoneRegex = /^(?!.*(?:Z|[+-]\d{2}:?\d{2})).+$/;
 
 /**
  *
@@ -42,16 +45,20 @@ export const parseDate = (
       }T00:00:00`;
     }
 
+    // Now check that time is complete (JS can parse HH:mm but not HH)
     const [date, time] = arg.split("T");
-    // 8 as in "HH:MM:SS"
-    if (time.length < 8) {
+    // 8 as in "HH:MM:SS" (actually, just HH:mm would be enough, but better be safe)
+    // time is undefined for crappy strings like "hello-I-am-a-date"
+    if (time?.length < 8) {
       arg = `${date}T${time}${"00:00:00".slice(time.length)}`;
     }
 
-    if (options?.asUTC) {
+    if (options?.asUTC && noTimezoneRegex.test(arg)) {
       arg += "Z"; // In this case, force UTC
     }
   }
+
+  console.log(arg);
 
   const date = new Date(arg!); // ! => isEmpty cannot narrow type
 
