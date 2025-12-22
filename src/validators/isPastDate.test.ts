@@ -26,10 +26,10 @@ describe("isPastDate", () => {
     });
 
     it("should return false when date is after or equal to referenceDate", () => {
-      const referenceDate = new Date("2023-01-01");
-      expect(isPastDate("2023-06-01", { referenceDate })).toBe(false);
-      expect(isPastDate("2024-01-01", { referenceDate })).toBe(false);
-      expect(isPastDate("2023-01-01", { referenceDate })).toBe(false); // same date
+      const referenceDate = new Date("2023-01-01T00:00:00Z");
+      expect(isPastDate("2023-06-01T00:00:00Z", { referenceDate })).toBe(false);
+      expect(isPastDate("2024-01-01T00:00:00Z", { referenceDate })).toBe(false);
+      expect(isPastDate("2023-01-01T00:00:00Z", { referenceDate })).toBe(false); // same date
     });
 
     it("should work with different date formats as referenceDate", () => {

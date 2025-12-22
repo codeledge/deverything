@@ -93,9 +93,7 @@ describe("parseDate", () => {
         new Date("2000-02-21T00:00:00.000Z")
       );
     });
-
-    // TODO!!!! time still not working with asUTC: true
-    test.skip("time", async () => {
+    test("time", async () => {
       expect(parseDate("2000-02-02T40:00:00")).toBeUndefined();
 
       expect(parseDate("2000-02-21T01", { asUTC: true })).toStrictEqual(
@@ -106,8 +104,8 @@ describe("parseDate", () => {
         new Date("2000-02-21T00:01:00.000Z")
       );
 
-      expect(parseDate("2000-02-21T00:00:00", { asUTC: true })).toStrictEqual(
-        new Date("2000-02-21T00:00:00.000Z")
+      expect(parseDate("2000-02-21T00:00:01", { asUTC: true })).toStrictEqual(
+        new Date("2000-02-21T00:00:01.000Z")
       );
     });
   });

@@ -32,13 +32,21 @@ export const parseDate = (
     if (!Number.isFinite(arg)) return;
   }
 
-  if (isString(arg) && partialDateRegex.test(arg)) {
-    // Add time to date string because it will be interpreted
-    // as UTC date instead of local time, and there is no
-    // circumstance where UTC as default is desired.
-    arg = `${
-      arg + "-01-01".slice(arg.length - 4) // fill missing month and day if needed
-    }T00:00:00`;
+  if (isString(arg)) {
+    if (partialDateRegex.test(arg)) {
+      // Add time to date string because it will be interpreted
+      // as UTC date instead of local time, and there is no
+      // circumstance where UTC as default is desired.
+      arg = `${
+        arg + "-01-01".slice(arg.length - 4) // fill missing month and day if needed
+      }T00:00:00`;
+    }
+
+    const [date, time] = arg.split("T");
+    // 8 as in "HH:MM:SS"
+    if (time.length < 8) {
+      arg = `${date}T${time}${"00:00:00".slice(time.length)}`;
+    }
 
     if (options?.asUTC) {
       arg += "Z"; // In this case, force UTC
