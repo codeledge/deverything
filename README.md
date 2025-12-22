@@ -182,6 +182,8 @@ These functions are optimized for low entropy random data generation useful for 
 - `randomFile()`
 - `randomFloat()`
 - `randomObject()`
+- `randomObjectKey()` get a random key from an object
+- `randomObjectValue()` get a random value from an object
 - `randomHandle()` useful for social identifiers, or slugs
 - `randomHexColor()`
 - `randomHexValue()`
