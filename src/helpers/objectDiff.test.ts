@@ -2,8 +2,23 @@ import { describe, expect, test } from "vitest";
 import { objectDiff } from "./objectDiff";
 
 describe("objectDiff", () => {
-  test("no arg", async () => {
+  test("empty objects", async () => {
     expect(objectDiff({}, {})).toStrictEqual({});
+  });
+
+  test("array objects", async () => {
+    expect(
+      objectDiff({ a: [{ a: 1 }, { b: 2 }] }, { a: [{ a: 1 }, { b: 2 }] })
+    ).toStrictEqual({});
+
+    expect(
+      objectDiff({ a: [{ a: 1 }, { b: 3 }] }, { a: [{ a: 1 }, { b: 2 }] })
+    ).toStrictEqual({
+      a: {
+        from: [{ a: 1 }, { b: 3 }],
+        to: [{ a: 1 }, { b: 2 }],
+      },
+    });
   });
 
   test("args", async () => {
