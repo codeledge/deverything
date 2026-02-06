@@ -77,6 +77,7 @@ Contributions always welcome!
 ### Math
 
 - `average()`
+- `countDecimalPlaces()` count the number of decimal places in a number
 - `isBetween()`
 - `isOutside()`
 - `isStrictlyBetween()`
