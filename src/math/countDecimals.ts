@@ -1,12 +1,12 @@
 /**
  * Counts the number of decimal places in a number.
  * @example
- * countDecimalPlaces(1.23); // 2
- * countDecimalPlaces(1.234567); // 6
- * countDecimalPlaces(5); // 0
- * countDecimalPlaces(0.1); // 1
+ * countDecimals(1.23); // 2
+ * countDecimals(1.234567); // 6
+ * countDecimals(5); // 0
+ * countDecimals(0.1); // 1
  */
-export const countDecimalPlaces = (num: number): number => {
+export const countDecimals = (num: number): number => {
   if (!Number.isFinite(num)) return 0;
 
   const numStr = num.toString();

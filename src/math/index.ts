@@ -1,5 +1,5 @@
 export * from "./average";
-export * from "./countDecimalPlaces";
+export * from "./countDecimals";
 export * from "./isBetween";
 export * from "./isOutside";
 export * from "./isStrictlyBetween";

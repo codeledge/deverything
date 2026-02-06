@@ -1,5 +1,11 @@
 # deverything
 
+## 4.7.1
+
+### Patch Changes
+
+- count decimals rename
+
 ## 4.7.0
 
 ### Minor Changes
