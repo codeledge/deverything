@@ -147,11 +147,14 @@ Contributions always welcome!
 
 ### Formatters
 
-- `formatCamelCase()`
+- `formatCamelCase()` "hello-world" => "helloWorld"
 - `formatCookies()` { cookie1: "1", cookie2: "2" } => "cookie1=1; cookie2=2"
-- `formatNumber()` 1000 => "1,000" or "1K" or 0.112 => "11.2%"
-- `formatPercentage()` 0.11 => "11%"
+- `formatCount()` "#items: 3, #users: 5"
+- `formatDateRange()` "2026-02-09T00:00... ⮕ 2026-02-10T00:00..."
 - `formatIndexProgress()` => "[2/10]"
+- `formatNumber()` 1000 => "1,000" or "1K" or 0.112 => "11.2%"
+- `formatPascalCase()` "hello-world" => "HelloWorld"
+- `formatPercentage()` 0.11 => "11%"
 - `stringToCSSUnicode()` "hello" => "\000068\000065\00006c\00006c\00006f" use this for CSS
 - `stringToUnicode()` "hello" => "\u0068\u0065\u006c\u006c\u006f"
 

@@ -1,5 +1,11 @@
 # deverything
 
+## 4.8.0
+
+### Minor Changes
+
+- formatters
+
 ## 4.7.1
 
 ### Patch Changes
