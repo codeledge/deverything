@@ -1,3 +1,5 @@
+import { isPromise } from "../validators/isPromise";
+
 /**
  * Creates a lazily-initialized singleton from a factory function.
  * Works with both sync and async factories — the return type mirrors the factory's.
@@ -7,20 +9,22 @@
  * rejects, the singleton resets so the next call retries.
  */
 export const singleton = <Result>(factory: () => Result): (() => Result) => {
-  let instance: Result | null = null;
+  let hasInstance = false;
+  let instance!: Result;
 
   return () => {
-    if (instance) {
+    if (hasInstance) {
       return instance;
     }
 
     const result = factory();
 
-    if (result instanceof Promise) {
+    if (isPromise(result)) {
+      hasInstance = true;
       instance = result.then(
         (value) => value,
         (error) => {
-          instance = null;
+          hasInstance = false;
           throw error;
         }
       ) as Result;
@@ -28,6 +32,8 @@ export const singleton = <Result>(factory: () => Result): (() => Result) => {
       return instance;
     }
 
+    // not a promise
+    hasInstance = true;
     instance = result;
     return result;
   };
