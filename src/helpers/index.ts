@@ -3,6 +3,7 @@ export * from "./arrayDiff";
 export * from "./arrayIntersection";
 export * from "./capitalize";
 export * from "./chunkArray";
+export * from "./chunkText";
 export * from "./chunkedAll";
 export * from "./chunkedAsync";
 export * from "./chunkedDynamic";

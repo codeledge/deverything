@@ -1,5 +1,11 @@
 # deverything
 
+## 4.10.0
+
+### Minor Changes
+
+- chunkText
+
 ## 4.9.0
 
 ### Minor Changes
