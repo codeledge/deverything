@@ -96,6 +96,7 @@ Contributions always welcome!
   - `arrayIntersection()` get the intersection of two arrays
 - `capitalize()` word => Word
 - `chunkArray()` split array into chunks
+- `chunkText()` split text into chunks of a given character size, optionally preserving sentence boundaries via `Intl.Segmenter`
 - `chunkedAll()` process all items in chunks
 - `chunkedAsync()` process async operations in chunks
 - `chunkedDynamic()` process with dynamic chunk sizes
