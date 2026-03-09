@@ -1,5 +1,11 @@
 # deverything
 
+## 4.10.1
+
+### Patch Changes
+
+- Fix missing singleton export
+
 ## 4.10.0
 
 ### Minor Changes
