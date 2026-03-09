@@ -48,6 +48,7 @@ export * from "./seriesAsync";
 export * from "./setObjectPath";
 export * from "./setUrlSearchParams";
 export * from "./shuffle";
+export * from "./singleton";
 export * from "./sleep";
 export * from "./stringify";
 export * from "./toggleArrayValue";
