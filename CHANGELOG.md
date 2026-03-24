@@ -1,5 +1,11 @@
 # deverything
 
+## 4.10.2
+
+### Patch Changes
+
+- more names
+
 ## 4.10.1
 
 ### Patch Changes
