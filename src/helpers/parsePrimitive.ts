@@ -7,8 +7,14 @@ export type ParsedPrimitive = string | number | boolean | null | undefined;
  * literal spellings (`isNumeric` for numeric strings); otherwise returns the trimmed string.
  *
  * Keyword matching is case-insensitive (`TRUE`, `Null`, …). Empty after trim yields `""`.
+ *
+ * @param options.coerceBoolean - When true, also maps `yes`/`no`, `on`/`off`, `y`/`n` to booleans before numeric parsing.
  */
-export const parsePrimitive = (str: string): ParsedPrimitive => {
+export const parsePrimitive = (
+  str: string,
+  options?: { coerceBoolean?: boolean }
+): ParsedPrimitive => {
+  const { coerceBoolean = false } = options ?? {};
   const trimmed = str.trim();
 
   if (trimmed === "") {
@@ -37,6 +43,15 @@ export const parsePrimitive = (str: string): ParsedPrimitive => {
   }
   if (keyword === "undefined") {
     return undefined;
+  }
+
+  if (coerceBoolean) {
+    if (keyword === "yes" || keyword === "on" || keyword === "y") {
+      return true;
+    }
+    if (keyword === "no" || keyword === "off" || keyword === "n") {
+      return false;
+    }
   }
 
   if (isNumeric(trimmed)) {
