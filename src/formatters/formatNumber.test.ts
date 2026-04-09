@@ -8,6 +8,11 @@ describe("formatNumber", () => {
     expect(formatNumber(value, { compact: true })).toBe(`${value}`);
   });
 
+  test("compact, < 1, with unit", () => {
+    expect(formatNumber(0.001111, { compact: true, unit: "m" })).toBe("1.11mm");
+    expect(formatNumber(0.000011, { compact: true, unit: "s" })).toBe("11μs");
+  });
+
   test("should return a string in compact K notation if value is one thousand or above", () => {
     const value = randomInt({ min: 1000, max: 9999 });
     expect(formatNumber(value, { compact: true })).toContain("K");

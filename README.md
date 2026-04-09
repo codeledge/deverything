@@ -126,7 +126,6 @@ Contributions always welcome!
 - `moveToIndex()` move array element to desired index
 - `moveToLast()` move array element to last
 - `normalizeNumber()` normalizes between 0 and 1
-- `objectDiff()` get the difference between two objects
 - `omit()` omit properties from object
 - ⭐ `parseDate()` pass anything Date-Like, and get a JS Date back
 - `pickObjectKeys()` pick specific keys from object
