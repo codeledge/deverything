@@ -1,5 +1,14 @@
 # deverything
 
+## 5.0.0
+
+### Major Changes
+
+- dropped and added, so major version
+  - `bucketSortedDates` REMOVED
+  - `objectDiff` REMOVED
+  - parseArray and parsePrimitive added
+
 ## 4.10.2
 
 ### Patch Changes
