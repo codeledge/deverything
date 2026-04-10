@@ -31,8 +31,10 @@ Contributions always welcome!
 - `isFunction()`
 - `isJsDate()` if it's a **valid** javascript's Date
   - `isBetweenDates()` check if date falls between two other dates (left inclusive: includes start, excludes end)
+  - `isInDateRange()` alias of `isBetweenDates()`
   - `isFutureDate()` check if date is in the future, optionally against a reference date
   - `isPastDate()` check if date is in the past, optionally against a reference date
+  - `isSameUTCDay()` same calendar day in UTC
   - `isStringDate()` also checks if the string passed is a **valid** date
 - `isKey()` is a real key of an object
 - `isLastIndex()` is the index is the last item of array
@@ -43,6 +45,9 @@ Contributions always welcome!
   - `isOdd()`
   - `isPositiveInt()`
   - `isNegativeInt()`
+- `isBigInt()` if the arg is a bigint
+- `isBigIntString()` if the string is a valid bigint literal
+- `isOutsideInt4()` if a number is outside PostgreSQL `int4` range
 - `isNumeric()` if string is representing a number
 - `isNumericId()` if it's a valid numeric ID
 - ⭐ `isObject()` if it's a js plain Object
@@ -71,6 +76,7 @@ Contributions always welcome!
 - `startOfThisWeek()`
 - `startOfToday()`
 - `startOfTomorrow()`
+- `startOfYesterday()`
 - `startOfUTCDay()` get the start of a specific day in UTC
 - `startOfUTCTomorrow()` get the start of tomorrow in UTC
 
@@ -126,12 +132,16 @@ Contributions always welcome!
 - `moveToIndex()` move array element to desired index
 - `moveToLast()` move array element to last
 - `normalizeNumber()` normalizes between 0 and 1
-- `objectDiff()` get the difference between two objects
+- `normalizeString()` trim, strip diacritics (Unicode NFD), lowercase
+- `noop()` no-op function
 - `omit()` omit properties from object
 - ⭐ `parseDate()` pass anything Date-Like, and get a JS Date back
+- `parseArray()` split a string into parsed primitives (comma-separated by default)
+- `parsePrimitive()` coerce a string to boolean, number, null, undefined, or trimmed string
 - `pickObjectKeys()` pick specific keys from object
 - `pickObjectValues()` pick specific values from object
 - `pluck()` make array of value from object keys
+- `prismaDateRange()` `{ gte, lt }` window from a start/end range for Prisma filters
 - `promiseWithTimeout()` takes a promise, a timeoutMs, and an option error as arguments. Returns a new Promise that either resolves with the value of the input promise or rejects with the provided error or a default error message if the input promise does not resolve or reject within the specified timeoutMs.
 - `removeUndefinedValues()` remove undefined values from object
 - `scrambleText()` replace alpha chars with random chars
@@ -139,7 +149,9 @@ Contributions always welcome!
 - `seriesAsync()` executes promises in series, and returns all results
 - `setObjectPath()` set a value in an object by path
 - `setUrlSearchParams()` set URL search params
+- `formatTrpcInputQueryString()` serialize a tRPC procedure input to `URLSearchParams`
 - `shuffle()` shuffles elements in an array
+- `singleton()` lazily-initialized singleton from a factory (sync or async)
 - `sleep()` promise-based sleep
 - `stringify()` stringify anything, without breaking on circular dependencies
 - `toggleArrayValue()` remove/add value in array
@@ -153,9 +165,11 @@ Contributions always welcome!
 - `formatCount()` "#items: 3, #users: 5"
 - `formatDateRange()` "2026-02-09T00:00... ⮕ 2026-02-10T00:00..."
 - `formatIndexProgress()` => "[2/10]"
+- `formatProgress()` progress string with optional id prefix
 - `formatNumber()` 1000 => "1,000" or "1K" or 0.112 => "11.2%"
 - `formatPascalCase()` "hello-world" => "HelloWorld"
 - `formatPercentage()` 0.11 => "11%"
+- `formatPercentageNumber()` numeric percentage (e.g. 0.123 => 12.35) before formatting as string
 - `stringToCSSUnicode()` "hello" => "\000068\000065\00006c\00006c\00006f" use this for CSS
 - `stringToUnicode()` "hello" => "\u0068\u0065\u006c\u006c\u006f"
 
@@ -186,6 +200,7 @@ These functions are optimized for low entropy random data generation useful for 
 - `randomEnumValue()` enum FRUIT { APPLE = 1, PEAR = 3 } => 3
 - `randomFile()`
 - `randomFloat()`
+- `randomFormattedPercentage()` random percentage string for tests
 - `randomObject()`
 - `randomObjectKey()` get a random key from an object
 - `randomObjectValue()` get a random value from an object
@@ -216,6 +231,8 @@ These functions are optimized for low entropy random data generation useful for 
 - `randomUUID()` lightweight uuid generation, passing UUID validation
 - `randomValue()`
 - `randomWord()`
+- `randomNoun()`
+- `randomVerb()`
 
 ### TypeScript Helpers & Generics
 
