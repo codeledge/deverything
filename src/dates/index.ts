@@ -1,4 +1,3 @@
-export * from "./bucketSortedDates";
 export * from "./getDateRangeSeries";
 export * from "./getDateSeriesRange";
 export * from "./groupByDateBucket";
@@ -9,6 +8,6 @@ export * from "./startOfNextWeek";
 export * from "./startOfThisWeek";
 export * from "./startOfToday";
 export * from "./startOfTomorrow";
-export * from "./startOfYesterday";
 export * from "./startOfUTCDay";
 export * from "./startOfUTCTomorrow";
+export * from "./startOfYesterday";
