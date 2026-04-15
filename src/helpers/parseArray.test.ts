@@ -3,6 +3,7 @@ import { parseArray } from "./parseArray";
 
 describe("parseArray", () => {
   test("default separator is comma", () => {
+    expect(parseArray("")).toEqual([]);
     expect(parseArray("a,b,c")).toEqual(["a", "b", "c"]);
     expect(parseArray("a, b, c")).toEqual(["a", "b", "c"]);
   });

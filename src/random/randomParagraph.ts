@@ -1,4 +1,3 @@
-import { array } from "../helpers";
 import { capitalize } from "../helpers/capitalize";
 import { randomInt } from "./randomInt";
 import { randomWord } from "./randomWord";
