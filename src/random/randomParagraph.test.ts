@@ -38,4 +38,41 @@ describe(`randomParagraph`, () => {
     const result = randomParagraph();
     expect(result.endsWith(".")).toBeTruthy();
   });
+
+  it(`respects minCharacters`, () => {
+    for (let i = 0; i < 20; i++) {
+      const result = randomParagraph({ minCharacters: 100, maxCharacters: 500 });
+      expect(result.length).toBeGreaterThanOrEqual(100);
+    }
+  });
+
+  it(`respects minCharacters and maxCharacters together`, () => {
+    for (let i = 0; i < 20; i++) {
+      const result = randomParagraph({
+        minCharacters: 150,
+        maxCharacters: 200,
+      });
+      expect(result.length).toBeGreaterThanOrEqual(150);
+      expect(result.length).toBeLessThanOrEqual(200);
+    }
+  });
+
+  it(`caps at maxCharacters when minCharacters exceeds it`, () => {
+    for (let i = 0; i < 20; i++) {
+      const result = randomParagraph({
+        minCharacters: 300,
+        maxCharacters: 200,
+      });
+      expect(result.length).toBeLessThanOrEqual(200);
+    }
+  });
+
+  it(`default behavior is unchanged without minCharacters`, () => {
+    for (let i = 0; i < 20; i++) {
+      const result = randomParagraph();
+      expect(result.length).toBeLessThanOrEqual(200);
+      expect(result.endsWith(".")).toBeTruthy();
+      expect(result.length).toBeGreaterThan(0);
+    }
+  });
 });

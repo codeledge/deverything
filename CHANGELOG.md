@@ -1,5 +1,11 @@
 # deverything
 
+## 5.1.0
+
+### Minor Changes
+
+- Add `minCharacters` option to `randomParagraph` — ensures the generated paragraph meets a minimum character length by adding words beyond `maxWords`, while still respecting `maxCharacters` as an upper bound.
+
 ## 5.0.0
 
 ### Major Changes
