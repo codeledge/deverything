@@ -1,5 +1,11 @@
 # deverything
 
+## 5.2.0
+
+### Minor Changes
+
+- email domain
+
 ## 5.1.0
 
 ### Minor Changes

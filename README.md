@@ -108,6 +108,7 @@ Contributions always welcome!
 - `chunkedDynamic()` process with dynamic chunk sizes
 - `clamp()` clamp number in a range
 - `cleanSpaces()` trims and turns double spaces into single space
+- `copyToClipboard()` copy a string to the system clipboard (browser only)
 - `cyclicalItem()` get item from array with cyclical indexing
 - `dir()` get directory listing
 - `enumKeys()` enum FRUIT { APPLE, PEAR } => ["APPLE", "PEAR"]
