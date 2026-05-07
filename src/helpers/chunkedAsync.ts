@@ -2,11 +2,7 @@ import { chunkArray } from "./chunkArray";
 import { sleep } from "./sleep";
 
 /**
- * @description Run a series of (async) functions in order and return the results
- * @param array
- * @param chunkSize
- * @param fn
- * @param options.minChunkTimeMs - Minimum time to process each chunk
+ * @deprecated Use pMap/pAll/pReduce instead
  */
 export const chunkedAsync = async <T>(
   array: T[],

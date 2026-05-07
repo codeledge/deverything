@@ -1,5 +1,16 @@
 # deverything
 
+## 5.3.0
+
+### Minor Changes
+
+- deprecated chunkedAsync
+- deplecated chunkedDynamic
+- added getCountryName
+- added getFlagEmoji
+- added paginationToSkipTake
+- added skipTakeToPagination
+
 ## 5.2.0
 
 ### Minor Changes
