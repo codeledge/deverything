@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "build": "tsup --treeshake",
-    "ci:publish": "changeset publish",
+    "ci:publish": "pnpm publish --no-git-checks",
     "ci:version": "changeset version",
     "clean": "rm -rf node_modules && rm -rf dist",
     "dev": "tsup --watch",
@@ -47,6 +47,10 @@
   ],
   "author": "ogroppo",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
   "devDependencies": {
     "@changesets/cli": "^2.29.5",
     "@types/node": "^24.0.13",
