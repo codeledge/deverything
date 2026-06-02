@@ -1,5 +1,11 @@
 # deverything
 
+## 5.3.1
+
+### Patch Changes
+
+- escape sql pattern
+
 ## 5.3.0
 
 ### Minor Changes
