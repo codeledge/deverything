@@ -11,7 +11,8 @@
   ],
   "scripts": {
     "build": "tsup --treeshake",
-    "ci:publish": "pnpm publish --no-git-checks",
+    "ci:publish": "changeset publish",
+    "ci:version": "changeset version",
     "clean": "rm -rf node_modules && rm -rf dist",
     "dev": "tsup --watch",
     "format": "prettier --write src/**/*.ts",
