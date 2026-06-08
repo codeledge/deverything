@@ -35,4 +35,19 @@ describe("formatFileSize", () => {
     expect(formatFileSize(1024 ** 3, "GB")).toBe("1 GB");
     expect(formatFileSize(1024 ** 3 * 2, "GB")).toBe("2 GB");
   });
+
+  it("formats TB", () => {
+    expect(formatFileSize(1024 ** 4, "TB")).toBe("1 TB");
+    expect(formatFileSize(1024 ** 4 * 3, "TB")).toBe("3 TB");
+  });
+
+  it("formats PB", () => {
+    expect(formatFileSize(1024 ** 5, "PB")).toBe("1 PB");
+    expect(formatFileSize(1024 ** 5 * 4, "PB")).toBe("4 PB");
+  });
+
+  it("formats EB", () => {
+    expect(formatFileSize(1024 ** 6, "EB")).toBe("1 EB");
+    expect(formatFileSize(1024 ** 6 * 2, "EB")).toBe("2 EB");
+  });
 });

@@ -1,10 +1,13 @@
-type FileSizeUnit = "B" | "KB" | "MB" | "GB";
+type FileSizeUnit = "B" | "KB" | "MB" | "GB" | "TB" | "PB" | "EB";
 
 const BYTES_PER_UNIT: Record<FileSizeUnit, number> = {
   B: 1,
   KB: 1024,
   MB: 1024 ** 2,
   GB: 1024 ** 3,
+  TB: 1024 ** 4,
+  PB: 1024 ** 5,
+  EB: 1024 ** 6,
 };
 
 /**
