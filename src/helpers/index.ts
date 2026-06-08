@@ -20,6 +20,7 @@ export * from "./filterAlphanumeric";
 export * from "./first";
 export * from "./firstKey";
 export * from "./firstValue";
+export * from "./formatFileSize";
 export * from "./getCookieByName";
 export * from "./getCountryName";
 export * from "./getFlagEmoji";

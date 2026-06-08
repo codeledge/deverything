@@ -1,5 +1,11 @@
 # deverything
 
+## 5.4.0
+
+### Minor Changes
+
+- formatFileSize
+
 ## 5.3.1
 
 ### Patch Changes
