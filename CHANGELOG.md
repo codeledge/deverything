@@ -1,5 +1,11 @@
 # deverything
 
+## 5.5.0
+
+### Minor Changes
+
+- sortBySortdedKeys
+
 ## 5.4.0
 
 ### Minor Changes
