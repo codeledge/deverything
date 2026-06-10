@@ -1,5 +1,11 @@
 # deverything
 
+## 5.5.1
+
+### Patch Changes
+
+- fix typo
+
 ## 5.5.0
 
 ### Minor Changes

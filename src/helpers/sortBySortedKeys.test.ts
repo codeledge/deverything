@@ -1,7 +1,7 @@
 import { describe, expect, test } from "vitest";
-import { sortBySortdedKeys } from "./sortBySortdedKeys";
+import { sortBySortedKeys } from "./sortBySortedKeys";
 
-describe("sortBySortdedKeys", () => {
+describe("sortBySortedKeys", () => {
   test("sorts by default id field in key order", () => {
     const array = [
       { id: 2, name: "Alice" },
@@ -9,7 +9,7 @@ describe("sortBySortdedKeys", () => {
       { id: 3, name: "Charlie" },
     ];
 
-    expect(sortBySortdedKeys(array, [1, 2, 3])).toEqual([
+    expect(sortBySortedKeys(array, [1, 2, 3])).toEqual([
       { id: 1, name: "Bob" },
       { id: 2, name: "Alice" },
       { id: 3, name: "Charlie" },
@@ -24,7 +24,7 @@ describe("sortBySortdedKeys", () => {
     ];
 
     expect(
-      sortBySortdedKeys(array, ["amy", "zoe", "mia"], { field: "handle" })
+      sortBySortedKeys(array, ["amy", "zoe", "mia"], { field: "handle" })
     ).toEqual([
       { handle: "amy", id: 2 },
       { handle: "zoe", id: 1 },
@@ -35,7 +35,7 @@ describe("sortBySortdedKeys", () => {
   test("puts values missing from keys at the end in asc order", () => {
     const array = [{ id: 9 }, { id: 1 }, { id: 5 }];
 
-    expect(sortBySortdedKeys(array, [1, 5])).toEqual([
+    expect(sortBySortedKeys(array, [1, 5])).toEqual([
       { id: 1 },
       { id: 5 },
       { id: 9 },
@@ -45,7 +45,7 @@ describe("sortBySortdedKeys", () => {
   test("reverses key order when direction is desc", () => {
     const array = [{ id: 1 }, { id: 2 }, { id: 3 }];
 
-    expect(sortBySortdedKeys(array, [1, 2, 3], { direction: "desc" })).toEqual([
+    expect(sortBySortedKeys(array, [1, 2, 3], { direction: "desc" })).toEqual([
       { id: 3 },
       { id: 2 },
       { id: 1 },
@@ -55,14 +55,14 @@ describe("sortBySortdedKeys", () => {
   test("returns a copy when keys is empty", () => {
     const array = [{ id: 2 }, { id: 1 }];
 
-    expect(sortBySortdedKeys(array, [])).toEqual(array);
-    expect(sortBySortdedKeys(array, [])).not.toBe(array);
+    expect(sortBySortedKeys(array, [])).toEqual(array);
+    expect(sortBySortedKeys(array, [])).not.toBe(array);
   });
 
   test("does not mutate the input array", () => {
     const array = [{ id: 2 }, { id: 1 }];
 
-    sortBySortdedKeys(array, [1, 2]);
+    sortBySortedKeys(array, [1, 2]);
 
     expect(array).toEqual([{ id: 2 }, { id: 1 }]);
   });

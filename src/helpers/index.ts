@@ -59,7 +59,7 @@ export * from "./shuffle";
 export * from "./singleton";
 export * from "./skipTakeToPagination";
 export * from "./sleep";
-export * from "./sortBySortdedKeys";
+export * from "./sortBySortedKeys";
 export * from "./stringify";
 export * from "./toggleArrayValue";
 export * from "./truncate";

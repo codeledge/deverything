@@ -4,10 +4,10 @@
  * @remarks Returns a new array. Does not mutate `array`.
  * @example
  * const array = [{ id: 2, name: "Alice" }, { id: 1, name: "Bob" }, { id: 3, name: "Charlie" }];
- * const sortedArray = sortBySortdedKeys(array, [1, 2, 3]);
+ * const sortedArray = sortBySortedKeys(array, [1, 2, 3]);
  * // sortedArray = [{ id: 1, name: "Bob" }, { id: 2, name: "Alice" }, { id: 3, name: "Charlie" }];
  */
-export const sortBySortdedKeys = <T extends Record<string, unknown>>(
+export const sortBySortedKeys = <T extends Record<string, unknown>>(
   array: T[],
   keys: (string | number)[],
   options?: { direction?: "asc" | "desc"; field?: keyof T }
