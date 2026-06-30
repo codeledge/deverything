@@ -80,6 +80,26 @@ const calculateRemainingTime = (
   return formatRemainingTime(remainingSeconds);
 };
 
+/**
+ * Formats a progress indicator showing the current index, total, and completion percentage.
+ *
+ * When a `progressId` is provided, also estimates and appends the remaining time based on
+ * the rate of progress since the first call with that ID. Tracking state is automatically
+ * cleaned up once the final item is reached.
+ *
+ * @param index - Zero-based index of the current item being processed.
+ * @param total - Total number of items.
+ * @param options - Optional configuration.
+ * @param options.progressId - Stable identifier used to track throughput across calls and
+ *   compute a remaining-time estimate. Omit to skip time estimation.
+ * @returns A formatted string such as `"42/100 42.00%"` or `"42/100 42.00% (~3m 20s remaining)"`.
+ *
+ * @example
+ * for (const [i, item] of items.entries()) {
+ *   console.log(formatProgress(i, items.length, { progressId: "my-job" }));
+ *   await process(item);
+ * }
+ */
 export const formatProgress = (
   index: number,
   total: number,

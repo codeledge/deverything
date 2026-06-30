@@ -1,5 +1,11 @@
 # deverything
 
+## 5.5.2
+
+### Patch Changes
+
+- sign
+
 ## 5.5.1
 
 ### Patch Changes
@@ -10,7 +16,7 @@
 
 ### Minor Changes
 
-- sortBySortdedKeys
+- sortBySortedKeys
 
 ## 5.4.0
 

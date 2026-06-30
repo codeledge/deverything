@@ -24,17 +24,25 @@ export const formatNumber = (
     maxDigits,
     percentage,
     unit = "",
+    sign = false,
   }: {
     compact?: boolean;
     maxDigits?: number;
     percentage?: boolean;
     unit?: string;
+    sign?: boolean;
   } = {}
 ): string => {
+  let prefix = "";
+
+  if (sign) {
+    prefix = value > 0 ? "+" : "";
+  }
+
   if (percentage) {
     const useValue = isNumber(value) ? value : 0;
     const number = (useValue * 100).toFixed(maxDigits || 0);
-    return `${number}%`;
+    return `${prefix}${number}%`;
   }
 
   // < 1 case
@@ -51,7 +59,7 @@ export const formatNumber = (
     const formatter = Intl.NumberFormat("en", {
       maximumSignificantDigits: maxDigits ?? 3,
     });
-    return `${formatter.format(scaled)}${tier.suffix}${unit}`;
+    return `${prefix}${formatter.format(scaled)}${tier.suffix}${unit}`;
   }
 
   // > 1 case
@@ -60,5 +68,5 @@ export const formatNumber = (
     maximumSignificantDigits: maxDigits,
   });
 
-  return `${formatter.format(value)}${unit}`;
+  return `${prefix}${formatter.format(value)}${unit}`;
 };

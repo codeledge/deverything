@@ -36,6 +36,32 @@ describe("formatNumber", () => {
     expect(formattedValue).toEqual("123,456.123");
   });
 
+  describe("sign", () => {
+    test("prefixes positive number with +", () => {
+      expect(formatNumber(1234, { sign: true })).toBe("+1,234");
+    });
+
+    test("no prefix for zero", () => {
+      expect(formatNumber(0, { sign: true })).toBe("0");
+    });
+
+    test("no prefix for negative", () => {
+      expect(formatNumber(-50, { sign: true })).toBe("-50");
+    });
+
+    test("prefixes positive compact value with +", () => {
+      expect(formatNumber(1500, { sign: true, compact: true })).toBe("+1.5K");
+    });
+
+    test("prefixes positive percentage with +", () => {
+      expect(formatNumber(0.25, { sign: true, percentage: true })).toBe("+25%");
+    });
+
+    test("no prefix for zero percentage", () => {
+      expect(formatNumber(0, { sign: true, percentage: true })).toBe("0%");
+    });
+  });
+
   describe("Percentage", () => {
     test("no digits", () => {
       const formattedValue = formatNumber(0.123456, { percentage: true });

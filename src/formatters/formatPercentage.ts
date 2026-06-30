@@ -8,13 +8,21 @@ export const formatPercentageNumber = (
   value: number,
   {
     digits,
+    sign,
   }: {
     digits?: number;
+    sign?: boolean;
   } = {}
 ): string => {
-  return `${clamp({
+  let prefix = "";
+
+  if (sign) {
+    prefix = value > 0 ? "+" : "";
+  }
+
+  return `${prefix}${clamp({
     number: value * 100,
-    min: 0,
+    min: -100,
     max: 100,
   }).toFixed(digits || 0)}`;
 };
@@ -28,9 +36,11 @@ export const formatPercentage = (
   value: number,
   {
     digits,
+    sign,
   }: {
     digits?: number;
+    sign?: boolean;
   } = {}
 ): string => {
-  return `${formatPercentageNumber(value, { digits })}%`;
+  return `${formatPercentageNumber(value, { digits, sign })}%`;
 };
