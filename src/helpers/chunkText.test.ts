@@ -41,4 +41,24 @@ describe("chunkText", () => {
     expect(chunks).toEqual(["Hello world. How are you?", " I am fine."]);
     expect(chunks.some((chunk) => chunk.length > 25)).toBe(false);
   });
+
+  test("never exceeds maxSize with surrogate-pair unicode", () => {
+    const chunks = chunkText("👍👍👍👍👍", 3);
+    expect(chunks.every((chunk) => chunk.length <= 3)).toBe(true);
+    expect(chunks.join("")).toBe("👍👍👍👍👍");
+  });
+
+  test("never exceeds maxSize when hard-splitting a long unicode word", () => {
+    const chunks = chunkText("👍👍👍👍👍", 3, { preserveOnBreak: "word" });
+    expect(chunks.every((chunk) => chunk.length <= 3)).toBe(true);
+    expect(chunks.join("")).toBe("👍👍👍👍👍");
+  });
+
+  test("never exceeds maxSize when a single grapheme is longer than maxSize", () => {
+    const family = "👨‍👩‍👧‍👦";
+    expect(family.length).toBeGreaterThan(5);
+    const chunks = chunkText(family, 5);
+    expect(chunks.every((chunk) => chunk.length <= 5)).toBe(true);
+    expect(chunks.join("")).toBe(family);
+  });
 });

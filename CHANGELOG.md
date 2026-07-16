@@ -1,5 +1,11 @@
 # deverything
 
+## 5.5.3
+
+### Patch Changes
+
+- chunk graphemes
+
 ## 5.5.2
 
 ### Patch Changes
