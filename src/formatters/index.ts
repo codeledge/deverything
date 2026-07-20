@@ -3,6 +3,7 @@ export * from "./formatCookies";
 export * from "./formatCount";
 export * from "./formatDateRange";
 export * from "./formatIndexProgress";
+export * from "./formatInitials";
 export * from "./formatNumber";
 export * from "./formatPascalCase";
 export * from "./formatPercentage";

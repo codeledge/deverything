@@ -166,6 +166,7 @@ Contributions always welcome!
 - `formatCount()` "#items: 3, #users: 5"
 - `formatDateRange()` "2026-02-09T00:00... ⮕ 2026-02-10T00:00..."
 - `formatIndexProgress()` => "[2/10]"
+- `formatInitials()` first letters of the first one or two words, capitalized
 - `formatProgress()` progress string with optional id prefix
 - `formatNumber()` 1000 => "1,000" or "1K" or 0.112 => "11.2%"
 - `formatPascalCase()` "hello-world" => "HelloWorld"

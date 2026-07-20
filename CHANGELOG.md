@@ -1,5 +1,11 @@
 # deverything
 
+## 5.7.0
+
+### Minor Changes
+
+- formatInitials
+
 ## 5.6.0
 
 ### Minor Changes
