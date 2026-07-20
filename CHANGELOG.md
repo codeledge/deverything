@@ -1,5 +1,11 @@
 # deverything
 
+## 5.6.0
+
+### Minor Changes
+
+- formatSlug
+
 ## 5.5.3
 
 ### Patch Changes

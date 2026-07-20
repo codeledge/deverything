@@ -171,6 +171,7 @@ Contributions always welcome!
 - `formatPascalCase()` "hello-world" => "HelloWorld"
 - `formatPercentage()` 0.11 => "11%"
 - `formatPercentageNumber()` numeric percentage (e.g. 0.123 => 12.35) before formatting as string
+- `formatSlug()` transliterate and format a URL/identifier slug; supports `strict`, custom `map` / replacement
 - `stringToCSSUnicode()` "hello" => "\000068\000065\00006c\00006c\00006f" use this for CSS
 - `stringToUnicode()` "hello" => "\u0068\u0065\u006c\u006c\u006f"
 

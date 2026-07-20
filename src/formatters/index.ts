@@ -7,5 +7,6 @@ export * from "./formatNumber";
 export * from "./formatPascalCase";
 export * from "./formatPercentage";
 export * from "./formatProgress";
+export * from "./formatSlug";
 export * from "./stringToCSSUnicode";
 export * from "./stringToUnicode";

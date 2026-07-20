@@ -41,7 +41,10 @@ describe(`randomParagraph`, () => {
 
   it(`respects minCharacters`, () => {
     for (let i = 0; i < 20; i++) {
-      const result = randomParagraph({ minCharacters: 100, maxCharacters: 500 });
+      const result = randomParagraph({
+        minCharacters: 100,
+        maxCharacters: 500,
+      });
       expect(result.length).toBeGreaterThanOrEqual(100);
     }
   });
