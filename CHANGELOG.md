@@ -1,5 +1,11 @@
 # deverything
 
+## 5.8.1
+
+### Patch Changes
+
+- locale
+
 ## 5.8.0
 
 ### Minor Changes

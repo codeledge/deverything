@@ -36,6 +36,23 @@ describe("formatNumber", () => {
     expect(formattedValue).toEqual("123,456.123");
   });
 
+  describe("locale", () => {
+    test("defaults to en grouping", () => {
+      expect(formatNumber(12345)).toBe("12,345");
+    });
+
+    test("uses locale grouping and decimal separators", () => {
+      expect(formatNumber(12345, { locale: "de" })).toBe("12.345");
+      expect(formatNumber(12345.67, { locale: "de" })).toBe("12.345,67");
+      expect(formatNumber(12345, { locale: "it" })).toBe("12.345");
+      expect(formatNumber(12345, { locale: "pt-br" })).toBe("12.345");
+    });
+
+    test("prefixes positive values with locale formatting", () => {
+      expect(formatNumber(1234, { sign: true, locale: "de" })).toBe("+1.234");
+    });
+  });
+
   describe("sign", () => {
     test("prefixes positive number with +", () => {
       expect(formatNumber(1234, { sign: true })).toBe("+1,234");

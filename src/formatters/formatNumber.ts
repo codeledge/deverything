@@ -9,6 +9,7 @@ const SUB_ONE_COMPACT_TIERS = [
 
 /**
  *
+ * @param options.locale - BCP 47 tag for grouping/decimal separators (default "en")
  * @example formatNumber(1000, { compact: true }) // "1K"
  * @example formatNumber(0.001, { compact: true }) // "1m"
  * @example formatNumber(0.000001, { compact: true }) // "1μ"
@@ -16,17 +17,20 @@ const SUB_ONE_COMPACT_TIERS = [
  * @example formatNumber(1111, { maxDigits: 2 }) // "1,100" (2 significant digits)
  * @example formatNumber(111111.123123123) // "111,111.123" (default 3 decimal places)
  * @example formatNumber(0.12345, { percentage: true, maxDigits: 2 }) // "12.35%"
+ * @example formatNumber(12345, { locale: "de" }) // "12.345"
  */
 export const formatNumber = (
   value: number,
   {
     compact,
+    locale = "en",
     maxDigits,
     percentage,
     unit = "",
     sign = false,
   }: {
     compact?: boolean;
+    locale?: string;
     maxDigits?: number;
     percentage?: boolean;
     unit?: string;
@@ -56,14 +60,14 @@ export const formatNumber = (
           : SUB_ONE_COMPACT_TIERS[2]; // milli
 
     const scaled = value / tier.divisor;
-    const formatter = Intl.NumberFormat("en", {
+    const formatter = Intl.NumberFormat(locale, {
       maximumSignificantDigits: maxDigits ?? 3,
     });
     return `${prefix}${formatter.format(scaled)}${tier.suffix}${unit}`;
   }
 
   // > 1 case
-  const formatter = Intl.NumberFormat("en", {
+  const formatter = Intl.NumberFormat(locale, {
     notation: compact ? "compact" : "standard",
     maximumSignificantDigits: maxDigits,
   });
