@@ -9,4 +9,5 @@ export * from "./multiply";
 export * from "./normaliseArray";
 export * from "./normaliseNumber";
 export * from "./percentageChange";
+export * from "./roundToEven";
 export * from "./sum";
