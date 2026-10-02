@@ -1,5 +1,11 @@
 # deverything
 
+## 5.10.0
+
+### Minor Changes
+
+- 72fd433: roundToEven
+
 ## 5.9.0
 
 ### Minor Changes
