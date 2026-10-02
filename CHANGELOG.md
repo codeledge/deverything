@@ -1,5 +1,11 @@
 # deverything
 
+## 5.9.0
+
+### Minor Changes
+
+- added formatCountryName
+
 ## 5.8.1
 
 ### Patch Changes
