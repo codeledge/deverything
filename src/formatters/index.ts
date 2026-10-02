@@ -1,6 +1,7 @@
 export * from "./formatCamelCase";
 export * from "./formatCookies";
 export * from "./formatCount";
+export * from "./formatCountryName";
 export * from "./formatDateRange";
 export * from "./formatIndexProgress";
 export * from "./formatInitials";
