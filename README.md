@@ -93,6 +93,7 @@ Contributions always welcome!
 - `normaliseArray()`
 - `normaliseNumber()`
 - `percentageChange()`
+- `roundToEven()` round to the nearest even integer, e.g. for video dimensions
 - `sum()`
 
 ### Helpers

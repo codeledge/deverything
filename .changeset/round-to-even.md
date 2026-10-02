@@ -1,0 +1,5 @@
+---
+"deverything": minor
+---
+
+roundToEven
