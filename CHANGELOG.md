@@ -4,7 +4,7 @@
 
 ### Major Changes
 
-- c5af34b: Rename `randomUUID` to `incrementalUUID`. It is a counter-based test fixture, not a random id, and the old name led to it being used for production ids. `randomUUID` stays as a deprecated alias.
+- c5af34b: drop `randomUUID` in favour of `incrementalUUID`. It is a counter-based test fixture, not a random id, and the old name led to it being used for production ids.
 
 ## 5.10.0
 

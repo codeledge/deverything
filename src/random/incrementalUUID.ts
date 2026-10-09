@@ -15,9 +15,3 @@ export const incrementalUUID = () => {
   const digit3 = id.substring(12, 15);
   return `00000000-0000-1000-8${digit3}-${digit12}`;
 };
-
-/**
- * @deprecated Renamed to {@link incrementalUUID}: despite the name it is not
- * random. Use `crypto.randomUUID()` for ids in production.
- */
-export const randomUUID = incrementalUUID;
