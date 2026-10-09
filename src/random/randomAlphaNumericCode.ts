@@ -5,7 +5,9 @@ import { randomArrayItem } from "./randomArrayItem";
 const chars = "123456789ABCDEFGHIJKLMNPQRSTUVWXYZ".split("");
 
 /**
- * Generates a random alphanumeric code that can be used for verification codes, etc.
+ * Generates a random alphanumeric code for tests and fixtures, e.g. a fake verification code.
+ * Uses `Math.random`, so codes are predictable: never use it for real verification codes,
+ * reference codes or anything else in production; use `crypto.getRandomValues()` there.
  * Does not contain 0s or Os as they get confused with each other.
  * @param length The length of the code to generate.
  * @returns A random alphanumeric code.
