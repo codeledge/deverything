@@ -9,7 +9,7 @@ import { incrementalId } from "../helpers";
  *
  * /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i
  */
-export const generateTestUUID = () => {
+export const incrementalUUID = () => {
   const id = incrementalId().toString().padStart(15, "0");
   const digit12 = id.substring(0, 12);
   const digit3 = id.substring(12, 15);
@@ -17,7 +17,7 @@ export const generateTestUUID = () => {
 };
 
 /**
- * @deprecated Renamed to {@link generateTestUUID}: despite the name it is not
+ * @deprecated Renamed to {@link incrementalUUID}: despite the name it is not
  * random. Use `crypto.randomUUID()` for ids in production.
  */
-export const randomUUID = generateTestUUID;
+export const randomUUID = incrementalUUID;

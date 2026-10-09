@@ -205,7 +205,7 @@ These functions are optimized for low entropy random data generation useful for 
 - `randomFile()`
 - `randomFloat()`
 - `randomFormattedPercentage()` random percentage string for tests
-- `generateTestUUID()` predictable uuid for tests, passing UUID validation. Counter-based, not random: never use it for ids in production (formerly `randomUUID()`, kept as a deprecated alias)
+- `incrementalUUID()` predictable uuid for tests, passing UUID validation. Counter-based, not random: never use it for ids in production (formerly `randomUUID()`, kept as a deprecated alias)
 - `randomObject()`
 - `randomObjectKey()` get a random key from an object
 - `randomObjectValue()` get a random value from an object
