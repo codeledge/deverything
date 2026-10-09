@@ -33,6 +33,6 @@ export * from "./randomPath";
 export * from "./randomPhoneNumber";
 export * from "./randomString";
 export * from "./randomSymbol";
-export * from "./randomUUID";
+export * from "./incrementalUUID";
 export * from "./randomValue";
 export * from "./randomWord";
