@@ -1,5 +1,11 @@
 # deverything
 
+## 6.0.1
+
+### Patch Changes
+
+- 9252f68: Clarify that `randomAlphaNumericCode`, `randomNumericCode` and `randomPassword` use `Math.random` and are for tests and fixtures only, not real verification codes, reference codes or passwords.
+
 ## 6.0.0
 
 ### Major Changes
