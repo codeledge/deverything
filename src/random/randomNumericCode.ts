@@ -2,7 +2,9 @@ import { array } from "../helpers/array";
 import { randomInt } from "./randomInt";
 
 /**
- * Generates a random numeric code that can be used for verification codes, etc.
+ * Generates a random numeric code for tests and fixtures, e.g. a fake verification code.
+ * Uses `Math.random`, so codes are predictable: never use it for real verification codes,
+ * OTPs or anything else in production; use `crypto.randomInt()` there.
  * Does not start with 0.
  * @param length The length of the code to generate.
  * @returns A random numeric code.
