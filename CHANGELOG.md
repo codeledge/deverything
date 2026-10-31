@@ -1,5 +1,13 @@
 # deverything
 
+## 6.0.1
+
+### Patch Changes
+
+- fix isUUID
+- 439bf4f: `isUUID` follows RFC 9562: it accepts versions 6, 7 and 8 and the Nil and Max UUIDs, which it used to reject. It now takes any value and is a type guard (`arg is string`), returning false for non-strings.
+- 9252f68: Clarify that `randomAlphaNumericCode`, `randomNumericCode` and `randomPassword` use `Math.random` and are for tests and fixtures only, not real verification codes, reference codes or passwords.
+
 ## 6.0.0
 
 ### Major Changes
