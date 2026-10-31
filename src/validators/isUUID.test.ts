@@ -1,4 +1,4 @@
-import { describe, expect, test } from "vitest";
+import { describe, expect, expectTypeOf, test } from "vitest";
 import { isUUID } from "./isUUID";
 
 describe("isUUID", () => {
@@ -32,5 +32,17 @@ describe("isUUID", () => {
     expect(isUUID("919108f7-52d1-4320-cbac-f847db4148a8")).toBe(false); // Microsoft variant
     expect(isUUID("00000000-0000-0000-0000-000000000001")).toBe(false);
     expect(isUUID(" 919108f7-52d1-4320-9bac-f847db4148a8")).toBe(false);
+  });
+
+  test("non-strings", () => {
+    expect(isUUID(undefined)).toBe(false);
+    expect(isUUID(null)).toBe(false);
+    expect(isUUID(1)).toBe(false);
+    expect(isUUID({})).toBe(false);
+  });
+
+  test("narrows to string", () => {
+    const value: unknown = "919108f7-52d1-4320-9bac-f847db4148a8";
+    if (isUUID(value)) expectTypeOf(value).toEqualTypeOf<string>();
   });
 });
