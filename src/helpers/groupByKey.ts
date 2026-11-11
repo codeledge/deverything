@@ -4,7 +4,7 @@ import { isValue } from "../validators/isValue";
  *
  * @param items
  * @param key
- * @returns Record<keyof T, T[]>
+ * @returns the items grouped by the value of their `key`
  * @example
  * const items = [
  *   { externalId: 1, value: 100 },
@@ -26,22 +26,16 @@ import { isValue } from "../validators/isValue";
  * // }
  */
 export const groupByKey = <T, K extends keyof T>(
-  items: T[],
+  items: readonly T[],
   key: K
-): Record<keyof T, T[]> => {
-  return items.reduce(
-    (acc, item) => {
-      const groupKey = item[key] as keyof T;
-      if (!isValue(groupKey)) {
-        // if item does not have the key, don't group it
-        return acc;
-      }
-      if (!acc[groupKey]) {
-        acc[groupKey] = [];
-      }
-      acc[groupKey].push(item);
-      return acc;
-    },
-    {} as Record<keyof T, T[]>
-  );
+): Record<Extract<T[K], PropertyKey>, T[]> => {
+  const groups: Record<PropertyKey, T[]> = {};
+  for (const item of items) {
+    const groupKey = item[key];
+    // if item does not have the key, don't group it
+    if (!isValue(groupKey)) continue;
+    const bucket = groupKey as PropertyKey;
+    (groups[bucket] ??= []).push(item);
+  }
+  return groups as Record<Extract<T[K], PropertyKey>, T[]>;
 };

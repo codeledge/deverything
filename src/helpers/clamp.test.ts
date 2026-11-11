@@ -1,4 +1,4 @@
-import { describe, expect, test } from "vitest";
+import { afterEach, describe, expect, test, vi } from "vitest";
 import { clamp } from "./clamp";
 
 describe("clamp", () => {
@@ -14,5 +14,16 @@ describe("clamp", () => {
     expect(clamp({ number: Infinity, min: 0, max: 9.9 })).toBe(9.9);
     expect(clamp({ number: -Infinity, min: 0, max: 9.9 })).toBe(0);
     expect(clamp({ number: -Infinity, min: Math.PI, max: 9.9 })).toBe(Math.PI);
+  });
+
+  describe("without a process global, as in a browser", () => {
+    afterEach(() => {
+      vi.unstubAllGlobals();
+    });
+
+    test("does not throw when max < min", () => {
+      vi.stubGlobal("process", undefined);
+      expect(clamp({ number: 10, min: 0, max: -10 })).toBe(-10);
+    });
   });
 });
