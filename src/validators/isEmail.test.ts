@@ -1,4 +1,4 @@
-import { describe, expect, test } from "vitest";
+import { describe, expect, expectTypeOf, test } from "vitest";
 import { isEmail } from "./isEmail";
 
 describe("isEmail", () => {
@@ -20,6 +20,11 @@ describe("isEmail", () => {
 
   test("rejects a domain without a dot, and non-strings", () => {
     expect(isEmail("user@localhost")).toBe(false);
-    expect(isEmail(1 as unknown as string)).toBe(false);
+    expect(isEmail(1)).toBe(false);
+  });
+
+  test("narrows an unknown value to string", () => {
+    const value: unknown = "user@example.com";
+    if (isEmail(value)) expectTypeOf(value).toEqualTypeOf<string>();
   });
 });

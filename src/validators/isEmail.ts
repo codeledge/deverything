@@ -7,5 +7,5 @@ import { isString } from "./isString";
  * @example isEmail("user@example.com") // true
  * @example isEmail("hello user@example.com") // false
  */
-export const isEmail = (arg: string) =>
+export const isEmail = (arg: unknown): arg is string =>
   isString(arg) && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(arg);
