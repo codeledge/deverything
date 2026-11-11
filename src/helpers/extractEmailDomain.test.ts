@@ -20,7 +20,16 @@ describe("extractEmailDomain", () => {
     expect(extractEmailDomain("user@")).toBeUndefined();
   });
 
-  test("handles multiple @ signs (uses first)", () => {
-    expect(extractEmailDomain("a@b@example.com")).toBe("b@example.com");
+  test("splits on the last @, as a quoted local part may contain one", () => {
+    expect(extractEmailDomain('"a@b"@example.com')).toBe("example.com");
+    expect(extractEmailDomain("a@b@example.com")).toBe("example.com");
+  });
+
+  test("lowercases and trims the domain", () => {
+    expect(extractEmailDomain("User@Example.COM ")).toBe("example.com");
+  });
+
+  test("returns undefined when the domain is only whitespace", () => {
+    expect(extractEmailDomain("user@  ")).toBeUndefined();
   });
 });

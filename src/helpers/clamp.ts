@@ -7,7 +7,11 @@ export const clamp = ({
   min: number;
   max: number;
 }) => {
-  if (max < min && process.env.DEVERYTHING_WARNINGS) {
+  if (
+    max < min &&
+    typeof process !== "undefined" &&
+    process.env?.DEVERYTHING_WARNINGS
+  ) {
     console.warn("clamp: max < min", { number, min, max });
   }
 
