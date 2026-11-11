@@ -27,4 +27,17 @@ describe("isEmail", () => {
     const value: unknown = "user@example.com";
     if (isEmail(value)) expectTypeOf(value).toEqualTypeOf<string>();
   });
+
+  test("rejects empty domain labels", () => {
+    expect(isEmail("a@b..c")).toBe(false);
+    expect(isEmail("a@.b.c")).toBe(false);
+    expect(isEmail("a@b.c.")).toBe(false);
+  });
+
+  test("stays fast on a long string of dots", () => {
+    const hostile = "!@!." + "!.".repeat(50_000) + " ";
+    const start = performance.now();
+    expect(isEmail(hostile)).toBe(false);
+    expect(performance.now() - start).toBeLessThan(100);
+  });
 });
